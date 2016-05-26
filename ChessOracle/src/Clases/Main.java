@@ -31,30 +31,30 @@ public class Main extends javax.swing.JFrame {
         lb_A5 = new javax.swing.JLabel();
         lb_A1 = new javax.swing.JLabel();
         lb_A7 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
+        lb_C4 = new javax.swing.JLabel();
+        lb_C3 = new javax.swing.JLabel();
+        lb_C5 = new javax.swing.JLabel();
+        lb_C8 = new javax.swing.JLabel();
+        lb_C6 = new javax.swing.JLabel();
+        lb_C2 = new javax.swing.JLabel();
+        lb_C7 = new javax.swing.JLabel();
+        lb_C1 = new javax.swing.JLabel();
+        lb_E4 = new javax.swing.JLabel();
+        lb_E3 = new javax.swing.JLabel();
+        lb_E5 = new javax.swing.JLabel();
+        lb_E8 = new javax.swing.JLabel();
+        lb_E6 = new javax.swing.JLabel();
+        lb_E2 = new javax.swing.JLabel();
+        lb_E7 = new javax.swing.JLabel();
+        lb_E1 = new javax.swing.JLabel();
+        lb_G4 = new javax.swing.JLabel();
+        lb_G3 = new javax.swing.JLabel();
+        lb_G5 = new javax.swing.JLabel();
+        lb_G8 = new javax.swing.JLabel();
+        lb_G6 = new javax.swing.JLabel();
+        lb_G2 = new javax.swing.JLabel();
+        lb_G7 = new javax.swing.JLabel();
+        lb_G1 = new javax.swing.JLabel();
         lb_A2 = new javax.swing.JLabel();
         lb_B7 = new javax.swing.JLabel();
         lb_B5 = new javax.swing.JLabel();
@@ -63,30 +63,30 @@ public class Main extends javax.swing.JFrame {
         lb_B6 = new javax.swing.JLabel();
         lb_B4 = new javax.swing.JLabel();
         lb_B8 = new javax.swing.JLabel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel45 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
-        jLabel49 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel52 = new javax.swing.JLabel();
-        jLabel53 = new javax.swing.JLabel();
-        jLabel54 = new javax.swing.JLabel();
-        jLabel55 = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
-        jLabel57 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        jLabel59 = new javax.swing.JLabel();
-        jLabel60 = new javax.swing.JLabel();
-        jLabel61 = new javax.swing.JLabel();
-        jLabel62 = new javax.swing.JLabel();
-        jLabel63 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
+        lb_D7 = new javax.swing.JLabel();
+        lb_D5 = new javax.swing.JLabel();
+        lb_D6 = new javax.swing.JLabel();
+        lb_D3 = new javax.swing.JLabel();
+        lb_D2 = new javax.swing.JLabel();
+        lb_D8 = new javax.swing.JLabel();
+        lb_D4 = new javax.swing.JLabel();
+        lb_D1 = new javax.swing.JLabel();
+        lb_F5 = new javax.swing.JLabel();
+        lb_F7 = new javax.swing.JLabel();
+        lb_F1 = new javax.swing.JLabel();
+        lb_F4 = new javax.swing.JLabel();
+        lb_F3 = new javax.swing.JLabel();
+        lb_F6 = new javax.swing.JLabel();
+        lb_F8 = new javax.swing.JLabel();
+        lb_F2 = new javax.swing.JLabel();
+        lb_H5 = new javax.swing.JLabel();
+        lb_H7 = new javax.swing.JLabel();
+        lb_H1 = new javax.swing.JLabel();
+        lb_H4 = new javax.swing.JLabel();
+        lb_H3 = new javax.swing.JLabel();
+        lb_H6 = new javax.swing.JLabel();
+        lb_H8 = new javax.swing.JLabel();
+        lb_H2 = new javax.swing.JLabel();
         jLabel65 = new javax.swing.JLabel();
         jLabel66 = new javax.swing.JLabel();
         jLabel67 = new javax.swing.JLabel();
@@ -106,7 +106,7 @@ public class Main extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jb_nuevaPartida = new javax.swing.JButton();
         jLabel81 = new javax.swing.JLabel();
-        cb_tipo = new javax.swing.JComboBox<String>();
+        cb_tipo = new javax.swing.JComboBox<>();
         rb_negro = new javax.swing.JRadioButton();
         rb_blanco = new javax.swing.JRadioButton();
         jb_ingresarCoordenadas = new javax.swing.JButton();
@@ -148,89 +148,89 @@ public class Main extends javax.swing.JFrame {
         lb_A7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
         getContentPane().add(lb_A7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 210, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 370, 75, 75));
+        lb_C4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_C4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_C4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 370, 75, 75));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, -1, -1));
+        lb_C3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_C3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 370, -1, -1));
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 370, -1, -1));
+        lb_C5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_C5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 370, -1, -1));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 370, 75, 75));
+        lb_C8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_C8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_C8, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 370, 75, 75));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, 75, 75));
+        lb_C6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_C6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_C6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 370, 75, 75));
 
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, 75, 75));
+        lb_C2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_C2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_C2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, 75, 75));
 
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, -1, -1));
+        lb_C7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_C7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 370, -1, -1));
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 370, -1, -1));
+        lb_C1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_C1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 370, -1, -1));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 530, 75, 75));
+        lb_E4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_E4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_E4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 530, 75, 75));
 
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 530, -1, -1));
+        lb_E3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_E3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 530, -1, -1));
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 530, -1, -1));
+        lb_E5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_E5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 530, -1, -1));
 
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 530, 75, 75));
+        lb_E8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_E8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_E8, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 530, 75, 75));
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 530, 75, 75));
+        lb_E6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_E6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_E6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 530, 75, 75));
 
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 530, 75, 75));
+        lb_E2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_E2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_E2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 530, 75, 75));
 
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 530, -1, -1));
+        lb_E7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_E7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 530, -1, -1));
 
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 530, -1, -1));
+        lb_E1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_E1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 530, -1, -1));
 
-        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 690, 75, 75));
+        lb_G4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_G4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_G4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 690, 75, 75));
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 690, -1, -1));
+        lb_G3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_G3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 690, -1, -1));
 
-        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 690, -1, -1));
+        lb_G5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_G5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 690, -1, -1));
 
-        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 690, 75, 75));
+        lb_G8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_G8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_G8, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 690, 75, 75));
 
-        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel29.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 690, 75, 75));
+        lb_G6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_G6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_G6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 690, 75, 75));
 
-        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel30.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 690, 75, 75));
+        lb_G2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_G2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_G2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 690, 75, 75));
 
-        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 690, -1, -1));
+        lb_G7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_G7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 690, -1, -1));
 
-        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 690, -1, -1));
+        lb_G1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_G1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 690, -1, -1));
 
         lb_A2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
         lb_A2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -260,89 +260,89 @@ public class Main extends javax.swing.JFrame {
         lb_B8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
         getContentPane().add(lb_B8, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 290, -1, -1));
 
-        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 450, 75, 75));
+        lb_D7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_D7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_D7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 450, 75, 75));
 
-        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel42.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, 75, 75));
+        lb_D5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_D5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_D5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, 75, 75));
 
-        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 450, -1, -1));
+        lb_D6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_D6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 450, -1, -1));
 
-        jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel44.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, 75, 75));
+        lb_D3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_D3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_D3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, 75, 75));
 
-        jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 450, -1, -1));
+        lb_D2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_D2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 450, -1, -1));
 
-        jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 450, -1, -1));
+        lb_D8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_D8, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 450, -1, -1));
 
-        jLabel47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 450, -1, -1));
+        lb_D4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_D4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 450, -1, -1));
 
-        jLabel48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel48.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, 75, 75));
+        lb_D1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_D1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_D1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, 75, 75));
 
-        jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel49.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 610, 75, 75));
+        lb_F5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_F5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_F5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 610, 75, 75));
 
-        jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel50.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 610, 75, 75));
+        lb_F7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_F7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_F7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 610, 75, 75));
 
-        jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel51.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 610, 75, 75));
+        lb_F1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_F1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_F1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 610, 75, 75));
 
-        jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 610, -1, -1));
+        lb_F4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_F4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 610, -1, -1));
 
-        jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel53.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 610, 75, 75));
+        lb_F3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_F3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_F3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 610, 75, 75));
 
-        jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 610, -1, -1));
+        lb_F6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_F6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 610, -1, -1));
 
-        jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 610, -1, -1));
+        lb_F8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_F8, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 610, -1, -1));
 
-        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 610, -1, -1));
+        lb_F2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_F2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 610, -1, -1));
 
-        jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel57.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 770, 75, 75));
+        lb_H5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_H5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_H5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 770, 75, 75));
 
-        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel58.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 770, 75, 75));
+        lb_H7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_H7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_H7, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 770, 75, 75));
 
-        jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel59.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 770, 75, 75));
+        lb_H1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_H1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_H1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 770, 75, 75));
 
-        jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 770, -1, -1));
+        lb_H4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_H4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 770, -1, -1));
 
-        jLabel61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
-        jLabel61.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        getContentPane().add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 770, 75, 75));
+        lb_H3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white_tile.png"))); // NOI18N
+        lb_H3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        getContentPane().add(lb_H3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 770, 75, 75));
 
-        jLabel62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 770, -1, -1));
+        lb_H6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_H6, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 770, -1, -1));
 
-        jLabel63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 770, -1, -1));
+        lb_H8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_H8, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 770, -1, -1));
 
-        jLabel64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
-        getContentPane().add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 770, -1, -1));
+        lb_H2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/black_tile.png"))); // NOI18N
+        getContentPane().add(lb_H2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 770, -1, -1));
 
         jLabel65.setFont(new java.awt.Font("Segoe Print", 1, 14)); // NOI18N
         jLabel65.setForeground(new java.awt.Color(51, 51, 51));
@@ -444,7 +444,7 @@ public class Main extends javax.swing.JFrame {
         jLabel81.setText("SELECCIONE LA PIEZA");
 
         cb_tipo.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        cb_tipo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "CABALLO", "REY", "PEÓN" }));
+        cb_tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CABALLO", "REY", "PEÓN" }));
 
         bg_color.add(rb_negro);
         rb_negro.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -472,7 +472,7 @@ public class Main extends javax.swing.JFrame {
 
         jLabel82.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         jLabel82.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel82.setText("POSICÓN DE LA PIEZA");
+        jLabel82.setText("POSICIÓN DE LA PIEZA");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -546,14 +546,19 @@ public class Main extends javax.swing.JFrame {
 
     private void jb_ingresarCoordenadasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_ingresarCoordenadasMouseClicked
         // TODO add your handling code here:
-        Icon whorse_wt = new ImageIcon("src/Icons/whorse_wt.png");
+	Icon whorse_wt = new ImageIcon("src/Icons/whorse_wt.png");
+        Icon wpawn_wt = new ImageIcon("src/Icons/wpawn_wt.png");
+        Icon wking_wt = new ImageIcon("src/Icons/wking_wt.png");
+        Icon bhorse_wt = new ImageIcon("src/Icons/bhorse_wt.png");
+        Icon bpawn_wt = new ImageIcon("src/Icons/bpawn_wt.png");
+        Icon bking_wt = new ImageIcon("src/Icons/bking_wt.png");
         String posicion = tf_posicion.getText();
         String tipo = cb_tipo.getSelectedItem().toString();
         char fila = posicion.charAt(0);
         char columna = posicion.charAt(1);
         switch (tipo) {
             case "CABALLO":
-                if (rb_blanco.isSelected()){
+                if (rb_blanco.isSelected()){//caballos blancos
                     if (fila == 'A') {
                         if (columna == '1') {
                            
@@ -590,17 +595,856 @@ public class Main extends javax.swing.JFrame {
                         } else if (columna == '8') {
                             
                         }
+                    }else if(fila=='C'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_C2.setIcon(whorse_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_C4.setIcon(whorse_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_C6.setIcon(whorse_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_C8.setIcon(whorse_wt);
+                        }
+                    }else if(fila=='D'){
+                        if (columna == '1') {
+                           lb_D1.setIcon(whorse_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_D3.setIcon(whorse_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_D5.setIcon(whorse_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_D7.setIcon(whorse_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }else if(fila=='E'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_E2.setIcon(whorse_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_E4.setIcon(whorse_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_E6.setIcon(whorse_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_E8.setIcon(whorse_wt);
+                        }
+                    }else if(fila=='F'){
+                        if (columna == '1') {
+                           lb_F1.setIcon(whorse_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_F3.setIcon(whorse_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_F5.setIcon(whorse_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_F7.setIcon(whorse_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }else if(fila=='G'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_G2.setIcon(whorse_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_G4.setIcon(whorse_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_G6.setIcon(whorse_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_G8.setIcon(whorse_wt);
+                        }
+                    }else if(fila=='H'){
+                        if (columna == '1') {
+                           lb_H1.setIcon(whorse_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_H3.setIcon(whorse_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_H5.setIcon(whorse_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_H7.setIcon(whorse_wt);
+                        } else if (columna == '8') {
+                            
+                        }
                     }
-                } else {
-
+                } else {//caballos negros
+                    if (fila == 'A') {
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_A2.setIcon(bhorse_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_A4.setIcon(bhorse_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_A6.setIcon(bhorse_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_A8.setIcon(bhorse_wt);
+                        }
+                    } else if (fila == 'B') {
+                        if (columna == '1') {
+                           lb_B1.setIcon(bhorse_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_B3.setIcon(bhorse_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_B5.setIcon(bhorse_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_B7.setIcon(bhorse_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }else if(fila=='C'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_C2.setIcon(bhorse_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_C4.setIcon(bhorse_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_C6.setIcon(bhorse_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_C8.setIcon(bhorse_wt);
+                        }
+                    }else if(fila=='D'){
+                        if (columna == '1') {
+                           lb_D1.setIcon(bhorse_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_D3.setIcon(bhorse_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_D5.setIcon(bhorse_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_D7.setIcon(bhorse_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }else if(fila=='E'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_E2.setIcon(bhorse_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_E4.setIcon(bhorse_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_E6.setIcon(bhorse_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_E8.setIcon(bhorse_wt);
+                        }
+                    }else if(fila=='F'){
+                        if (columna == '1') {
+                           lb_F1.setIcon(bhorse_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_F3.setIcon(bhorse_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_F5.setIcon(bhorse_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_F7.setIcon(bhorse_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }else if(fila=='G'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_G2.setIcon(bhorse_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_G4.setIcon(bhorse_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_G6.setIcon(bhorse_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_G8.setIcon(bhorse_wt);
+                        }
+                    }else if(fila=='H'){
+                        if (columna == '1') {
+                           lb_H1.setIcon(bhorse_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_H3.setIcon(bhorse_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_H5.setIcon(bhorse_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_H7.setIcon(bhorse_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }
                 }
                 break;
             case "PEON":
+                if(rb_blanco.isSelected()){//peones blancos
+                    if(fila=='A'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_A2.setIcon(wpawn_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_A4.setIcon(wpawn_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_A6.setIcon(wpawn_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_A8.setIcon(wpawn_wt);
+                        }
+                    }else if(fila=='B'){
+                        if (columna == '1') {
+                           lb_B1.setIcon(wpawn_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_B3.setIcon(wpawn_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_B5.setIcon(wpawn_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_B7.setIcon(wpawn_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }else if(fila=='C'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_C2.setIcon(wpawn_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_C4.setIcon(wpawn_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_C6.setIcon(wpawn_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_C8.setIcon(wpawn_wt);
+                        }
+                    }else if(fila=='D'){
+                        if (columna == '1') {
+                           lb_D1.setIcon(wpawn_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_D3.setIcon(wpawn_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_D5.setIcon(wpawn_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_D7.setIcon(wpawn_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }else if(fila=='E'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_E2.setIcon(wpawn_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_E4.setIcon(wpawn_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_E6.setIcon(wpawn_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_E8.setIcon(wpawn_wt);
+                        }
+                    }else if(fila=='F'){
+                        if (columna == '1') {
+                           lb_F1.setIcon(wpawn_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_F3.setIcon(wpawn_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_F5.setIcon(wpawn_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_F7.setIcon(wpawn_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }else if(fila=='G'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_G2.setIcon(wpawn_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_G4.setIcon(wpawn_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_G6.setIcon(wpawn_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_G8.setIcon(wpawn_wt);
+                        }
+                    }else if(fila=='H'){
+                        if (columna == '1') {
+                           lb_H1.setIcon(wpawn_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_H3.setIcon(wpawn_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_H5.setIcon(wpawn_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_H7.setIcon(wpawn_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }
+                }else{//peones negros
+                    if(fila=='A'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_A2.setIcon(bpawn_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_A4.setIcon(bpawn_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_A6.setIcon(bpawn_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_A8.setIcon(bpawn_wt);
+                        }
+                    }else if(fila=='B'){
+                        if (columna == '1') {
+                           lb_B1.setIcon(bpawn_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_B3.setIcon(bpawn_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_B5.setIcon(bpawn_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_B7.setIcon(bpawn_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }else if(fila=='C'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_C2.setIcon(bpawn_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_C4.setIcon(bpawn_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_C6.setIcon(bpawn_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_C8.setIcon(bpawn_wt);
+                        }
+                    }else if(fila=='D'){
+                        if (columna == '1') {
+                           lb_D1.setIcon(bpawn_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_D3.setIcon(bpawn_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_D5.setIcon(bpawn_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_D7.setIcon(bpawn_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }else if(fila=='E'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_E2.setIcon(bpawn_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_E4.setIcon(bpawn_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_E6.setIcon(bpawn_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_E8.setIcon(bpawn_wt);
+                        }
+                    }else if(fila=='F'){
+                        if (columna == '1') {
+                           lb_F1.setIcon(bpawn_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_F3.setIcon(bpawn_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_F5.setIcon(bpawn_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_F7.setIcon(bpawn_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }else if(fila=='G'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_G2.setIcon(bpawn_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_G4.setIcon(bpawn_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_G6.setIcon(bpawn_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_G8.setIcon(bpawn_wt);
+                        }
+                    }else if(fila=='H'){
+                        if (columna == '1') {
+                           lb_H1.setIcon(bpawn_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_H3.setIcon(bpawn_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_H5.setIcon(bpawn_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_H7.setIcon(bpawn_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }
+                }
                 break;
             case "REY":
+                if(rb_blanco.isSelected()){//rey blanco
+                    if(fila=='A'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_A2.setIcon(wking_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_A4.setIcon(wking_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_A6.setIcon(wking_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_A8.setIcon(wking_wt);
+                        }
+                    }else if(fila=='B'){
+                        if (columna == '1') {
+                           lb_B1.setIcon(wking_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_B3.setIcon(wking_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_B5.setIcon(wking_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_B7.setIcon(wking_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }else if(fila=='C'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_C2.setIcon(wking_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_C4.setIcon(wking_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_C6.setIcon(wking_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_C8.setIcon(wking_wt);
+                        }
+                    }else if(fila=='D'){
+                        if (columna == '1') {
+                           lb_D1.setIcon(wking_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_D3.setIcon(wking_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_D5.setIcon(wking_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_D7.setIcon(wking_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }else if(fila=='E'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_E2.setIcon(wking_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_E4.setIcon(wking_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_E6.setIcon(wking_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_E8.setIcon(wking_wt);
+                        }
+                    }else if(fila=='F'){
+                        if (columna == '1') {
+                           lb_F1.setIcon(wking_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_F3.setIcon(wking_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_F5.setIcon(wking_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_F7.setIcon(wking_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }else if(fila=='G'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_G2.setIcon(wking_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_G4.setIcon(wking_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_G6.setIcon(wking_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_G8.setIcon(wking_wt);
+                        }
+                    }else if(fila=='H'){
+                        if (columna == '1') {
+                           lb_H1.setIcon(wking_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_H3.setIcon(wking_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_H5.setIcon(wking_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_H7.setIcon(wking_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }
+                }else{//rey negro
+                    if(fila=='A'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_A2.setIcon(bking_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_A4.setIcon(bking_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_A6.setIcon(bking_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_A8.setIcon(bking_wt);
+                        }
+                    }else if(fila=='B'){
+                        if (columna == '1') {
+                           lb_B1.setIcon(bking_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_B3.setIcon(bking_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_B5.setIcon(bking_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_B7.setIcon(bking_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }else if(fila=='C'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_C2.setIcon(bking_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_C4.setIcon(bking_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_C6.setIcon(bking_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_C8.setIcon(bking_wt);
+                        }
+                    }else if(fila=='D'){
+                        if (columna == '1') {
+                           lb_D1.setIcon(bking_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_D3.setIcon(bking_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_D5.setIcon(bking_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_D7.setIcon(bking_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }else if(fila=='E'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_E2.setIcon(bking_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_E4.setIcon(bking_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_E6.setIcon(bking_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_E8.setIcon(bking_wt);
+                        }
+                    }else if(fila=='F'){
+                        if (columna == '1') {
+                           lb_F1.setIcon(bking_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_F3.setIcon(bking_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_F5.setIcon(bking_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_F7.setIcon(bking_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }else if(fila=='G'){
+                        if (columna == '1') {
+                           
+                        } else if (columna == '2') {
+                            lb_G2.setIcon(bking_wt);
+                        } else if (columna == '3') {
+                            
+                        } else if (columna == '4') {
+                            lb_G4.setIcon(bking_wt);
+                        } else if (columna == '5') {
+                           
+                        } else if (columna == '6') {
+                            lb_G6.setIcon(bking_wt);
+                        } else if (columna == '7') {
+                            
+                        } else if (columna == '8') {
+                            lb_G8.setIcon(bking_wt);
+                        }
+                    }else if(fila=='H'){
+                        if (columna == '1') {
+                           lb_H1.setIcon(bking_wt);
+                        } else if (columna == '2') {
+                            
+                        } else if (columna == '3') {
+                            lb_H3.setIcon(bking_wt);
+                        } else if (columna == '4') {
+                            
+                        } else if (columna == '5') {
+                           lb_H5.setIcon(bking_wt);
+                        } else if (columna == '6') {
+                            
+                        } else if (columna == '7') {
+                            lb_H7.setIcon(bking_wt);
+                        } else if (columna == '8') {
+                            
+                        }
+                    }
+                }
                 break;
         }
         tf_posicion.setText("");
+
     }//GEN-LAST:event_jb_ingresarCoordenadasMouseClicked
 
     private void jb_nuevaPartidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_nuevaPartidaMouseClicked
@@ -646,56 +1490,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.ButtonGroup bg_color;
     private javax.swing.JComboBox<String> cb_tipo;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
-    private javax.swing.JLabel jLabel60;
-    private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
-    private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
@@ -714,7 +1511,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jb_ingresarCoordenadas;
     private javax.swing.JButton jb_nuevaPartida;
@@ -734,6 +1530,54 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel lb_B6;
     private javax.swing.JLabel lb_B7;
     private javax.swing.JLabel lb_B8;
+    private javax.swing.JLabel lb_C1;
+    private javax.swing.JLabel lb_C2;
+    private javax.swing.JLabel lb_C3;
+    private javax.swing.JLabel lb_C4;
+    private javax.swing.JLabel lb_C5;
+    private javax.swing.JLabel lb_C6;
+    private javax.swing.JLabel lb_C7;
+    private javax.swing.JLabel lb_C8;
+    private javax.swing.JLabel lb_D1;
+    private javax.swing.JLabel lb_D2;
+    private javax.swing.JLabel lb_D3;
+    private javax.swing.JLabel lb_D4;
+    private javax.swing.JLabel lb_D5;
+    private javax.swing.JLabel lb_D6;
+    private javax.swing.JLabel lb_D7;
+    private javax.swing.JLabel lb_D8;
+    private javax.swing.JLabel lb_E1;
+    private javax.swing.JLabel lb_E2;
+    private javax.swing.JLabel lb_E3;
+    private javax.swing.JLabel lb_E4;
+    private javax.swing.JLabel lb_E5;
+    private javax.swing.JLabel lb_E6;
+    private javax.swing.JLabel lb_E7;
+    private javax.swing.JLabel lb_E8;
+    private javax.swing.JLabel lb_F1;
+    private javax.swing.JLabel lb_F2;
+    private javax.swing.JLabel lb_F3;
+    private javax.swing.JLabel lb_F4;
+    private javax.swing.JLabel lb_F5;
+    private javax.swing.JLabel lb_F6;
+    private javax.swing.JLabel lb_F7;
+    private javax.swing.JLabel lb_F8;
+    private javax.swing.JLabel lb_G1;
+    private javax.swing.JLabel lb_G2;
+    private javax.swing.JLabel lb_G3;
+    private javax.swing.JLabel lb_G4;
+    private javax.swing.JLabel lb_G5;
+    private javax.swing.JLabel lb_G6;
+    private javax.swing.JLabel lb_G7;
+    private javax.swing.JLabel lb_G8;
+    private javax.swing.JLabel lb_H1;
+    private javax.swing.JLabel lb_H2;
+    private javax.swing.JLabel lb_H3;
+    private javax.swing.JLabel lb_H4;
+    private javax.swing.JLabel lb_H5;
+    private javax.swing.JLabel lb_H6;
+    private javax.swing.JLabel lb_H7;
+    private javax.swing.JLabel lb_H8;
     private javax.swing.JRadioButton rb_blanco;
     private javax.swing.JRadioButton rb_negro;
     private javax.swing.JTextField tf_posicion;
