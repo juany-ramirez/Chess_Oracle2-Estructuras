@@ -1450,7 +1450,79 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_ingresarCoordenadasMouseClicked
 
     private void jb_nuevaPartidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_nuevaPartidaMouseClicked
-
+        Icon gray = new ImageIcon("src/Icons/gray_tile.png");
+        Icon white = new ImageIcon("src/Icons/white_tile.png");
+        lb_A1.setIcon(gray);
+        lb_A2.setIcon(white);
+        lb_A3.setIcon(gray);
+        lb_A4.setIcon(white);
+        lb_A5.setIcon(gray);
+        lb_A6.setIcon(white);
+        lb_A7.setIcon(gray);
+        lb_A8.setIcon(white);
+        
+        lb_B1.setIcon(white);
+        lb_B2.setIcon(gray);
+        lb_B3.setIcon(white);
+        lb_B4.setIcon(gray);
+        lb_B5.setIcon(white);
+        lb_B6.setIcon(gray);
+        lb_B7.setIcon(white);
+        lb_B8.setIcon(gray);
+        
+        lb_C1.setIcon(gray);
+        lb_C2.setIcon(white);
+        lb_C3.setIcon(gray);
+        lb_C4.setIcon(white);
+        lb_C5.setIcon(gray);
+        lb_C6.setIcon(white);
+        lb_C7.setIcon(gray);
+        lb_C8.setIcon(white);
+        
+        lb_D1.setIcon(white);
+        lb_D2.setIcon(gray);
+        lb_D3.setIcon(white);
+        lb_D4.setIcon(gray);
+        lb_D5.setIcon(white);
+        lb_D6.setIcon(gray);
+        lb_D7.setIcon(white);
+        lb_D8.setIcon(gray);
+       
+        lb_E1.setIcon(gray);
+        lb_E2.setIcon(white);
+        lb_E3.setIcon(gray);
+        lb_E4.setIcon(white);
+        lb_E5.setIcon(gray);
+        lb_E6.setIcon(white);
+        lb_E7.setIcon(gray);
+        lb_E8.setIcon(white);
+        
+        lb_F1.setIcon(white);
+        lb_F2.setIcon(gray);
+        lb_F3.setIcon(white);
+        lb_F4.setIcon(gray);
+        lb_F5.setIcon(white);
+        lb_F6.setIcon(gray);
+        lb_F7.setIcon(white);
+        lb_F8.setIcon(gray);
+        
+        lb_G1.setIcon(gray);
+        lb_G2.setIcon(white);
+        lb_G3.setIcon(gray);
+        lb_G4.setIcon(white);
+        lb_G5.setIcon(gray);
+        lb_G6.setIcon(white);
+        lb_G7.setIcon(gray);
+        lb_G8.setIcon(white);
+        
+        lb_H1.setIcon(white);
+        lb_H2.setIcon(gray);
+        lb_H3.setIcon(white);
+        lb_H4.setIcon(gray);
+        lb_H5.setIcon(white);
+        lb_H6.setIcon(gray);
+        lb_H7.setIcon(white);
+        lb_H8.setIcon(gray);
     }//GEN-LAST:event_jb_nuevaPartidaMouseClicked
 
     /**
