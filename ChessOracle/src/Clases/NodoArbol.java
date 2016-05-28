@@ -9,30 +9,46 @@ package Clases;
  *
  * @author Admin
  */
-public class NodoArbol {
-    
-    Object value;
-    Lista hijos;
+public class NodoArbol {    
+    Movimiento value;
+    NodoArbol padre;
+    Lista hijos=new Lista();
+    int nivel=0;
     
     public NodoArbol() {
-        hijos = new Lista();
+        value=null;
     }
 
-    public NodoArbol(Object padre) {
-        this.value = padre;
+    public NodoArbol(Movimiento move, NodoArbol padre) {
+        this.value = move;
+        this.padre=padre;   
     } 
-    
-    public NodoArbol(Object padre, Lista hijos) {
-        this.value = padre;
-        this.hijos = hijos;
-    }
-    
-    public Object getValue() {
+        
+    public Movimiento getValue() {
         return value;
     }
 
-    public void setValue(Object padre) {
-        this.value = padre;
+    public void setValue(Movimiento move) {
+        this.value = move;
+    }
+
+    public NodoArbol getPadre() {
+        return padre;
+    }
+
+    public int getNivel() {
+        if(padre==null){
+            return 0;
+        }
+        return padre.getNivel()+1;
+    }
+
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
+    }
+
+    public void setPadre(NodoArbol padre) {
+        this.padre = padre;
     }
 
     public Lista getHijos() {
@@ -42,24 +58,40 @@ public class NodoArbol {
     public void setHijos(Lista hijos) {
         this.hijos = hijos;
     }
-    
-    public void addSon(Object value){
-        if (hijos == null)
-            hijos = new Lista();
-        hijos.push(new NodoArbol(value));
+      
+    public NodoArbol getRightBrother(){
+        NodoArbol derecho = null;
+        derecho=(NodoArbol)padre.getHijos().at(padre.getHijos().find(this));
+        return derecho;
+    }
+ 
+    public NodoArbol getLefterSon(){
+        NodoArbol izquierdo= (NodoArbol)hijos.at(0);
+        return izquierdo;
     }
     
-    public void deleteSon(Object value){
-        hijos.remove(hijos.find(value));
+    public void addSon(Movimiento move){
+        hijos.insert(new NodoArbol(move,this),hijos.getSize());
+        nivel++;
     }
     
-    public int sizeH(){
-        return hijos.size;
+    public void delete(){
+        padre.getHijos().remove(padre.getHijos().find(this));
     }
     
-    public boolean tieneHijos(){
-        if(hijos == null || hijos.size == 0)
-            return true;
-        return false;
+    public boolean isLeaf(){
+        return hijos.getSize()==0;
+    }
+    
+    public void recorrido(){
+        for (int i = 0; i < this.getNivel(); i++) {
+            System.out.print(".");
+        }
+        if(!isLeaf()){
+            for (int i = 0; i < this.getHijos().getSize(); i++) {
+                System.out.println(hijos.at(i));
+            }
+        }
+    
     }
 }

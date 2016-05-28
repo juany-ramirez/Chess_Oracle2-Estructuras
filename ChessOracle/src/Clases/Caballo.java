@@ -3,7 +3,7 @@ package Clases;
 
 public class Caballo extends Pieza {
 
-    public Caballo(byte color, int x, int y) {
+    public Caballo(String color, int x, int y) {
         super(color, x, y);
     } //constructor
 
@@ -36,18 +36,8 @@ public class Caballo extends Pieza {
             return false;
         }
     } //si el moviemiento es valido
-//C++ TO JAVA CONVERTER WARNING: 'const' methods are not available in Java:
-//ORIGINAL LINE: virtual String toString()const
 
-    @Override
-    public String toString() {
-        String ss;
-        if (color == 'N') {
-            ss = "C";
-        } else {
-            ss = "c";
-        }
-        return ss;
-    }
+
+
 
 }

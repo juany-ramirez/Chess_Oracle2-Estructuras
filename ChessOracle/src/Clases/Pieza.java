@@ -2,27 +2,16 @@ package Clases;
 
 public abstract class Pieza {
 
-    protected byte color;
+    protected String color;
     protected Posicion posicion = new Posicion();
 
-    public Pieza(byte color, int x) {
-        this(color, x, 0);
-    }
 
-    public Pieza(byte color) {
-        this(color, 0, 0);
-    }
-
-    public Pieza() {
-        
-    }
-
-    public Pieza(byte color, int x, int y) {
+    public Pieza(String color, int x, int y) {
         this.color = color;
         this.posicion = new Posicion(x, y);
     }
 
-    public final byte getColor() {
+    public String getColor() {
         return color;
     }
 
@@ -30,7 +19,7 @@ public abstract class Pieza {
         return posicion;
     }
 
-    public final void setColor(byte color) {
+    public final void setColor(String color) {
         this.color = color;
     }
 
@@ -40,8 +29,5 @@ public abstract class Pieza {
 
     public abstract boolean movimientoValido(Pieza[][] NamelessParameter1, Posicion NamelessParameter2);
 
-    public String toString() {
-        String retval = "";
-        return retval;
-    }
+   
 }

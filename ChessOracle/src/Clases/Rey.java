@@ -4,21 +4,21 @@ package Clases;
 
 public class Rey extends Pieza {
 
-    public Rey(byte color, int x, int y) {
+    public Rey(String color, int x, int y) {
         super(color, x, y);
     }
 
     public boolean movimientoValido(Pieza[][] tablero, Posicion direccion) {
         int diferenciaV;
         int diferenciaH;
-        byte actual;
-        byte opuesto;
-        if (this.getColor() == 'B') {
-            actual = (byte) 'B';
-            opuesto = (byte) 'N';
+        String actual;
+        String opuesto;
+        if (this.getColor() == "B") {
+            actual = "B";
+            opuesto = "N";
         } else {
-            actual = (byte) 'N';
-            opuesto = (byte) 'B';
+            actual = "N";
+            opuesto = "B";
         }
 
         if (tablero[direccion.getY()][direccion.getX()] == null || tablero[direccion.getY()][direccion.getX()].getColor() == opuesto) {
@@ -45,14 +45,5 @@ public class Rey extends Pieza {
         return false;
     }
 
-    public String toString() {
-        String ss;
-        if (color == 'N') {
-            ss = "R";
-        } else {
-            ss = "r";
-        }
-        return ss;
-    }
 
 }

@@ -4,7 +4,7 @@ package Clases;
 
 public class Alfil extends Pieza {
 
-    public Alfil(byte color, int X, int Y) {
+    public Alfil(String color, int X, int Y) {
         super(color, X, Y);
     }
 
@@ -12,7 +12,7 @@ public class Alfil extends Pieza {
     public boolean movimientoValido(Pieza[][] tablero, Posicion direccion) {
         int y;
         int x;
-        byte actual = this.getColor();
+        String actual = this.getColor();
 
         if ((this.posicion.getX() == direccion.getX()) || (this.posicion.getY() == direccion.getY())) {
             //verifica que no se mueva a los lados ni verticalmente
@@ -99,15 +99,5 @@ public class Alfil extends Pieza {
         return false;
     }
 
-    @Override
-    public String toString() {
-        String ss;
-        if (color == 'N') {
-            ss = "A";
-        } else {
-            ss = "a";
-        }
-        return ss;
-    }
 
 }

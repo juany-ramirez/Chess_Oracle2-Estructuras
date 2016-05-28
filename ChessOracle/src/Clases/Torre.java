@@ -2,7 +2,7 @@ package Clases;
 
 public class Torre extends Pieza {
 
-    public Torre(byte color, int x, int y) {
+    public Torre(String color, int x, int y) {
         super(color, x, y);
     }
 
@@ -62,15 +62,5 @@ public class Torre extends Pieza {
             }
         }
         return false;
-    }
-
-    public String toString() {
-        String ss;
-        if (color == 'N') {
-            ss = "T";
-        } else {
-            ss = "t";
-        }
-        return ss;
     }
 }

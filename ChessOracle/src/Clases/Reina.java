@@ -2,7 +2,7 @@ package Clases;
 
 public class Reina extends Pieza
 {
-	public Reina(byte color, int x, int y)
+	public Reina(String color, int x, int y)
 	{
 		super(color, x, y);
 	}
@@ -32,17 +32,5 @@ public class Reina extends Pieza
 		}
 	}
         
-	public String toString()
-	{
-		String ss;
-		if (color == 'N')
-		{
-			ss = "Q";
-		}
-		else
-		{
-			ss = "q";
-		}
-		return ss;
-	}
+
 }

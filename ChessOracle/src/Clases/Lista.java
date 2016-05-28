@@ -11,17 +11,15 @@ package Clases;
  * @author manuel
  */
 public class Lista {
-
-    Nodo head;
-    int size;
+    Nodo head=null;
+    int size=0;
 
     public Lista() {
-        size = 0;
+        head=null;
     }
 
     public Lista(Object value) {
         head = new Nodo(value);
-        size = 1;
     }
 
     public Nodo getHead() {
@@ -31,38 +29,49 @@ public class Lista {
     public void setHead(Nodo value) {
         head = value;
     }
+    
+      public int getSize() {
+        return size;
+    }
+    
+    public void setSize(int size){
+        this.size = size;
+    }
+    
 
     public void insert(Object value, int position) {
-        if (position >= 0 && position < size) {
-
-            Nodo current = head;
-            if (position == 0) {
-                this.setHead(new Nodo(value));
-                head.setNext(current);
-            } else {
-                for (int i = 0; i < position - 1; i++) {
-                    current = current.getNext();
-                }
-
-                if (current.hasNext() == false) {
-                    current.setNext((new Nodo(value)));
-                } else {
-                    Nodo second = current.getNext();
-                    current.setNext(new Nodo(value));
-                    current.getNext().setNext(second);
+        if (head != null) {
+            if (position == 0 || position >= 0 && position <= size) {
+                int current = 0;
+                Nodo actual = head;
+                Nodo next;
+                if (position > 0) {
+                    while (current != position - 1) {
+                        actual = actual.getNext();
+                        current++;
+                    }
+                    Nodo olderNext = actual.getNext();
+                    next = new Nodo(value);
+                    actual.setNext(new Nodo(value));
+                    next.setNext(olderNext);
+                    size++;
+                } else if (position == 0) {
+                    next = head;
+                    setHead(new Nodo(value));
+                    head.setNext(next);
+                    size++;
                 }
             }
+        } else {
+            head = new Nodo(value);
             size++;
         }
     }
 
-    public int getSize() {
-        return size;
-    }
+  
 
     public int find(Object value) {
         Nodo current = head;
-
         for (int i = 0; i < size; i++) {
             if (current.getValue() == value) {
                 return i;
@@ -72,22 +81,8 @@ public class Lista {
         return -1;
     }
 
-    public Nodo at(int position) {
+    public Object at(int position) {
         Nodo current = head;
-
-        for (int i = 0; i < size; i++) {
-            if (i == position) {
-                return current;
-            }
-
-            current = current.getNext();
-        }
-        return null;
-    }
-
-    public Object get(int position) {
-        Nodo current = head;
-
         for (int i = 0; i < size; i++) {
             if (i == position) {
                 return current.getValue();
@@ -95,7 +90,7 @@ public class Lista {
 
             current = current.getNext();
         }
-        return -1;
+        return null;
     }
 
     public Object first() {
@@ -103,13 +98,8 @@ public class Lista {
     }
 
     public void concat(Lista nueva) {
-        Nodo current = head;
-        while (current.hasNext()) {
-            current = current.getNext();
-        }
-
-        current.setNext(nueva.getHead());
-        size = size + nueva.getSize();
+        size += nueva.getSize();
+        insert(nueva.getHead(), 0);
     }
 
     public void push(Object value) {
@@ -130,23 +120,27 @@ public class Lista {
     }
 
     public void remove(int position) {
-        if (position >= 0 && position < size) {
-            if (position == 0) {
-                this.setHead(head.getNext());
-            } else if (position == size - 1) {
-                this.at(size - 2).setNext(null);
-            } else {
-                Nodo current = head;
-
-                for (int i = 0; i < position - 1; i++) {
-                    current = current.getNext();
+        if (head != null) {
+            if (position == 0 || position > 0 && position < size) {
+                int current = 0;
+                Nodo actual = head;
+                if (position > 0) {
+                    while (current < position - 1) {
+                        actual = actual.getNext();
+                        current++;
+                    }
+                    if (actual.hasNext()) {
+                        actual.setNext(actual.getNext().getNext());
+                        size--;
+                    } else {
+                        actual = null;
+                        size--;
+                    }
+                } else {
+                    setHead(head.getNext());
+                    size--;
                 }
-
-                Nodo second = current.getNext().getNext();
-                current.setNext(second);
-
             }
-            size--;
         }
     }
 }

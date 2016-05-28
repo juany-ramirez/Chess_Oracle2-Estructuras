@@ -1,5 +1,7 @@
 package Clases;
 
+import java.awt.Frame;
+import java.awt.Window;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
@@ -22,6 +24,8 @@ public class Main extends javax.swing.JFrame {
     private void initComponents() {
 
         bg_color = new javax.swing.ButtonGroup();
+        bg_jugada = new javax.swing.ButtonGroup();
+        jd_movimientos = new javax.swing.JDialog();
         lb_A3 = new javax.swing.JLabel();
         lb_A4 = new javax.swing.JLabel();
         lb_B1 = new javax.swing.JLabel();
@@ -105,16 +109,32 @@ public class Main extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jb_nuevaPartida = new javax.swing.JButton();
         jLabel81 = new javax.swing.JLabel();
-        cb_tipo = new javax.swing.JComboBox<>();
+        cb_tipo = new javax.swing.JComboBox<String>();
         rb_negro = new javax.swing.JRadioButton();
         rb_blanco = new javax.swing.JRadioButton();
         jb_ingresarCoordenadas = new javax.swing.JButton();
         tf_posicion = new javax.swing.JTextField();
         jLabel82 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jRadioButton1 = new javax.swing.JRadioButton();
+        jRadioButton2 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+
+        javax.swing.GroupLayout jd_movimientosLayout = new javax.swing.GroupLayout(jd_movimientos.getContentPane());
+        jd_movimientos.getContentPane().setLayout(jd_movimientosLayout);
+        jd_movimientosLayout.setHorizontalGroup(
+            jd_movimientosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jd_movimientosLayout.setVerticalGroup(
+            jd_movimientosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -425,8 +445,9 @@ public class Main extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(67, 67, 67));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.setForeground(new java.awt.Color(102, 0, 102));
 
-        jb_nuevaPartida.setBackground(new java.awt.Color(153, 153, 0));
+        jb_nuevaPartida.setBackground(new java.awt.Color(153, 153, 153));
         jb_nuevaPartida.setFont(new java.awt.Font("Modern No. 20", 1, 24)); // NOI18N
         jb_nuevaPartida.setForeground(new java.awt.Color(102, 0, 102));
         jb_nuevaPartida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/new.png"))); // NOI18N
@@ -443,7 +464,7 @@ public class Main extends javax.swing.JFrame {
         jLabel81.setText("SELECCIONE LA PIEZA");
 
         cb_tipo.setFont(new java.awt.Font("Times New Roman", 0, 14)); // NOI18N
-        cb_tipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CABALLO", "REY", "PEON" }));
+        cb_tipo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "CABALLO", "REY", "PEON" }));
 
         bg_color.add(rb_negro);
         rb_negro.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -456,11 +477,11 @@ public class Main extends javax.swing.JFrame {
         rb_blanco.setSelected(true);
         rb_blanco.setText("BLANCO");
 
-        jb_ingresarCoordenadas.setBackground(new java.awt.Color(153, 153, 0));
-        jb_ingresarCoordenadas.setFont(new java.awt.Font("Modern No. 20", 1, 24)); // NOI18N
+        jb_ingresarCoordenadas.setBackground(new java.awt.Color(153, 153, 153));
+        jb_ingresarCoordenadas.setFont(new java.awt.Font("Modern No. 20", 1, 14)); // NOI18N
         jb_ingresarCoordenadas.setForeground(new java.awt.Color(102, 0, 102));
         jb_ingresarCoordenadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/add.png"))); // NOI18N
-        jb_ingresarCoordenadas.setText("INGRESAR");
+        jb_ingresarCoordenadas.setText("INGRESAR PIEZA");
         jb_ingresarCoordenadas.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jb_ingresarCoordenadasMouseClicked(evt);
@@ -473,33 +494,68 @@ public class Main extends javax.swing.JFrame {
         jLabel82.setForeground(new java.awt.Color(255, 255, 255));
         jLabel82.setText("POSICIÓN DE LA PIEZA");
 
+        jButton1.setBackground(new java.awt.Color(153, 153, 153));
+        jButton1.setFont(new java.awt.Font("Modern No. 20", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(102, 0, 102));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/jugar.png"))); // NOI18N
+        jButton1.setText("ANALIZAR JUAGADA");
+        jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        bg_jugada.add(jRadioButton1);
+        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton1.setText("COMER UN CABALLO");
+
+        bg_jugada.add(jRadioButton2);
+        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton2.setText("CORONAR UN PEÓN");
+
+        bg_jugada.add(jRadioButton3);
+        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jRadioButton3.setText("JAQUE AL REY");
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/decorative-swirl-with-shadow-hi.png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(41, Short.MAX_VALUE)
+                .addContainerGap(24, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jb_nuevaPartida, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jRadioButton3)
+                            .addComponent(jRadioButton2)
+                            .addComponent(jRadioButton1))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(rb_negro)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel82)
-                                .addComponent(rb_blanco)
-                                .addComponent(jLabel81))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(rb_negro)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(rb_blanco)
+                                        .addComponent(jLabel81))
+                                    .addGap(3, 3, 3))
+                                .addComponent(jLabel82))
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(cb_tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(109, 109, 109))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jb_nuevaPartida, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(58, 58, 58))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(tf_posicion, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(11, 11, 11)))
-                        .addGap(81, 81, 81))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jb_ingresarCoordenadas, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(50, 50, 50))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(cb_tipo, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(96, 96, 96))))
+                                .addGap(123, 123, 123))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jb_ingresarCoordenadas, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(77, 77, 77))))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -514,16 +570,27 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rb_blanco)
                     .addComponent(rb_negro))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel82)
                 .addGap(18, 18, 18)
                 .addComponent(tf_posicion, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addGap(18, 18, 18)
                 .addComponent(jb_ingresarCoordenadas, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jRadioButton1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jRadioButton3))
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 61, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 260, -1, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 210, 440, 660));
 
         jLabel2.setFont(new java.awt.Font("Modern No. 20", 0, 90)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 0, 102));
@@ -531,14 +598,15 @@ public class Main extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 950, 100));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/decorative-swirl-with-shadow-hi.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 810, 310, 60));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 870, 310, 60));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/decorative-swirl-with-shadow-hi.png"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 190, 310, 60));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 150, 350, 60));
 
         jLabel1.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white-wallpaper-18 (1).jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1220, 900));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1240, 950));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1562,11 +1630,14 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup bg_color;
+    private javax.swing.ButtonGroup bg_jugada;
     private javax.swing.JComboBox<String> cb_tipo;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
@@ -1586,8 +1657,12 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JButton jb_ingresarCoordenadas;
     private javax.swing.JButton jb_nuevaPartida;
+    private javax.swing.JDialog jd_movimientos;
     private javax.swing.JLabel lb_A1;
     private javax.swing.JLabel lb_A2;
     private javax.swing.JLabel lb_A3;

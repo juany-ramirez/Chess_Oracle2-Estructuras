@@ -10,26 +10,22 @@ package Clases;
  * @author Admin
  */
 public class Arbol {
-    NodoArbol raiz;
-    
-    
-    public NodoArbol getLefterSon(){
+    NodoArbol root=null;
+
+    public Arbol(NodoArbol root) {
+        this.root = root;
+    }
+
+    public NodoArbol getRoot() {
+        return root;
+    }
+
+    public void setRoot(NodoArbol root) {
+        this.root = root;
+    }
         
-        return raiz;//esta funcion no retorna esto
+    public boolean isEmpty(){
+        return(root==null);
     }
-    
-    public NodoArbol getRightBrother(){
-        return raiz;//esta funcion no retorna esto
-    }
-    
-    public Lista Profundidad(){
-        Lista mapeo = new Lista();
-        Lista  lineaPresente = new Lista();
-        /*
-        recorrer todas las lineas, e ir comparando cual es tiene el menor size
-        */
-        return mapeo;
-    }
-    
     
 }
