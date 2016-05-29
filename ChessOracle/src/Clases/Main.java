@@ -116,9 +116,9 @@ public class Main extends javax.swing.JFrame {
         tf_posicion = new javax.swing.JTextField();
         jLabel82 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
+        rb_caballo = new javax.swing.JRadioButton();
+        rb_peon = new javax.swing.JRadioButton();
+        rb_rey = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -498,20 +498,25 @@ public class Main extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Modern No. 20", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(102, 0, 102));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/jugar.png"))); // NOI18N
-        jButton1.setText("ANALIZAR JUAGADA");
+        jButton1.setText("ANALIZAR JUGADA");
         jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
 
-        bg_jugada.add(jRadioButton1);
-        jRadioButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton1.setText("COMER UN CABALLO");
+        bg_jugada.add(rb_caballo);
+        rb_caballo.setForeground(new java.awt.Color(255, 255, 255));
+        rb_caballo.setText("COMER UN CABALLO");
 
-        bg_jugada.add(jRadioButton2);
-        jRadioButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton2.setText("CORONAR UN PEÓN");
+        bg_jugada.add(rb_peon);
+        rb_peon.setForeground(new java.awt.Color(255, 255, 255));
+        rb_peon.setText("CORONAR UN PEÓN");
 
-        bg_jugada.add(jRadioButton3);
-        jRadioButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jRadioButton3.setText("JAQUE AL REY");
+        bg_jugada.add(rb_rey);
+        rb_rey.setForeground(new java.awt.Color(255, 255, 255));
+        rb_rey.setText("JAQUE AL REY");
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/decorative-swirl-with-shadow-hi.png"))); // NOI18N
 
@@ -524,9 +529,9 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton3)
-                            .addComponent(jRadioButton2)
-                            .addComponent(jRadioButton1))
+                            .addComponent(rb_rey)
+                            .addComponent(rb_peon)
+                            .addComponent(rb_caballo))
                         .addGap(18, 18, 18)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27))
@@ -581,11 +586,11 @@ public class Main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jRadioButton1)
+                        .addComponent(rb_caballo)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton2)
+                        .addComponent(rb_peon)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton3))
+                        .addComponent(rb_rey))
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 61, Short.MAX_VALUE))
         );
@@ -1593,6 +1598,17 @@ public class Main extends javax.swing.JFrame {
         lb_H8.setIcon(gray);
     }//GEN-LAST:event_jb_nuevaPartidaMouseClicked
 
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+        if(rb_peon.isSelected()){//arbol para coronar un peon
+            
+        }else if(rb_caballo.isSelected()){//arbol para comer un caballo
+            
+        }else if(rb_rey.isSelected()){//arbol para poner en jaque al rey
+            
+        }
+    }//GEN-LAST:event_jButton1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -1657,9 +1673,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JButton jb_ingresarCoordenadas;
     private javax.swing.JButton jb_nuevaPartida;
     private javax.swing.JDialog jd_movimientos;
@@ -1728,7 +1741,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel lb_H7;
     private javax.swing.JLabel lb_H8;
     private javax.swing.JRadioButton rb_blanco;
+    private javax.swing.JRadioButton rb_caballo;
     private javax.swing.JRadioButton rb_negro;
+    private javax.swing.JRadioButton rb_peon;
+    private javax.swing.JRadioButton rb_rey;
     private javax.swing.JTextField tf_posicion;
     // End of variables declaration//GEN-END:variables
 }
