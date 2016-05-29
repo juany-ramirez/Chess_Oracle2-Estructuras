@@ -28,4 +28,17 @@ public class Arbol {
         return(root==null);
     }
     
+    public void llamarRecorrido(){
+        recorrido(root);
+    }
+    public void recorrido(NodoArbol nodo){
+        for (int i = -1; i < nodo.getHijos().getSize(); i++){ 
+            if(nodo.getPadre()!=null){
+                System.out.println(nodo.getValue()+" (Padre: "+nodo.getPadre()+")");
+            }else{
+                System.out.println(nodo.getValue());
+            }
+            recorrido((NodoArbol)nodo.getHijos().at(i+1));
+        }
+    }
 }

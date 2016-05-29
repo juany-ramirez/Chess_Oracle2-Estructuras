@@ -82,16 +82,6 @@ public class NodoArbol {
     public boolean isLeaf(){
         return hijos.getSize()==0;
     }
-    
-    public void recorrido(){
-        for (int i = 0; i < this.getNivel(); i++) {
-            System.out.print(".");
-        }
-        if(!isLeaf()){
-            for (int i = 0; i < this.getHijos().getSize(); i++) {
-                System.out.println(hijos.at(i));
-            }
-        }
-    
-    }
 }
+    
+   
