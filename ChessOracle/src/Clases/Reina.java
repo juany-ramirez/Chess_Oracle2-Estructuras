@@ -2,6 +2,9 @@ package Clases;
 
 public class Reina extends Pieza
 {
+    public Reina(){
+	}
+    
 	public Reina(String color, int x, int y)
 	{
 		super(color, x, y);
@@ -17,7 +20,7 @@ public class Reina extends Pieza
 		return torre;
 	}
         
-	public boolean movimientoValido(Pieza[][] tablero, Posicion direccion)
+	public boolean movimientoValido(Tablero tablero, Posicion direccion)
 	{
 		Alfil a = alfilValido();
 		Torre t = torreValido();

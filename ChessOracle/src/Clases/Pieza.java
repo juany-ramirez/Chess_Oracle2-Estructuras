@@ -6,6 +6,10 @@ public abstract class Pieza {
     protected Posicion posicion = new Posicion();
 
 
+    public Pieza() {
+    
+    }
+    
     public Pieza(String color, int x, int y) {
         this.color = color;
         this.posicion = new Posicion(x, y);
@@ -15,6 +19,7 @@ public abstract class Pieza {
         return color;
     }
 
+    
     public final Posicion getPosicion() {
         return posicion;
     }
@@ -27,7 +32,7 @@ public abstract class Pieza {
         this.posicion=posicion;
     }
 
-    public abstract boolean movimientoValido(Pieza[][] NamelessParameter1, Posicion NamelessParameter2);
+    public abstract boolean movimientoValido(Tablero NamelessParameter1, Posicion NamelessParameter2);
 
    
 }
