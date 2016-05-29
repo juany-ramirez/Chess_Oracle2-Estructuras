@@ -27,7 +27,6 @@ public class Main extends javax.swing.JFrame {
         bg_color = new javax.swing.ButtonGroup();
         bg_jugada = new javax.swing.ButtonGroup();
         jd_movimientos = new javax.swing.JDialog();
-        jd_Opciones = new javax.swing.JDialog();
         lb_A3 = new javax.swing.JLabel();
         lb_A4 = new javax.swing.JLabel();
         lb_B1 = new javax.swing.JLabel();
@@ -135,17 +134,6 @@ public class Main extends javax.swing.JFrame {
         );
         jd_movimientosLayout.setVerticalGroup(
             jd_movimientosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jd_OpcionesLayout = new javax.swing.GroupLayout(jd_Opciones.getContentPane());
-        jd_Opciones.getContentPane().setLayout(jd_OpcionesLayout);
-        jd_OpcionesLayout.setHorizontalGroup(
-            jd_OpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        jd_OpcionesLayout.setVerticalGroup(
-            jd_OpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
@@ -460,7 +448,7 @@ public class Main extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setForeground(new java.awt.Color(102, 0, 102));
 
-        jb_nuevaPartida.setBackground(new java.awt.Color(153, 153, 0));
+        jb_nuevaPartida.setBackground(new java.awt.Color(102, 102, 102));
         jb_nuevaPartida.setFont(new java.awt.Font("Modern No. 20", 1, 24)); // NOI18N
         jb_nuevaPartida.setForeground(new java.awt.Color(102, 0, 102));
         jb_nuevaPartida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/new.png"))); // NOI18N
@@ -490,7 +478,7 @@ public class Main extends javax.swing.JFrame {
         rb_blanco.setSelected(true);
         rb_blanco.setText("BLANCO");
 
-        jb_ingresarCoordenadas.setBackground(new java.awt.Color(153, 153, 0));
+        jb_ingresarCoordenadas.setBackground(new java.awt.Color(102, 102, 102));
         jb_ingresarCoordenadas.setFont(new java.awt.Font("Modern No. 20", 1, 14)); // NOI18N
         jb_ingresarCoordenadas.setForeground(new java.awt.Color(102, 0, 102));
         jb_ingresarCoordenadas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/add.png"))); // NOI18N
@@ -507,7 +495,7 @@ public class Main extends javax.swing.JFrame {
         jLabel82.setForeground(new java.awt.Color(255, 255, 255));
         jLabel82.setText("POSICIÓN DE LA PIEZA");
 
-        jButton1.setBackground(new java.awt.Color(102, 102, 0));
+        jButton1.setBackground(new java.awt.Color(102, 102, 102));
         jButton1.setFont(new java.awt.Font("Gloucester MT Extra Condensed", 1, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(227, 227, 227));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/89-64.png"))); // NOI18N
@@ -548,7 +536,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(rb_caballo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -617,7 +605,7 @@ public class Main extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Modern No. 20", 0, 90)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(102, 0, 102));
         jLabel2.setText("C H E S S  O R A C L E");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, 950, 100));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 40, 950, 100));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/decorative-swirl-with-shadow-hi.png"))); // NOI18N
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 870, 310, 60));
@@ -647,9 +635,9 @@ public class Main extends javax.swing.JFrame {
         Icon bhorse_bt = new ImageIcon("src/Icons/bhorse_bt.png");
         Icon bpawn_bt = new ImageIcon("src/Icons/bpawn_bt.png");
         Icon bking_bt = new ImageIcon("src/Icons/bking_bt.png");
-        String posicion = tf_posicion.getText().toUpperCase();
+        String posicion = tf_posicion.getText();
         String tipo = cb_tipo.getSelectedItem().toString();
-        Pieza pieza;
+        Pieza pieza=null;
         char fila = posicion.charAt(0);
         char columna = posicion.charAt(1);
         switch (tipo) {
@@ -659,1707 +647,978 @@ public class Main extends javax.swing.JFrame {
                     pieza.setColor("B");
                     if (fila == 'A') {
                         if (columna == '1') {
-                            lb_A1.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(0, 0));
-                            tablero.add(0, 0, pieza);
+                            lb_A1.setIcon(whorse_bt);
                         } else if (columna == '2') {
                             lb_A2.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(0, 1));
-                            tablero.add(0, 1, pieza);
                         } else if (columna == '3') {
-                            lb_A3.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(0, 2));
-                            tablero.add(0, 2, pieza);
+                            lb_A3.setIcon(whorse_bt);
                         } else if (columna == '4') {
                             lb_A4.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(0, 3));
-                            tablero.add(0, 3, pieza);
                         } else if (columna == '5') {
-                            lb_A5.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(0, 4));
-                            tablero.add(0, 4, pieza);
+                            lb_A5.setIcon(whorse_bt);
                         } else if (columna == '6') {
                             lb_A6.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(0, 5));
-                            tablero.add(0, 5, pieza);
                         } else if (columna == '7') {
-                            lb_A7.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(0, 6));
-                            tablero.add(0, 6, pieza);
+                            lb_A7.setIcon(whorse_bt);
                         } else if (columna == '8') {
                             lb_A8.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(0, 7));
-                            tablero.add(0, 7, pieza);
                         }
                     }
                     if (fila == 'B') {
                         if (columna == '1') {
                             lb_B1.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(1, 0));
-                            tablero.add(1, 0, pieza);
                         } else if (columna == '2') {
-                            lb_B2.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(1, 1));
-                            tablero.add(1, 1, pieza);
+                            lb_B2.setIcon(whorse_bt);
                         } else if (columna == '3') {
                             lb_B3.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(1, 2));
-                            tablero.add(1, 2, pieza);
                         } else if (columna == '4') {
-                            lb_B4.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(1, 3));
-                            tablero.add(1, 3, pieza);
+                            lb_B4.setIcon(whorse_bt);
                         } else if (columna == '5') {
                             lb_B5.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(1, 4));
-                            tablero.add(1, 4, pieza);
                         } else if (columna == '6') {
-                            lb_B6.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(1, 5));
-                            tablero.add(1, 5, pieza);
+                            lb_B6.setIcon(whorse_bt);
                         } else if (columna == '7') {
                             lb_B7.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(1, 6));
-                            tablero.add(1, 6, pieza);
                         } else if (columna == '8') {
-                            lb_B8.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(1, 7));
-                            tablero.add(1, 7, pieza);
+                            lb_B8.setIcon(whorse_bt);
                         }
                     }
                     if (fila == 'C') {
                         if (columna == '1') {
-                            lb_C1.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(2, 0));
-                            tablero.add(2, 0, pieza);
+                            lb_C1.setIcon(whorse_bt);
                         } else if (columna == '2') {
                             lb_C2.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(2, 1));
-                            tablero.add(2, 1, pieza);
                         } else if (columna == '3') {
-                            lb_C3.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(2, 2));
-                            tablero.add(2, 2, pieza);
+                            lb_C3.setIcon(whorse_bt);
                         } else if (columna == '4') {
                             lb_C4.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(2, 3));
-                            tablero.add(2, 3, pieza);
                         } else if (columna == '5') {
-                            lb_C5.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(2, 4));
-                            tablero.add(2, 4, pieza);
+                            lb_C5.setIcon(whorse_bt);
                         } else if (columna == '6') {
                             lb_C6.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(2, 5));
-                            tablero.add(2, 5, pieza);
                         } else if (columna == '7') {
-                            lb_C7.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(2, 6));
-                            tablero.add(2, 6, pieza);
+                            lb_C7.setIcon(whorse_bt);
                         } else if (columna == '8') {
                             lb_C8.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(2, 7));
-                            tablero.add(2, 7, pieza);
                         }
                     }
                     if (fila == 'D') {
                         if (columna == '1') {
                             lb_D1.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(3, 0));
-                            tablero.add(3, 0, pieza);
                         } else if (columna == '2') {
-                            lb_D2.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(3, 1));
-                            tablero.add(3, 1, pieza);
+                            lb_D2.setIcon(whorse_bt);
                         } else if (columna == '3') {
                             lb_D3.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(3, 2));
-                            tablero.add(3, 2, pieza);
                         } else if (columna == '4') {
-                            lb_D4.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(3, 3));
-                            tablero.add(3, 3, pieza);
+                            lb_D4.setIcon(whorse_bt);
                         } else if (columna == '5') {
                             lb_D5.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(3, 4));
-                            tablero.add(3, 4, pieza);
                         } else if (columna == '6') {
-                            lb_D6.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(3, 5));
-                            tablero.add(3, 5, pieza);
+                            lb_D6.setIcon(whorse_bt);
                         } else if (columna == '7') {
                             lb_D7.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(3, 6));
-                            tablero.add(3, 6, pieza);
                         } else if (columna == '8') {
-                            lb_D8.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(3, 7));
-                            tablero.add(3, 7, pieza);
+                            lb_D8.setIcon(whorse_bt);
                         }
                     }
                     if (fila == 'E') {
                         if (columna == '1') {
-                            lb_E1.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(4, 0));
-                            tablero.add(4, 0, pieza);
+                            lb_E1.setIcon(whorse_bt);
                         } else if (columna == '2') {
                             lb_E2.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(4, 1));
-                            tablero.add(4, 1, pieza);
                         } else if (columna == '3') {
-                            lb_E3.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(4, 2));
-                            tablero.add(4, 2, pieza);
+                            lb_E3.setIcon(whorse_bt);
                         } else if (columna == '4') {
                             lb_E4.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(4, 3));
-                            tablero.add(4, 3, pieza);
                         } else if (columna == '5') {
-                            lb_E5.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(4, 4));
-                            tablero.add(4, 4, pieza);
+                            lb_E5.setIcon(whorse_bt);
                         } else if (columna == '6') {
                             lb_E6.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(4, 5));
-                            tablero.add(4, 5, pieza);
                         } else if (columna == '7') {
-                            lb_E7.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(4, 6));
-                            tablero.add(4, 6, pieza);
+                            lb_E7.setIcon(whorse_bt);
                         } else if (columna == '8') {
                             lb_E8.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(4, 7));
-                            tablero.add(4, 7, pieza);
                         }
                     }
                     if (fila == 'F') {
                         if (columna == '1') {
                             lb_F1.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(5, 0));
-                            tablero.add(5, 0, pieza);
                         } else if (columna == '2') {
-                            lb_F2.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(5, 1));
-                            tablero.add(5, 1, pieza);
+                            lb_F2.setIcon(whorse_bt);
                         } else if (columna == '3') {
                             lb_F3.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(5, 2));
-                            tablero.add(5, 2, pieza);
                         } else if (columna == '4') {
-                            lb_F4.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(5, 3));
-                            tablero.add(5, 3, pieza);
+                            lb_F4.setIcon(whorse_bt);
                         } else if (columna == '5') {
                             lb_F5.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(5, 4));
-                            tablero.add(5, 4, pieza);
                         } else if (columna == '6') {
-                            lb_F6.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(5, 5));
-                            tablero.add(5, 5, pieza);
+                            lb_F6.setIcon(whorse_bt);
                         } else if (columna == '7') {
                             lb_F7.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(5, 6));
-                            tablero.add(5, 6, pieza);
                         } else if (columna == '8') {
-                            lb_F8.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(5, 7));
-                            tablero.add(5, 7, pieza);
+                            lb_F8.setIcon(whorse_bt);
                         }
                     }
                     if (fila == 'G') {
                         if (columna == '1') {
-                            lb_G1.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(6, 0));
-                            tablero.add(6, 0, pieza);
+                            lb_G1.setIcon(whorse_bt);
                         } else if (columna == '2') {
                             lb_G2.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(6, 1));
-                            tablero.add(6, 1, pieza);
                         } else if (columna == '3') {
-                            lb_G3.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(6, 2));
-                            tablero.add(6, 2, pieza);
+                            lb_G3.setIcon(whorse_bt);
                         } else if (columna == '4') {
                             lb_G4.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(6, 3));
-                            tablero.add(6, 3, pieza);
                         } else if (columna == '5') {
-                            lb_G5.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(6, 4));
-                            tablero.add(6, 4, pieza);
+                            lb_G5.setIcon(whorse_bt);
                         } else if (columna == '6') {
                             lb_G6.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(6, 5));
-                            tablero.add(6, 5, pieza);
                         } else if (columna == '7') {
-                            lb_G7.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(6, 6));
-                            tablero.add(6, 6, pieza);
+                            lb_G7.setIcon(whorse_bt);
                         } else if (columna == '8') {
                             lb_G8.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(6, 7));
-                            tablero.add(6, 7, pieza);
                         }
                     }
                     if (fila == 'H') {
                         if (columna == '1') {
                             lb_H1.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(7, 0));
-                            tablero.add(7, 0, pieza);
                         } else if (columna == '2') {
-                            lb_H2.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(7, 1));
-                            tablero.add(7, 1, pieza);
+                            lb_H2.setIcon(whorse_bt);
                         } else if (columna == '3') {
                             lb_H3.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(7, 2));
-                            tablero.add(7, 2, pieza);
                         } else if (columna == '4') {
-                            lb_H4.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(7, 3));
-                            tablero.add(7, 3, pieza);
+                            lb_H4.setIcon(whorse_bt);
                         } else if (columna == '5') {
                             lb_H5.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(7, 4));
-                            tablero.add(7, 4, pieza);
                         } else if (columna == '6') {
-                            lb_H6.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(7, 5));
-                            tablero.add(7, 5, pieza);
+                            lb_H6.setIcon(whorse_bt);
                         } else if (columna == '7') {
                             lb_H7.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(7, 6));
-                            tablero.add(7, 6, pieza);
                         } else if (columna == '8') {
-                            lb_H8.setIcon(whorse_wt);
-                            pieza.setPosicion(new Posicion(7, 7));
-                            tablero.add(7, 7, pieza);
+                            lb_H8.setIcon(whorse_bt);
                         }
                     }
                 } else {//caballos negros
                     pieza.setColor("N");
                     if (fila == 'A') {
                         if (columna == '1') {
-                            lb_A1.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(0, 0));
-                            tablero.add(0, 0, pieza);
+                            lb_A1.setIcon(bhorse_bt);
                         } else if (columna == '2') {
                             lb_A2.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(0, 1));
-                            tablero.add(0, 1, pieza);
                         } else if (columna == '3') {
-                            lb_A3.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(0, 2));
-                            tablero.add(0, 2, pieza);
+                            lb_A3.setIcon(bhorse_bt);
                         } else if (columna == '4') {
                             lb_A4.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(0, 3));
-                            tablero.add(0, 3, pieza);
                         } else if (columna == '5') {
-                            lb_A5.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(0, 4));
-                            tablero.add(0, 4, pieza);
+                            lb_A5.setIcon(bhorse_bt);
                         } else if (columna == '6') {
                             lb_A6.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(0, 5));
-                            tablero.add(0, 5, pieza);
                         } else if (columna == '7') {
-                            lb_A7.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(0, 6));
-                            tablero.add(0, 6, pieza);
+                            lb_A7.setIcon(bhorse_bt);
                         } else if (columna == '8') {
                             lb_A8.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(0, 7));
-                            tablero.add(0, 7, pieza);
                         }
                     }
                     if (fila == 'B') {
                         if (columna == '1') {
                             lb_B1.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(1, 0));
-                            tablero.add(1, 0, pieza);
                         } else if (columna == '2') {
-                            lb_B2.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(1, 1));
-                            tablero.add(1, 1, pieza);
+                            lb_B2.setIcon(bhorse_bt);
                         } else if (columna == '3') {
                             lb_B3.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(1, 2));
-                            tablero.add(1, 2, pieza);
                         } else if (columna == '4') {
-                            lb_B4.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(1, 3));
-                            tablero.add(1, 3, pieza);
+                            lb_B4.setIcon(bhorse_bt);
                         } else if (columna == '5') {
                             lb_B5.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(1, 4));
-                            tablero.add(1, 4, pieza);
                         } else if (columna == '6') {
-                            lb_B6.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(1, 5));
-                            tablero.add(1, 5, pieza);
+                            lb_B6.setIcon(bhorse_bt);
                         } else if (columna == '7') {
                             lb_B7.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(1, 6));
-                            tablero.add(1, 6, pieza);
                         } else if (columna == '8') {
-                            lb_B8.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(1, 7));
-                            tablero.add(1, 7, pieza);
+                            lb_B8.setIcon(bhorse_bt);
                         }
                     }
                     if (fila == 'C') {
                         if (columna == '1') {
-                            lb_C1.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(2, 0));
-                            tablero.add(2, 0, pieza);
+                            lb_C1.setIcon(bhorse_bt);
                         } else if (columna == '2') {
                             lb_C2.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(2, 1));
-                            tablero.add(2, 1, pieza);
                         } else if (columna == '3') {
-                            lb_C3.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(2, 2));
-                            tablero.add(2, 2, pieza);
+                            lb_C3.setIcon(bhorse_bt);
                         } else if (columna == '4') {
                             lb_C4.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(2, 3));
-                            tablero.add(2, 3, pieza);
                         } else if (columna == '5') {
-                            lb_C5.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(2, 4));
-                            tablero.add(2, 4, pieza);
+                            lb_C5.setIcon(bhorse_bt);
                         } else if (columna == '6') {
                             lb_C6.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(2, 5));
-                            tablero.add(2, 5, pieza);
                         } else if (columna == '7') {
-                            lb_C7.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(2, 6));
-                            tablero.add(2, 6, pieza);
+                            lb_C7.setIcon(bhorse_bt);
                         } else if (columna == '8') {
                             lb_C8.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(2, 7));
-                            tablero.add(2, 7, pieza);
                         }
                     }
                     if (fila == 'D') {
                         if (columna == '1') {
                             lb_D1.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(3, 0));
-                            tablero.add(3, 0, pieza);
                         } else if (columna == '2') {
-                            lb_D2.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(3, 1));
-                            tablero.add(3, 1, pieza);
+                            lb_D2.setIcon(bhorse_bt);
                         } else if (columna == '3') {
                             lb_D3.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(3, 2));
-                            tablero.add(3, 2, pieza);
                         } else if (columna == '4') {
-                            lb_D4.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(3, 3));
-                            tablero.add(3, 3, pieza);
+                            lb_D4.setIcon(bhorse_bt);
                         } else if (columna == '5') {
                             lb_D5.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(3, 4));
-                            tablero.add(3, 4, pieza);
                         } else if (columna == '6') {
-                            lb_D6.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(3, 5));
-                            tablero.add(3, 5, pieza);
+                            lb_D6.setIcon(bhorse_bt);
                         } else if (columna == '7') {
                             lb_D7.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(3, 6));
-                            tablero.add(3, 6, pieza);
                         } else if (columna == '8') {
-                            lb_D8.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(3, 7));
-                            tablero.add(3, 7, pieza);
+                            lb_D8.setIcon(bhorse_bt);
                         }
                     }
                     if (fila == 'E') {
                         if (columna == '1') {
-                            lb_E1.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(4, 0));
-                            tablero.add(4, 0, pieza);
+                            lb_E1.setIcon(bhorse_bt);
                         } else if (columna == '2') {
                             lb_E2.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(4, 1));
-                            tablero.add(4, 1, pieza);
                         } else if (columna == '3') {
-                            lb_E3.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(4, 2));
-                            tablero.add(4, 2, pieza);
+                            lb_E3.setIcon(bhorse_bt);
                         } else if (columna == '4') {
                             lb_E4.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(4, 3));
-                            tablero.add(4, 3, pieza);
                         } else if (columna == '5') {
-                            lb_E5.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(4, 4));
-                            tablero.add(4, 4, pieza);
+                            lb_E5.setIcon(bhorse_bt);
                         } else if (columna == '6') {
                             lb_E6.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(4, 5));
-                            tablero.add(4, 5, pieza);
                         } else if (columna == '7') {
-                            lb_E7.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(4, 6));
-                            tablero.add(4, 6, pieza);
+                            lb_E7.setIcon(bhorse_bt);
                         } else if (columna == '8') {
                             lb_E8.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(4, 7));
-                            tablero.add(4, 7, pieza);
                         }
                     }
                     if (fila == 'F') {
                         if (columna == '1') {
                             lb_F1.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(5, 0));
-                            tablero.add(5, 0, pieza);
                         } else if (columna == '2') {
-                            lb_F2.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(5, 1));
-                            tablero.add(5, 1, pieza);
+                            lb_F2.setIcon(bhorse_bt);
                         } else if (columna == '3') {
                             lb_F3.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(5, 2));
-                            tablero.add(5, 2, pieza);
                         } else if (columna == '4') {
-                            lb_F4.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(5, 3));
-                            tablero.add(5, 3, pieza);
+                            lb_F4.setIcon(bhorse_bt);
                         } else if (columna == '5') {
                             lb_F5.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(5, 4));
-                            tablero.add(5, 4, pieza);
                         } else if (columna == '6') {
-                            lb_F6.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(5, 5));
-                            tablero.add(5, 5, pieza);
+                            lb_F6.setIcon(bhorse_bt);
                         } else if (columna == '7') {
                             lb_F7.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(5, 6));
-                            tablero.add(5, 6, pieza);
                         } else if (columna == '8') {
-                            lb_F8.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(5, 7));
-                            tablero.add(5, 7, pieza);
+                            lb_F8.setIcon(bhorse_bt);
                         }
                     }
                     if (fila == 'G') {
                         if (columna == '1') {
-                            lb_G1.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(6, 0));
-                            tablero.add(6, 0, pieza);
+                            lb_G1.setIcon(bhorse_bt);
                         } else if (columna == '2') {
                             lb_G2.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(6, 1));
-                            tablero.add(6, 1, pieza);
                         } else if (columna == '3') {
-                            lb_G3.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(6, 2));
-                            tablero.add(6, 2, pieza);
+                            lb_G3.setIcon(bhorse_bt);
                         } else if (columna == '4') {
                             lb_G4.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(6, 3));
-                            tablero.add(6, 3, pieza);
                         } else if (columna == '5') {
-                            lb_G5.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(6, 4));
-                            tablero.add(6, 4, pieza);
+                            lb_G5.setIcon(bhorse_bt);
                         } else if (columna == '6') {
                             lb_G6.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(6, 5));
-                            tablero.add(6, 5, pieza);
                         } else if (columna == '7') {
-                            lb_G7.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(6, 6));
-                            tablero.add(6, 6, pieza);
+                            lb_G7.setIcon(bhorse_bt);
                         } else if (columna == '8') {
                             lb_G8.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(6, 7));
-                            tablero.add(6, 7, pieza);
                         }
                     }
                     if (fila == 'H') {
                         if (columna == '1') {
                             lb_H1.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(7, 0));
-                            tablero.add(7, 0, pieza);
                         } else if (columna == '2') {
-                            lb_H2.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(7, 1));
-                            tablero.add(7, 1, pieza);
+                            lb_H2.setIcon(bhorse_bt);
                         } else if (columna == '3') {
                             lb_H3.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(7, 2));
-                            tablero.add(7, 2, pieza);
                         } else if (columna == '4') {
-                            lb_H4.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(7, 3));
-                            tablero.add(7, 3, pieza);
+                            lb_H4.setIcon(bhorse_bt);
                         } else if (columna == '5') {
                             lb_H5.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(7, 4));
-                            tablero.add(7, 4, pieza);
                         } else if (columna == '6') {
-                            lb_H6.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(7, 5));
-                            tablero.add(7, 5, pieza);
+                            lb_H6.setIcon(bhorse_bt);
                         } else if (columna == '7') {
-                            lb_H7.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(7, 6));
                             tablero.add(7, 6, pieza);
                         } else if (columna == '8') {
-                            lb_H8.setIcon(bhorse_wt);
-                            pieza.setPosicion(new Posicion(7, 7));
-                            tablero.add(7, 7, pieza);
+                            lb_H8.setIcon(bhorse_bt);
                         }
                     }
                 }
                 break;
             case "PEON":
                 pieza = new Peon();
-                if (rb_blanco.isSelected()) {//caballos blancos
+                if (rb_blanco.isSelected()) {//peones blancos
                     pieza.setColor("B");
                     if (fila == 'A') {
                         if (columna == '1') {
-                            lb_A1.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(0, 0));
-                            tablero.add(0, 0, pieza);
+                            lb_A1.setIcon(wpawn_bt);
                         } else if (columna == '2') {
                             lb_A2.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(0, 1));
-                            tablero.add(0, 1, pieza);
                         } else if (columna == '3') {
-                            lb_A3.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(0, 2));
-                            tablero.add(0, 2, pieza);
+                            lb_A3.setIcon(wpawn_bt);
                         } else if (columna == '4') {
                             lb_A4.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(0, 3));
-                            tablero.add(0, 3, pieza);
                         } else if (columna == '5') {
-                            lb_A5.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(0, 4));
-                            tablero.add(0, 4, pieza);
+                            lb_A5.setIcon(wpawn_bt);
                         } else if (columna == '6') {
                             lb_A6.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(0, 5));
-                            tablero.add(0, 5, pieza);
                         } else if (columna == '7') {
-                            lb_A7.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(0, 6));
-                            tablero.add(0, 6, pieza);
+                            lb_A7.setIcon(wpawn_bt);
                         } else if (columna == '8') {
                             lb_A8.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(0, 7));
-                            tablero.add(0, 7, pieza);
                         }
                     }
                     if (fila == 'B') {
                         if (columna == '1') {
                             lb_B1.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(1, 0));
-                            tablero.add(1, 0, pieza);
                         } else if (columna == '2') {
-                            lb_B2.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(1, 1));
-                            tablero.add(1, 1, pieza);
+                            lb_B2.setIcon(wpawn_bt);
                         } else if (columna == '3') {
                             lb_B3.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(1, 2));
-                            tablero.add(1, 2, pieza);
                         } else if (columna == '4') {
-                            lb_B4.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(1, 3));
-                            tablero.add(1, 3, pieza);
+                            lb_B4.setIcon(wpawn_bt);
                         } else if (columna == '5') {
                             lb_B5.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(1, 4));
-                            tablero.add(1, 4, pieza);
                         } else if (columna == '6') {
-                            lb_B6.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(1, 5));
-                            tablero.add(1, 5, pieza);
+                            lb_B6.setIcon(wpawn_bt);
                         } else if (columna == '7') {
                             lb_B7.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(1, 6));
-                            tablero.add(1, 6, pieza);
                         } else if (columna == '8') {
-                            lb_B8.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(1, 7));
-                            tablero.add(1, 7, pieza);
+                            lb_B8.setIcon(wpawn_bt);
                         }
                     }
                     if (fila == 'C') {
                         if (columna == '1') {
-                            lb_C1.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(2, 0));
-                            tablero.add(2, 0, pieza);
+                            lb_C1.setIcon(wpawn_bt);
                         } else if (columna == '2') {
                             lb_C2.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(2, 1));
-                            tablero.add(2, 1, pieza);
                         } else if (columna == '3') {
-                            lb_C3.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(2, 2));
-                            tablero.add(2, 2, pieza);
+                            lb_C3.setIcon(wpawn_bt);
                         } else if (columna == '4') {
                             lb_C4.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(2, 3));
-                            tablero.add(2, 3, pieza);
                         } else if (columna == '5') {
-                            lb_C5.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(2, 4));
-                            tablero.add(2, 4, pieza);
+                            lb_C5.setIcon(wpawn_bt);
                         } else if (columna == '6') {
                             lb_C6.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(2, 5));
-                            tablero.add(2, 5, pieza);
                         } else if (columna == '7') {
-                            lb_C7.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(2, 6));
-                            tablero.add(2, 6, pieza);
+                            lb_C7.setIcon(wpawn_bt);
                         } else if (columna == '8') {
                             lb_C8.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(2, 7));
-                            tablero.add(2, 7, pieza);
                         }
                     }
                     if (fila == 'D') {
                         if (columna == '1') {
                             lb_D1.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(3, 0));
-                            tablero.add(3, 0, pieza);
                         } else if (columna == '2') {
-                            lb_D2.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(3, 1));
-                            tablero.add(3, 1, pieza);
+                            lb_D2.setIcon(wpawn_bt);
                         } else if (columna == '3') {
                             lb_D3.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(3, 2));
-                            tablero.add(3, 2, pieza);
                         } else if (columna == '4') {
-                            lb_D4.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(3, 3));
-                            tablero.add(3, 3, pieza);
+                            lb_D4.setIcon(wpawn_bt);
                         } else if (columna == '5') {
                             lb_D5.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(3, 4));
-                            tablero.add(3, 4, pieza);
                         } else if (columna == '6') {
-                            lb_D6.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(3, 5));
-                            tablero.add(3, 5, pieza);
+                            lb_D6.setIcon(wpawn_bt);
                         } else if (columna == '7') {
                             lb_D7.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(3, 6));
-                            tablero.add(3, 6, pieza);
                         } else if (columna == '8') {
-                            lb_D8.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(3, 7));
-                            tablero.add(3, 7, pieza);
+                            lb_D8.setIcon(wpawn_bt);
                         }
                     }
                     if (fila == 'E') {
                         if (columna == '1') {
-                            lb_E1.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(4, 0));
-                            tablero.add(4, 0, pieza);
+                            lb_E1.setIcon(wpawn_bt);
                         } else if (columna == '2') {
                             lb_E2.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(4, 1));
-                            tablero.add(4, 1, pieza);
                         } else if (columna == '3') {
-                            lb_E3.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(4, 2));
-                            tablero.add(4, 2, pieza);
+                            lb_E3.setIcon(wpawn_bt);
                         } else if (columna == '4') {
                             lb_E4.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(4, 3));
-                            tablero.add(4, 3, pieza);
                         } else if (columna == '5') {
-                            lb_E5.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(4, 4));
-                            tablero.add(4, 4, pieza);
+                            lb_E5.setIcon(wpawn_bt);
                         } else if (columna == '6') {
                             lb_E6.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(4, 5));
-                            tablero.add(4, 5, pieza);
                         } else if (columna == '7') {
-                            lb_E7.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(4, 6));
-                            tablero.add(4, 6, pieza);
+                            lb_E7.setIcon(wpawn_bt);
                         } else if (columna == '8') {
                             lb_E8.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(4, 7));
-                            tablero.add(4, 7, pieza);
                         }
                     }
                     if (fila == 'F') {
                         if (columna == '1') {
                             lb_F1.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(5, 0));
-                            tablero.add(5, 0, pieza);
                         } else if (columna == '2') {
-                            lb_F2.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(5, 1));
-                            tablero.add(5, 1, pieza);
+                            lb_F2.setIcon(wpawn_bt);
                         } else if (columna == '3') {
                             lb_F3.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(5, 2));
-                            tablero.add(5, 2, pieza);
                         } else if (columna == '4') {
-                            lb_F4.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(5, 3));
-                            tablero.add(5, 3, pieza);
+                            lb_F4.setIcon(wpawn_bt);
                         } else if (columna == '5') {
                             lb_F5.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(5, 4));
-                            tablero.add(5, 4, pieza);
                         } else if (columna == '6') {
-                            lb_F6.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(5, 5));
-                            tablero.add(5, 5, pieza);
+                            lb_F6.setIcon(wpawn_bt);
                         } else if (columna == '7') {
                             lb_F7.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(5, 6));
-                            tablero.add(5, 6, pieza);
                         } else if (columna == '8') {
-                            lb_F8.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(5, 7));
-                            tablero.add(5, 7, pieza);
+                            lb_F8.setIcon(wpawn_bt);
                         }
                     }
                     if (fila == 'G') {
                         if (columna == '1') {
-                            lb_G1.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(6, 0));
-                            tablero.add(6, 0, pieza);
+                            lb_G1.setIcon(wpawn_bt);
                         } else if (columna == '2') {
                             lb_G2.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(6, 1));
-                            tablero.add(6, 1, pieza);
                         } else if (columna == '3') {
-                            lb_G3.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(6, 2));
-                            tablero.add(6, 2, pieza);
+                            lb_G3.setIcon(wpawn_bt);
                         } else if (columna == '4') {
-                            lb_G4.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(6, 3));
-                            tablero.add(6, 3, pieza);
+                            lb_G4.setIcon(wpawn_wt);;
                         } else if (columna == '5') {
-                            lb_G5.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(6, 4));
-                            tablero.add(6, 4, pieza);
+                            lb_G5.setIcon(wpawn_bt);
                         } else if (columna == '6') {
                             lb_G6.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(6, 5));
-                            tablero.add(6, 5, pieza);
                         } else if (columna == '7') {
-                            lb_G7.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(6, 6));
-                            tablero.add(6, 6, pieza);
+                            lb_G7.setIcon(wpawn_bt);
                         } else if (columna == '8') {
                             lb_G8.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(6, 7));
-                            tablero.add(6, 7, pieza);
                         }
                     }
                     if (fila == 'H') {
                         if (columna == '1') {
                             lb_H1.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(7, 0));
-                            tablero.add(7, 0, pieza);
                         } else if (columna == '2') {
-                            lb_H2.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(7, 1));
-                            tablero.add(7, 1, pieza);
+                            lb_H2.setIcon(wpawn_bt);
                         } else if (columna == '3') {
                             lb_H3.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(7, 2));
-                            tablero.add(7, 2, pieza);
                         } else if (columna == '4') {
-                            lb_H4.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(7, 3));
-                            tablero.add(7, 3, pieza);
+                            lb_H4.setIcon(wpawn_bt);
                         } else if (columna == '5') {
                             lb_H5.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(7, 4));
-                            tablero.add(7, 4, pieza);
                         } else if (columna == '6') {
-                            lb_H6.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(7, 5));
-                            tablero.add(7, 5, pieza);
+                            lb_H6.setIcon(wpawn_bt);
                         } else if (columna == '7') {
                             lb_H7.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(7, 6));
-                            tablero.add(7, 6, pieza);
                         } else if (columna == '8') {
-                            lb_H8.setIcon(wpawn_wt);
-                            pieza.setPosicion(new Posicion(7, 7));
-                            tablero.add(7, 7, pieza);
+                            lb_H8.setIcon(wpawn_bt);
                         }
                     }
-                } else {//caballos negros
+                } else {//peones negros
                     pieza.setColor("N");
                     if (fila == 'A') {
                         if (columna == '1') {
-                            lb_A1.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(0, 0));
-                            tablero.add(0, 0, pieza);
+                            lb_A1.setIcon(bpawn_bt);
                         } else if (columna == '2') {
                             lb_A2.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(0, 1));
-                            tablero.add(0, 1, pieza);
                         } else if (columna == '3') {
-                            lb_A3.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(0, 2));
-                            tablero.add(0, 2, pieza);
+                            lb_A3.setIcon(bpawn_bt);
                         } else if (columna == '4') {
                             lb_A4.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(0, 3));
-                            tablero.add(0, 3, pieza);
                         } else if (columna == '5') {
-                            lb_A5.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(0, 4));
-                            tablero.add(0, 4, pieza);
+                            lb_A5.setIcon(bpawn_bt);
                         } else if (columna == '6') {
                             lb_A6.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(0, 5));
-                            tablero.add(0, 5, pieza);
                         } else if (columna == '7') {
-                            lb_A7.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(0, 6));
-                            tablero.add(0, 6, pieza);
+                            lb_A7.setIcon(bpawn_bt);
                         } else if (columna == '8') {
                             lb_A8.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(0, 7));
-                            tablero.add(0, 7, pieza);
                         }
                     }
                     if (fila == 'B') {
                         if (columna == '1') {
                             lb_B1.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(1, 0));
-                            tablero.add(1, 0, pieza);
                         } else if (columna == '2') {
-                            lb_B2.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(1, 1));
-                            tablero.add(1, 1, pieza);
+                            lb_B2.setIcon(bpawn_bt);
                         } else if (columna == '3') {
                             lb_B3.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(1, 2));
-                            tablero.add(1, 2, pieza);
                         } else if (columna == '4') {
-                            lb_B4.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(1, 3));
-                            tablero.add(1, 3, pieza);
+                            lb_B4.setIcon(bpawn_bt);
                         } else if (columna == '5') {
                             lb_B5.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(1, 4));
-                            tablero.add(1, 4, pieza);
                         } else if (columna == '6') {
-                            lb_B6.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(1, 5));
-                            tablero.add(1, 5, pieza);
+                            lb_B6.setIcon(bpawn_bt);
                         } else if (columna == '7') {
                             lb_B7.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(1, 6));
-                            tablero.add(1, 6, pieza);
                         } else if (columna == '8') {
-                            lb_B8.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(1, 7));
-                            tablero.add(1, 7, pieza);
+                            lb_B8.setIcon(bpawn_bt);
                         }
                     }
                     if (fila == 'C') {
                         if (columna == '1') {
-                            lb_C1.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(2, 0));
-                            tablero.add(2, 0, pieza);
+                            lb_C1.setIcon(bpawn_bt);
                         } else if (columna == '2') {
                             lb_C2.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(2, 1));
-                            tablero.add(2, 1, pieza);
                         } else if (columna == '3') {
-                            lb_C3.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(2, 2));
-                            tablero.add(2, 2, pieza);
+                            lb_C3.setIcon(bpawn_bt);
                         } else if (columna == '4') {
                             lb_C4.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(2, 3));
-                            tablero.add(2, 3, pieza);
                         } else if (columna == '5') {
-                            lb_C5.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(2, 4));
-                            tablero.add(2, 4, pieza);
+                            lb_C5.setIcon(bpawn_bt);
                         } else if (columna == '6') {
                             lb_C6.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(2, 5));
-                            tablero.add(2, 5, pieza);
                         } else if (columna == '7') {
-                            lb_C7.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(2, 6));
-                            tablero.add(2, 6, pieza);
+                            lb_C7.setIcon(bpawn_bt);
                         } else if (columna == '8') {
                             lb_C8.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(2, 7));
-                            tablero.add(2, 7, pieza);
                         }
                     }
                     if (fila == 'D') {
                         if (columna == '1') {
                             lb_D1.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(3, 0));
-                            tablero.add(3, 0, pieza);
                         } else if (columna == '2') {
-                            lb_D2.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(3, 1));
-                            tablero.add(3, 1, pieza);
+                            lb_D2.setIcon(bpawn_bt);
                         } else if (columna == '3') {
                             lb_D3.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(3, 2));
-                            tablero.add(3, 2, pieza);
                         } else if (columna == '4') {
-                            lb_D4.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(3, 3));
-                            tablero.add(3, 3, pieza);
+                            lb_D4.setIcon(bpawn_bt);
                         } else if (columna == '5') {
                             lb_D5.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(3, 4));
-                            tablero.add(3, 4, pieza);
                         } else if (columna == '6') {
-                            lb_D6.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(3, 5));
-                            tablero.add(3, 5, pieza);
+                            lb_D6.setIcon(bpawn_bt);
                         } else if (columna == '7') {
                             lb_D7.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(3, 6));
-                            tablero.add(3, 6, pieza);
                         } else if (columna == '8') {
-                            lb_D8.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(3, 7));
-                            tablero.add(3, 7, pieza);
+                            lb_D8.setIcon(bpawn_bt);
                         }
                     }
                     if (fila == 'E') {
                         if (columna == '1') {
-                            lb_E1.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(4, 0));
-                            tablero.add(4, 0, pieza);
+                            lb_E1.setIcon(bpawn_bt);
                         } else if (columna == '2') {
                             lb_E2.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(4, 1));
-                            tablero.add(4, 1, pieza);
                         } else if (columna == '3') {
-                            lb_E3.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(4, 2));
-                            tablero.add(4, 2, pieza);
+                            lb_E3.setIcon(bpawn_bt);
                         } else if (columna == '4') {
                             lb_E4.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(4, 3));
-                            tablero.add(4, 3, pieza);
                         } else if (columna == '5') {
-                            lb_E5.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(4, 4));
-                            tablero.add(4, 4, pieza);
+                            lb_E5.setIcon(bpawn_bt);
                         } else if (columna == '6') {
                             lb_E6.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(4, 5));
-                            tablero.add(4, 5, pieza);
                         } else if (columna == '7') {
-                            lb_E7.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(4, 6));
-                            tablero.add(4, 6, pieza);
+                            lb_E7.setIcon(bpawn_bt);
                         } else if (columna == '8') {
                             lb_E8.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(4, 7));
-                            tablero.add(4, 7, pieza);
                         }
                     }
                     if (fila == 'F') {
                         if (columna == '1') {
                             lb_F1.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(5, 0));
-                            tablero.add(5, 0, pieza);
                         } else if (columna == '2') {
-                            lb_F2.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(5, 1));
-                            tablero.add(5, 1, pieza);
+                            lb_F2.setIcon(bpawn_bt);
                         } else if (columna == '3') {
                             lb_F3.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(5, 2));
-                            tablero.add(5, 2, pieza);
                         } else if (columna == '4') {
-                            lb_F4.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(5, 3));
-                            tablero.add(5, 3, pieza);
+                            lb_F4.setIcon(bpawn_bt);
                         } else if (columna == '5') {
                             lb_F5.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(5, 4));
-                            tablero.add(5, 4, pieza);
                         } else if (columna == '6') {
-                            lb_F6.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(5, 5));
-                            tablero.add(5, 5, pieza);
+                            lb_F6.setIcon(bpawn_bt);
                         } else if (columna == '7') {
                             lb_F7.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(5, 6));
-                            tablero.add(5, 6, pieza);
                         } else if (columna == '8') {
-                            lb_F8.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(5, 7));
-                            tablero.add(5, 7, pieza);
+                            lb_F8.setIcon(bpawn_bt);
                         }
                     }
                     if (fila == 'G') {
                         if (columna == '1') {
-                            lb_G1.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(6, 0));
-                            tablero.add(6, 0, pieza);
+                            lb_G1.setIcon(bpawn_bt);
                         } else if (columna == '2') {
                             lb_G2.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(6, 1));
-                            tablero.add(6, 1, pieza);
                         } else if (columna == '3') {
-                            lb_G3.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(6, 2));
-                            tablero.add(6, 2, pieza);
+                            lb_G3.setIcon(bpawn_bt);
                         } else if (columna == '4') {
                             lb_G4.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(6, 3));
-                            tablero.add(6, 3, pieza);
                         } else if (columna == '5') {
-                            lb_G5.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(6, 4));
-                            tablero.add(6, 4, pieza);
+                            lb_G5.setIcon(bpawn_bt);
                         } else if (columna == '6') {
                             lb_G6.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(6, 5));
-                            tablero.add(6, 5, pieza);
                         } else if (columna == '7') {
-                            lb_G7.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(6, 6));
-                            tablero.add(6, 6, pieza);
+                            lb_G7.setIcon(bpawn_bt);
                         } else if (columna == '8') {
                             lb_G8.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(6, 7));
-                            tablero.add(6, 7, pieza);
                         }
                     }
                     if (fila == 'H') {
                         if (columna == '1') {
                             lb_H1.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(7, 0));
-                            tablero.add(7, 0, pieza);
                         } else if (columna == '2') {
-                            lb_H2.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(7, 1));
-                            tablero.add(7, 1, pieza);
+                            lb_H2.setIcon(bpawn_bt);
                         } else if (columna == '3') {
                             lb_H3.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(7, 2));
-                            tablero.add(7, 2, pieza);
                         } else if (columna == '4') {
-                            lb_H4.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(7, 3));
-                            tablero.add(7, 3, pieza);
+                            lb_H4.setIcon(bpawn_bt);
                         } else if (columna == '5') {
                             lb_H5.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(7, 4));
-                            tablero.add(7, 4, pieza);
                         } else if (columna == '6') {
-                            lb_H6.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(7, 5));
-                            tablero.add(7, 5, pieza);
+                            lb_H6.setIcon(bpawn_bt);
                         } else if (columna == '7') {
                             lb_H7.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(7, 6));
-                            tablero.add(7, 6, pieza);
                         } else if (columna == '8') {
-                            lb_H8.setIcon(bpawn_wt);
-                            pieza.setPosicion(new Posicion(7, 7));
-                            tablero.add(7, 7, pieza);
+                            lb_H8.setIcon(bpawn_bt);
                         }
                     }
                 }
                 break;
             case "REY":
                 pieza = new Rey();
-                if (rb_blanco.isSelected()) {//caballos blancos
+                if (rb_blanco.isSelected()) {//rey blanco
                     pieza.setColor("B");
                     if (fila == 'A') {
                         if (columna == '1') {
-                            lb_A1.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(0, 0));
-                            tablero.add(0, 0, pieza);
+                            lb_A1.setIcon(wking_bt);
                         } else if (columna == '2') {
                             lb_A2.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(0, 1));
-                            tablero.add(0, 1, pieza);
                         } else if (columna == '3') {
-                            lb_A3.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(0, 2));
-                            tablero.add(0, 2, pieza);
+                            lb_A3.setIcon(wking_bt);
                         } else if (columna == '4') {
                             lb_A4.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(0, 3));
-                            tablero.add(0, 3, pieza);
                         } else if (columna == '5') {
-                            lb_A5.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(0, 4));
-                            tablero.add(0, 4, pieza);
+                            lb_A5.setIcon(wking_bt);
                         } else if (columna == '6') {
                             lb_A6.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(0, 5));
-                            tablero.add(0, 5, pieza);
                         } else if (columna == '7') {
-                            lb_A7.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(0, 6));
-                            tablero.add(0, 6, pieza);
+                            lb_A7.setIcon(wking_bt);
                         } else if (columna == '8') {
                             lb_A8.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(0, 7));
-                            tablero.add(0, 7, pieza);
                         }
                     }
                     if (fila == 'B') {
                         if (columna == '1') {
                             lb_B1.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(1, 0));
-                            tablero.add(1, 0, pieza);
                         } else if (columna == '2') {
-                            lb_B2.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(1, 1));
-                            tablero.add(1, 1, pieza);
+                            lb_B2.setIcon(wking_bt);
                         } else if (columna == '3') {
                             lb_B3.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(1, 2));
-                            tablero.add(1, 2, pieza);
                         } else if (columna == '4') {
-                            lb_B4.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(1, 3));
-                            tablero.add(1, 3, pieza);
+                            lb_B4.setIcon(wking_bt);
                         } else if (columna == '5') {
                             lb_B5.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(1, 4));
-                            tablero.add(1, 4, pieza);
                         } else if (columna == '6') {
-                            lb_B6.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(1, 5));
-                            tablero.add(1, 5, pieza);
+                            lb_B6.setIcon(wking_bt);
                         } else if (columna == '7') {
                             lb_B7.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(1, 6));
-                            tablero.add(1, 6, pieza);
                         } else if (columna == '8') {
-                            lb_B8.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(1, 7));
-                            tablero.add(1, 7, pieza);
+                            lb_B8.setIcon(wking_bt);
                         }
                     }
                     if (fila == 'C') {
                         if (columna == '1') {
-                            lb_C1.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(2, 0));
-                            tablero.add(2, 0, pieza);
+                            lb_C1.setIcon(wking_bt);
                         } else if (columna == '2') {
                             lb_C2.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(2, 1));
-                            tablero.add(2, 1, pieza);
                         } else if (columna == '3') {
-                            lb_C3.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(2, 2));
-                            tablero.add(2, 2, pieza);
+                            lb_C3.setIcon(wking_bt);
                         } else if (columna == '4') {
                             lb_C4.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(2, 3));
-                            tablero.add(2, 3, pieza);
                         } else if (columna == '5') {
-                            lb_C5.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(2, 4));
-                            tablero.add(2, 4, pieza);
+                            lb_C5.setIcon(wking_bt);
                         } else if (columna == '6') {
                             lb_C6.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(2, 5));
-                            tablero.add(2, 5, pieza);
                         } else if (columna == '7') {
-                            lb_C7.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(2, 6));
                             tablero.add(2, 6, pieza);
                         } else if (columna == '8') {
                             lb_C8.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(2, 7));
-                            tablero.add(2, 7, pieza);
                         }
                     }
                     if (fila == 'D') {
                         if (columna == '1') {
                             lb_D1.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(3, 0));
-                            tablero.add(3, 0, pieza);
                         } else if (columna == '2') {
-                            lb_D2.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(3, 1));
-                            tablero.add(3, 1, pieza);
+                            lb_D2.setIcon(wking_bt);
                         } else if (columna == '3') {
                             lb_D3.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(3, 2));
-                            tablero.add(3, 2, pieza);
                         } else if (columna == '4') {
-                            lb_D4.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(3, 3));
-                            tablero.add(3, 3, pieza);
+                            lb_D4.setIcon(wking_bt);
                         } else if (columna == '5') {
                             lb_D5.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(3, 4));
-                            tablero.add(3, 4, pieza);
                         } else if (columna == '6') {
-                            lb_D6.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(3, 5));
-                            tablero.add(3, 5, pieza);
+                            lb_D6.setIcon(wking_bt);
                         } else if (columna == '7') {
                             lb_D7.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(3, 6));
-                            tablero.add(3, 6, pieza);
                         } else if (columna == '8') {
-                            lb_D8.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(3, 7));
-                            tablero.add(3, 7, pieza);
+                            lb_D8.setIcon(wking_bt);
                         }
                     }
                     if (fila == 'E') {
                         if (columna == '1') {
-                            lb_E1.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(4, 0));
-                            tablero.add(4, 0, pieza);
+                            lb_E1.setIcon(wking_bt);
                         } else if (columna == '2') {
                             lb_E2.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(4, 1));
-                            tablero.add(4, 1, pieza);
                         } else if (columna == '3') {
-                            lb_E3.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(4, 2));
-                            tablero.add(4, 2, pieza);
+                            lb_E3.setIcon(wking_bt);
                         } else if (columna == '4') {
                             lb_E4.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(4, 3));
-                            tablero.add(4, 3, pieza);
                         } else if (columna == '5') {
-                            lb_E5.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(4, 4));
-                            tablero.add(4, 4, pieza);
+                            lb_E5.setIcon(wking_bt);
                         } else if (columna == '6') {
                             lb_E6.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(4, 5));
-                            tablero.add(4, 5, pieza);
                         } else if (columna == '7') {
-                            lb_E7.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(4, 6));
-                            tablero.add(4, 6, pieza);
+                            lb_E7.setIcon(wking_bt);
                         } else if (columna == '8') {
                             lb_E8.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(4, 7));
-                            tablero.add(4, 7, pieza);
                         }
                     }
                     if (fila == 'F') {
                         if (columna == '1') {
                             lb_F1.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(5, 0));
-                            tablero.add(5, 0, pieza);
                         } else if (columna == '2') {
-                            lb_F2.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(5, 1));
-                            tablero.add(5, 1, pieza);
+                            lb_F2.setIcon(wking_bt);
                         } else if (columna == '3') {
                             lb_F3.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(5, 2));
-                            tablero.add(5, 2, pieza);
                         } else if (columna == '4') {
-                            lb_F4.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(5, 3));
-                            tablero.add(5, 3, pieza);
+                            lb_F4.setIcon(wking_bt);
                         } else if (columna == '5') {
                             lb_F5.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(5, 4));
-                            tablero.add(5, 4, pieza);
                         } else if (columna == '6') {
-                            lb_F6.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(5, 5));
-                            tablero.add(5, 5, pieza);
+                            lb_F6.setIcon(wking_bt);
                         } else if (columna == '7') {
                             lb_F7.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(5, 6));
-                            tablero.add(5, 6, pieza);
                         } else if (columna == '8') {
-                            lb_F8.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(5, 7));
-                            tablero.add(5, 7, pieza);
+                            lb_F8.setIcon(wking_bt);
                         }
                     }
                     if (fila == 'G') {
                         if (columna == '1') {
-                            lb_G1.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(6, 0));
-                            tablero.add(6, 0, pieza);
+                            lb_G1.setIcon(wking_bt);
                         } else if (columna == '2') {
                             lb_G2.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(6, 1));
-                            tablero.add(6, 1, pieza);
                         } else if (columna == '3') {
-                            lb_G3.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(6, 2));
-                            tablero.add(6, 2, pieza);
+                            lb_G3.setIcon(wking_bt);
                         } else if (columna == '4') {
                             lb_G4.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(6, 3));
-                            tablero.add(6, 3, pieza);
                         } else if (columna == '5') {
-                            lb_G5.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(6, 4));
-                            tablero.add(6, 4, pieza);
+                            lb_G5.setIcon(wking_bt);
                         } else if (columna == '6') {
                             lb_G6.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(6, 5));
-                            tablero.add(6, 5, pieza);
                         } else if (columna == '7') {
-                            lb_G7.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(6, 6));
-                            tablero.add(6, 6, pieza);
+                            lb_G7.setIcon(wking_bt);
                         } else if (columna == '8') {
                             lb_G8.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(6, 7));
-                            tablero.add(6, 7, pieza);
                         }
                     }
                     if (fila == 'H') {
                         if (columna == '1') {
                             lb_H1.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(7, 0));
-                            tablero.add(7, 0, pieza);
                         } else if (columna == '2') {
-                            lb_H2.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(7, 1));
-                            tablero.add(7, 1, pieza);
+                            lb_H2.setIcon(wking_bt);
                         } else if (columna == '3') {
                             lb_H3.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(7, 2));
-                            tablero.add(7, 2, pieza);
                         } else if (columna == '4') {
-                            lb_H4.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(7, 3));
-                            tablero.add(7, 3, pieza);
+                            lb_H4.setIcon(wking_bt);
                         } else if (columna == '5') {
                             lb_H5.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(7, 4));
-                            tablero.add(7, 4, pieza);
                         } else if (columna == '6') {
-                            lb_H6.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(7, 5));
-                            tablero.add(7, 5, pieza);
+                            lb_H6.setIcon(wking_bt);
                         } else if (columna == '7') {
                             lb_H7.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(7, 6));
-                            tablero.add(7, 6, pieza);
                         } else if (columna == '8') {
-                            lb_H8.setIcon(wking_wt);
-                            pieza.setPosicion(new Posicion(7, 7));
-                            tablero.add(7, 7, pieza);
+                            lb_H8.setIcon(wking_bt);
                         }
                     }
-                } else {//caballos negros
+                } else {//rey negro
                     pieza.setColor("N");
                     if (fila == 'A') {
                         if (columna == '1') {
-                            lb_A1.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(0, 0));
-                            tablero.add(0, 0, pieza);
+                            lb_A1.setIcon(bking_bt);
                         } else if (columna == '2') {
                             lb_A2.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(0, 1));
-                            tablero.add(0, 1, pieza);
                         } else if (columna == '3') {
-                            lb_A3.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(0, 2));
-                            tablero.add(0, 2, pieza);
+                            lb_A3.setIcon(bking_bt);
                         } else if (columna == '4') {
                             lb_A4.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(0, 3));
-                            tablero.add(0, 3, pieza);
                         } else if (columna == '5') {
-                            lb_A5.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(0, 4));
-                            tablero.add(0, 4, pieza);
+                            lb_A5.setIcon(bking_bt);
                         } else if (columna == '6') {
                             lb_A6.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(0, 5));
-                            tablero.add(0, 5, pieza);
                         } else if (columna == '7') {
-                            lb_A7.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(0, 6));
-                            tablero.add(0, 6, pieza);
+                            lb_A7.setIcon(bking_bt);
                         } else if (columna == '8') {
                             lb_A8.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(0, 7));
-                            tablero.add(0, 7, pieza);
                         }
                     }
                     if (fila == 'B') {
                         if (columna == '1') {
                             lb_B1.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(1, 0));
-                            tablero.add(1, 0, pieza);
                         } else if (columna == '2') {
-                            lb_B2.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(1, 1));
-                            tablero.add(1, 1, pieza);
+                            lb_B2.setIcon(bking_bt);
                         } else if (columna == '3') {
                             lb_B3.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(1, 2));
-                            tablero.add(1, 2, pieza);
                         } else if (columna == '4') {
-                            lb_B4.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(1, 3));
-                            tablero.add(1, 3, pieza);
+                            lb_B4.setIcon(bking_bt);
                         } else if (columna == '5') {
                             lb_B5.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(1, 4));
-                            tablero.add(1, 4, pieza);
                         } else if (columna == '6') {
-                            lb_B6.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(1, 5));
-                            tablero.add(1, 5, pieza);
+                            lb_B6.setIcon(bking_bt);
                         } else if (columna == '7') {
                             lb_B7.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(1, 6));
-                            tablero.add(1, 6, pieza);
                         } else if (columna == '8') {
-                            lb_B8.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(1, 7));
-                            tablero.add(1, 7, pieza);
+                            lb_B8.setIcon(bking_bt);
                         }
                     }
                     if (fila == 'C') {
                         if (columna == '1') {
-                            lb_C1.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(2, 0));
-                            tablero.add(2, 0, pieza);
+                            lb_C1.setIcon(bking_bt);
                         } else if (columna == '2') {
                             lb_C2.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(2, 1));
-                            tablero.add(2, 1, pieza);
                         } else if (columna == '3') {
-                            lb_C3.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(2, 2));
-                            tablero.add(2, 2, pieza);
+                            lb_C3.setIcon(bking_bt);
                         } else if (columna == '4') {
                             lb_C4.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(2, 3));
-                            tablero.add(2, 3, pieza);
                         } else if (columna == '5') {
-                            lb_C5.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(2, 4));
-                            tablero.add(2, 4, pieza);
+                            lb_C5.setIcon(bking_bt);
                         } else if (columna == '6') {
                             lb_C6.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(2, 5));
-                            tablero.add(2, 5, pieza);
                         } else if (columna == '7') {
-                            lb_C7.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(2, 6));
-                            tablero.add(2, 6, pieza);
+                            lb_C7.setIcon(bking_bt);
                         } else if (columna == '8') {
-                            lb_C8.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(2, 7));
-                            tablero.add(2, 7, pieza);
+                            lb_C8.setIcon(bking_wt);                      
                         }
                     }
                     if (fila == 'D') {
                         if (columna == '1') {
                             lb_D1.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(3, 0));
-                            tablero.add(3, 0, pieza);
                         } else if (columna == '2') {
-                            lb_D2.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(3, 1));
-                            tablero.add(3, 1, pieza);
+                            lb_D2.setIcon(bking_bt);
                         } else if (columna == '3') {
                             lb_D3.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(3, 2));
-                            tablero.add(3, 2, pieza);
                         } else if (columna == '4') {
-                            lb_D4.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(3, 3));
-                            tablero.add(3, 3, pieza);
+                            lb_D4.setIcon(bking_bt);
                         } else if (columna == '5') {
                             lb_D5.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(3, 4));
-                            tablero.add(3, 4, pieza);
                         } else if (columna == '6') {
-                            lb_D6.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(3, 5));
-                            tablero.add(3, 5, pieza);
+                            lb_D6.setIcon(bking_bt);
                         } else if (columna == '7') {
                             lb_D7.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(3, 6));
-                            tablero.add(3, 6, pieza);
                         } else if (columna == '8') {
-                            lb_D8.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(3, 7));
-                            tablero.add(3, 7, pieza);
+                            lb_D8.setIcon(bking_bt);
                         }
                     }
                     if (fila == 'E') {
                         if (columna == '1') {
-                            lb_E1.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(4, 0));
-                            tablero.add(4, 0, pieza);
+                            lb_E1.setIcon(bking_bt);
                         } else if (columna == '2') {
                             lb_E2.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(4, 1));
-                            tablero.add(4, 1, pieza);
                         } else if (columna == '3') {
-                            lb_E3.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(4, 2));
-                            tablero.add(4, 2, pieza);
+                            lb_E3.setIcon(bking_bt);
                         } else if (columna == '4') {
                             lb_E4.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(4, 3));
-                            tablero.add(4, 3, pieza);
                         } else if (columna == '5') {
-                            lb_E5.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(4, 4));
-                            tablero.add(4, 4, pieza);
+                            lb_E5.setIcon(bking_bt);
                         } else if (columna == '6') {
                             lb_E6.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(4, 5));
-                            tablero.add(4, 5, pieza);
                         } else if (columna == '7') {
-                            lb_E7.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(4, 6));
-                            tablero.add(4, 6, pieza);
+                            lb_E7.setIcon(bking_bt);
                         } else if (columna == '8') {
                             lb_E8.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(4, 7));
-                            tablero.add(4, 7, pieza);
                         }
                     }
                     if (fila == 'F') {
                         if (columna == '1') {
                             lb_F1.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(5, 0));
-                            tablero.add(5, 0, pieza);
                         } else if (columna == '2') {
-                            lb_F2.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(5, 1));
-                            tablero.add(5, 1, pieza);
+                            lb_F2.setIcon(bking_bt);
                         } else if (columna == '3') {
                             lb_F3.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(5, 2));
-                            tablero.add(5, 2, pieza);
                         } else if (columna == '4') {
-                            lb_F4.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(5, 3));
-                            tablero.add(5, 3, pieza);
+                            lb_F4.setIcon(bking_bt);
                         } else if (columna == '5') {
                             lb_F5.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(5, 4));
-                            tablero.add(5, 4, pieza);
                         } else if (columna == '6') {
-                            lb_F6.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(5, 5));
-                            tablero.add(5, 5, pieza);
+                            lb_F6.setIcon(bking_bt);
                         } else if (columna == '7') {
                             lb_F7.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(5, 6));
-                            tablero.add(5, 6, pieza);
                         } else if (columna == '8') {
-                            lb_F8.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(5, 7));
-                            tablero.add(5, 7, pieza);
+                            lb_F8.setIcon(bking_bt);
                         }
                     }
                     if (fila == 'G') {
                         if (columna == '1') {
-                            lb_G1.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(6, 0));
-                            tablero.add(6, 0, pieza);
+                            lb_G1.setIcon(bking_bt);
                         } else if (columna == '2') {
                             lb_G2.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(6, 1));
-                            tablero.add(6, 1, pieza);
                         } else if (columna == '3') {
-                            lb_G3.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(6, 2));
-                            tablero.add(6, 2, pieza);
+                            lb_G3.setIcon(bking_bt);
                         } else if (columna == '4') {
                             lb_G4.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(6, 3));
-                            tablero.add(6, 3, pieza);
                         } else if (columna == '5') {
-                            lb_G5.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(6, 4));
-                            tablero.add(6, 4, pieza);
+                            lb_G5.setIcon(bking_bt);
                         } else if (columna == '6') {
                             lb_G6.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(6, 5));
-                            tablero.add(6, 5, pieza);
                         } else if (columna == '7') {
-                            lb_G7.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(6, 6));
-                            tablero.add(6, 6, pieza);
+                            lb_G7.setIcon(bking_bt);
                         } else if (columna == '8') {
                             lb_G8.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(6, 7));
-                            tablero.add(6, 7, pieza);
                         }
                     }
                     if (fila == 'H') {
                         if (columna == '1') {
                             lb_H1.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(7, 0));
-                            tablero.add(7, 0, pieza);
                         } else if (columna == '2') {
-                            lb_H2.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(7, 1));
-                            tablero.add(7, 1, pieza);
+                            lb_H2.setIcon(bking_bt);
                         } else if (columna == '3') {
                             lb_H3.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(7, 2));
-                            tablero.add(7, 2, pieza);
                         } else if (columna == '4') {
-                            lb_H4.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(7, 3));
-                            tablero.add(7, 3, pieza);
+                            lb_H4.setIcon(bking_bt);
                         } else if (columna == '5') {
                             lb_H5.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(7, 4));
-                            tablero.add(7, 4, pieza);
                         } else if (columna == '6') {
-                            lb_H6.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(7, 5));
-                            tablero.add(7, 5, pieza);
+                            lb_H6.setIcon(bking_bt);
                         } else if (columna == '7') {
                             lb_H7.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(7, 6));
-                            tablero.add(7, 6, pieza);
                         } else if (columna == '8') {
-                            lb_H8.setIcon(bking_wt);
-                            pieza.setPosicion(new Posicion(7, 7));
-                            tablero.add(7, 7, pieza);
+                            lb_H8.setIcon(bking_bt);
                         }
                     }
                 }
                 break;
         }
-        tf_posicion.setText(
-                "");
+        int x=-1, y=-1;
+        switch(fila){
+            case 'A': x=0;
+                break;
+            case 'B': x=1;
+                break;
+            case 'C': x=2;
+                break;
+            case 'D': x=3;
+                break;
+            case 'E': x=4;
+                break;
+            case 'F': x=5;
+                break;
+            case 'G': x=6;
+                break;
+            case 'H': x=7;
+                break;
+        }
+        
+        switch(columna){
+            case '1': y=0;
+                break;
+            case '2': y=1;
+                break;
+            case '3': y=2;
+                break;
+            case '4': y=3;
+                break;
+            case '5': y=4;
+                break;
+            case '6': y=5;
+                break;
+            case '7': y=6;
+                break;
+            case '8': y=7;
+                break;
+        }
+        pieza.setPosicion(new Posicion(x, y));
+        tablero.add(x, y, pieza);  
+        tf_posicion.setText("");
 
     }//GEN-LAST:event_jb_ingresarCoordenadasMouseClicked
 
@@ -2521,7 +1780,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jb_ingresarCoordenadas;
     private javax.swing.JButton jb_nuevaPartida;
-    private javax.swing.JDialog jd_Opciones;
     private javax.swing.JDialog jd_movimientos;
     private javax.swing.JLabel lb_A1;
     private javax.swing.JLabel lb_A2;
