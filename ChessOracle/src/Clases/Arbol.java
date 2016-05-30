@@ -31,24 +31,26 @@ public class Arbol {
     public void llamarRecorrido(){
         recorrido(root);
     }
+    
+    
+    public void delete(){
+        root.getHijos().remove(root.getHijos().find(this));
+    }
+    
     public void recorrido(NodoArbol nodo){
         for (int i = -1; i < nodo.getHijos().getSize(); i++){ 
-            if(nodo.getPadre()!=null){
-                System.out.println(nodo.getValue()+" (Padre: "+nodo.getPadre()+")");
+            if(root!=null){
+                System.out.println(nodo.getValue()+" (Padre: "+root+")");
             }else{
                 System.out.println(nodo.getValue());
             }
             recorrido((NodoArbol)nodo.getHijos().at(i+1));
         }
     }
+    
     public void peonCoronado(Pieza[][] tablero){
-        Pieza[][] copia = tablero;
-        Lista piezas = new Lista();
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                
-                    
-            }
-        }
+        Lista peones = new Lista();
+        Arbol arbol = new Arbol(new NodoArbol(tablero));
+        
     }
 }

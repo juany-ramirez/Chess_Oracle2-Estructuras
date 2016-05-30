@@ -617,7 +617,7 @@ public class Main extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Stencil", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/white-wallpaper-18 (1).jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 1300, 950));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 950));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1624,6 +1624,7 @@ public class Main extends javax.swing.JFrame {
             tablero[x][y]= new Peon(color,x,y);
         else if(tipoPieza ==3)
             tablero[x][y]= new Rey(color,x,y);
+        
         tf_posicion.setText("");
     }//GEN-LAST:event_jb_ingresarCoordenadasMouseClicked
 
