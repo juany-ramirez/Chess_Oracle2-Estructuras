@@ -41,4 +41,14 @@ public class Arbol {
             recorrido((NodoArbol)nodo.getHijos().at(i+1));
         }
     }
+    public void peonCoronado(Pieza[][] tablero){
+        Pieza[][] copia = tablero;
+        Lista piezas = new Lista();
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                
+                    
+            }
+        }
+    }
 }

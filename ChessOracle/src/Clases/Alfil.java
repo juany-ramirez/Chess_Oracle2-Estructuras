@@ -4,17 +4,15 @@ package Clases;
 
 public class Alfil extends Pieza {
 
-    
-    
-    public Alfil(String color, int X, int Y) {
+    public Alfil(char color, int X, int Y) {
         super(color, X, Y);
     }
 
     
-    public boolean movimientoValido(Tablero tablero, Posicion direccion) {
+    public boolean movimientoValido(Pieza[][] tablero, Posicion direccion) {
         int y;
         int x;
-        String actual = this.getColor();
+        char actual = this.getColor();
 
         if ((this.posicion.getX() == direccion.getX()) || (this.posicion.getY() == direccion.getY())) {
             //verifica que no se mueva a los lados ni verticalmente
@@ -27,11 +25,11 @@ public class Alfil extends Pieza {
                 x = this.posicion.getX() - 1;
 
                 while (true) {
-                    if (tablero.get(x, y) == null) {
+                    if (tablero[y][x] == null) {
                         y--;
                         x--;
 
-                    } else if (tablero.get(x, y) != null && tablero.get(x, y).getColor() == actual) {
+                    } else if (tablero[y][x] != null && tablero[y][x].getColor() == actual) {
                         return false;
                     }
                     if (x == direccion.getX() || y == direccion.getY()) {
@@ -45,10 +43,10 @@ public class Alfil extends Pieza {
                 x = this.posicion.getX() + 1;
 
                 while (true) {
-                    if (tablero.get(x, y) == null) {
+                    if (tablero[y][x] == null) {
                         y--;
                         x++;
-                    } else if (tablero.get(x, y) != null && tablero.get(x, y).getColor() == actual) {
+                    } else if (tablero[y][x] != null && tablero[y][x].getColor() == actual) {
                         return false;
                     }
                     if (x == direccion.getX() || y == direccion.getY()) {
@@ -63,10 +61,10 @@ public class Alfil extends Pieza {
                 x = this.posicion.getX() - 1;
 
                 while (true) {
-                    if (tablero.get(x, y) == null) {
+                    if (tablero[y][x] == null) {
                         y++;
                         x--;
-                    } else if (tablero.get(x, y) != null && tablero.get(x, y).getColor() == actual) {
+                    } else if (tablero[y][x] != null && tablero[y][x].getColor() == actual) {
                         return false;
                     }
                     if (x == direccion.getX() || y == direccion.getY()) {
@@ -81,10 +79,10 @@ public class Alfil extends Pieza {
                 x = this.posicion.getX() + 1;
 
                 while (true) {
-                    if (tablero.get(x, y) == null) {
+                    if (tablero[y][x] == null) {
                         y++;
                         x++;
-                    } else if (tablero.get(x, y) != null && tablero.get(x, y).getColor() == actual) {
+                    } else if (tablero[y][x] != null && tablero[y][x].getColor() == actual) {
                         return false;
                     }
                     if (x == direccion.getX() || y == direccion.getY()) {
@@ -101,5 +99,15 @@ public class Alfil extends Pieza {
         return false;
     }
 
+    @Override
+    public String toString() {
+        String ss;
+        if (color == 'N') {
+            ss = "A";
+        } else {
+            ss = "a";
+        }
+        return ss;
+    }
 
 }

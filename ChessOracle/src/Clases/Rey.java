@@ -7,24 +7,24 @@ public class Rey extends Pieza {
     public Rey() {
         
     }
-    public Rey(String color, int x, int y) {
+    public Rey(char color, int x, int y) {
         super(color, x, y);
     }
 
-    public boolean movimientoValido(Tablero tablero, Posicion direccion) {
+    public boolean movimientoValido(Pieza[][] tablero, Posicion direccion) {
         int diferenciaV;
         int diferenciaH;
-        String actual;
-        String opuesto;
-        if (this.getColor() == "B") {
-            actual = "B";
-            opuesto = "N";
+        byte actual;
+        byte opuesto;
+        if (this.getColor() == 'B') {
+            actual = (byte) 'B';
+            opuesto = (byte) 'N';
         } else {
-            actual = "N";
-            opuesto = "B";
+            actual = (byte) 'N';
+            opuesto = (byte) 'B';
         }
 
-        if (tablero.get(direccion.getY(),direccion.getX()) == null || tablero.get(direccion.getY(),direccion.getX()).getColor() == opuesto) {
+        if (tablero[direccion.getY()][direccion.getX()] == null || tablero[direccion.getY()][direccion.getX()].getColor() == opuesto) {
             if ((direccion.getY() == this.posicion.getY() - 1) && (direccion.getX() == this.posicion.getX() - 1)) {
                 return true;
             } else if ((this.posicion.getX() == direccion.getX()) && (direccion.getY() == this.posicion.getY() - 1)) {
@@ -42,10 +42,20 @@ public class Rey extends Pieza {
             } else if ((direccion.getY() == this.posicion.getY() + 1) && (direccion.getX() == this.posicion.getX() + 1)) {
                 return true;
             }
-        } else if (tablero.get(direccion.getY(),direccion.getX()).getColor() == actual) {
+        } else if (tablero[direccion.getY()][direccion.getX()].getColor() == actual) {
             return false;
         }
         return false;
+    }
+
+    public String toString() {
+        String ss;
+        if (color == 'N') {
+            ss = "R";
+        } else {
+            ss = "r";
+        }
+        return ss;
     }
 
 }
