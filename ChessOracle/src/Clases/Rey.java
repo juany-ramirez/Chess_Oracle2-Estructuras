@@ -48,5 +48,4 @@ public class Rey extends Pieza {
         return false;
     }
 
-
 }

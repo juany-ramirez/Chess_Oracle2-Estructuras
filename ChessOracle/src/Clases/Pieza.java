@@ -18,7 +18,6 @@ public abstract class Pieza {
     public String getColor() {
         return color;
     }
-
     
     public final Posicion getPosicion() {
         return posicion;
@@ -32,7 +31,11 @@ public abstract class Pieza {
         this.posicion=posicion;
     }
 
-    public abstract boolean movimientoValido(Tablero NamelessParameter1, Posicion NamelessParameter2);
+    public boolean movimientoValido(Pieza[][] tablero, Posicion posicion) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
 
    
 }

@@ -9,13 +9,15 @@ package Clases;
  *
  * @author Inspiron
  */
-public class Movimiento{
+public class Movimiento {
     String tipo;
-    Posicion posicion;
-    
-    public Movimiento(String tipo, Posicion posicion) {
+    int x;
+    int y;
+
+    public Movimiento(String tipo, int x, int y) {
         this.tipo = tipo;
-        this.posicion = posicion;
+        this.x = x;
+        this.y = y;
     }
 
     public String getTipo() {
@@ -26,17 +28,26 @@ public class Movimiento{
         this.tipo = tipo;
     }
 
-    public Posicion getPosicion() {
-        return posicion;
+    public int getX() {
+        return x;
     }
 
-    public void setPosicion(Posicion posicion) {
-        this.posicion = posicion;
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
     }
 
     @Override
     public String toString() {
-        return tipo+"("+posicion.getX()+","+posicion.getY()+")";
+        return "Movimiento{" + "tipo=" + tipo + ", x=" + x + ", y=" + y + '}';
     }
+    
     
 }

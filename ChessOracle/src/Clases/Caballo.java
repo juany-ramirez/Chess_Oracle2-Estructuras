@@ -40,6 +40,7 @@ public class Caballo extends Pieza {
         }
     } //si el moviemiento es valido
 
+
    
 
     

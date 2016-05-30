@@ -12,6 +12,7 @@ public class Main extends javax.swing.JFrame {
      */
     public Main() {
         initComponents();
+        llenar();
         //<html>ANALIZAR<br /><br />JUGADA</html> 
     }
 
@@ -637,14 +638,11 @@ public class Main extends javax.swing.JFrame {
         Icon bking_bt = new ImageIcon("src/Icons/bking_bt.png");
         String posicion = tf_posicion.getText();
         String tipo = cb_tipo.getSelectedItem().toString();
-        Pieza pieza=null;
         char fila = posicion.charAt(0);
         char columna = posicion.charAt(1);
         switch (tipo) {
             case "CABALLO":
-                pieza = new Caballo();
                 if (rb_blanco.isSelected()) {//caballos blancos
-                    pieza.setColor("B");
                     if (fila == 'A') {
                         if (columna == '1') {
                             lb_A1.setIcon(whorse_bt);
@@ -798,7 +796,6 @@ public class Main extends javax.swing.JFrame {
                         }
                     }
                 } else {//caballos negros
-                    pieza.setColor("N");
                     if (fila == 'A') {
                         if (columna == '1') {
                             lb_A1.setIcon(bhorse_bt);
@@ -946,7 +943,7 @@ public class Main extends javax.swing.JFrame {
                         } else if (columna == '6') {
                             lb_H6.setIcon(bhorse_bt);
                         } else if (columna == '7') {
-                            tablero.add(7, 6, pieza);
+                            lb_H7.setIcon(bhorse_wt);
                         } else if (columna == '8') {
                             lb_H8.setIcon(bhorse_bt);
                         }
@@ -954,9 +951,7 @@ public class Main extends javax.swing.JFrame {
                 }
                 break;
             case "PEON":
-                pieza = new Peon();
                 if (rb_blanco.isSelected()) {//peones blancos
-                    pieza.setColor("B");
                     if (fila == 'A') {
                         if (columna == '1') {
                             lb_A1.setIcon(wpawn_bt);
@@ -1110,7 +1105,6 @@ public class Main extends javax.swing.JFrame {
                         }
                     }
                 } else {//peones negros
-                    pieza.setColor("N");
                     if (fila == 'A') {
                         if (columna == '1') {
                             lb_A1.setIcon(bpawn_bt);
@@ -1266,9 +1260,7 @@ public class Main extends javax.swing.JFrame {
                 }
                 break;
             case "REY":
-                pieza = new Rey();
                 if (rb_blanco.isSelected()) {//rey blanco
-                    pieza.setColor("B");
                     if (fila == 'A') {
                         if (columna == '1') {
                             lb_A1.setIcon(wking_bt);
@@ -1321,7 +1313,7 @@ public class Main extends javax.swing.JFrame {
                         } else if (columna == '6') {
                             lb_C6.setIcon(wking_wt);
                         } else if (columna == '7') {
-                            tablero.add(2, 6, pieza);
+                            lb_C7.setIcon(wking_bt);
                         } else if (columna == '8') {
                             lb_C8.setIcon(wking_wt);
                         }
@@ -1422,7 +1414,6 @@ public class Main extends javax.swing.JFrame {
                         }
                     }
                 } else {//rey negro
-                    pieza.setColor("N");
                     if (fila == 'A') {
                         if (columna == '1') {
                             lb_A1.setIcon(bking_bt);
@@ -1616,13 +1607,18 @@ public class Main extends javax.swing.JFrame {
             case '8': y=7;
                 break;
         }
-        pieza.setPosicion(new Posicion(x, y));
-        tablero.add(x, y, pieza);  
+        String pieza="";
+        if(rb_blanco.isSelected()){
+            pieza=tipo+" BLANCO";
+        }else{
+            pieza=tipo+" NEGRO";
+        }
+        tablero[x][y]= new Movimiento(pieza,x,y);
         tf_posicion.setText("");
-
     }//GEN-LAST:event_jb_ingresarCoordenadasMouseClicked
 
     private void jb_nuevaPartidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_nuevaPartidaMouseClicked
+        llenar();
         Icon gray = new ImageIcon("src/Icons/gray_tile.png");
         Icon white = new ImageIcon("src/Icons/white_tile.png");
         lb_A1.setIcon(gray);
@@ -1699,7 +1695,6 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_nuevaPartidaMouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        movimientos = tablero;
         if (rb_peon.isSelected()) {//arbol para coronar un peon
 
         } else if (rb_caballo.isSelected()) {//arbol para comer un caballo
@@ -1709,6 +1704,14 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1MouseClicked
 
+    
+    public void llenar(){
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                tablero[i][j]=null;
+            }
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -1853,6 +1856,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField tf_posicion;
     // End of variables declaration//GEN-END:variables
 
-    Tablero tablero = new Tablero();
-    Tablero movimientos = new Tablero();
+    Movimiento[][] tablero= new Movimiento[8][8];
+    Movimiento[][] movimientos= new Movimiento[8][8];
+    //Tablero tablero = new Tablero();
+    //Tablero movimientos = new Tablero();
 }
