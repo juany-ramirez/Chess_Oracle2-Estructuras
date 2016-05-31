@@ -10,7 +10,8 @@ package Clases;
  * @author Admin
  */
 public class Arbol {
-    NodoArbol root=null;
+
+    NodoArbol root = null;
 
     public Arbol(NodoArbol root) {
         this.root = root;
@@ -23,15 +24,17 @@ public class Arbol {
     public void setRoot(NodoArbol root) {
         this.root = root;
     }
-        
-    public boolean isEmpty(){
-        return(root==null);
+
+    public boolean isEmpty() {
+        return (root == null);
     }
-    
-    public void delete(){
+
+    public void delete() {
         root.getHijos().remove(root.getHijos().find(this));
     }
-    
-    
-    
+
+    public void preOrder() {
+        root.recorrido();
+    }
+
 }

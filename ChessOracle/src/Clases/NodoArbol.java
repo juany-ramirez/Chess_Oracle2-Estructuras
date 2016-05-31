@@ -9,16 +9,16 @@ package Clases;
  *
  * @author Admin
  */
-public class NodoArbol {    
+public class NodoArbol {
+
     Object value;
     NodoArbol padre;
     Lista hijos = new Lista();
-    
+
     public NodoArbol() {
-        value=null;
+        value = null;
     }
 
-    
     public NodoArbol(Object value, NodoArbol padre) {
         this.value = value;
         this.padre = padre;
@@ -32,7 +32,6 @@ public class NodoArbol {
         this.padre = padre;
     }
 
-    
     public Object getValue() {
         return value;
     }
@@ -48,33 +47,44 @@ public class NodoArbol {
     public void setHijos(Lista hijos) {
         this.hijos = hijos;
     }
-      
-    public int getChildCount(){
+
+    public int getChildCount() {
         return hijos.getSize();
     }
-    
-    public NodoArbol getLefterSon(){
-        NodoArbol izquierdo= (NodoArbol)hijos.at(0);
+
+    public NodoArbol getLefterSon() {
+        NodoArbol izquierdo = (NodoArbol) hijos.at(0);
         return izquierdo;
     }
-    
-    public NodoArbol getRightBrother(){
-        NodoArbol derecho=null;
-        int pos=padre.getHijos().find(this);
-        if(padre.getHijos().getSize()>pos){
-            derecho=(NodoArbol)padre.getHijos().at(pos+1);
+
+    public NodoArbol getRightBrother() {
+        NodoArbol derecho = null;
+        int pos = padre.getHijos().find(this);
+        if (padre.getHijos().getSize() > pos) {
+            derecho = (NodoArbol) padre.getHijos().at(pos + 1);
         }
         return derecho;
     }
-    
-    public void addSon(Object hijo, NodoArbol padre){
+
+    public void addSon(Object hijo, NodoArbol padre) {
         hijos.push(new NodoArbol(hijo, padre));
     }
 
-    public boolean isLeaf(){
-        return hijos.getSize()==0;
+    public boolean isLeaf() {
+        return hijos.getSize() == 0;
     }
-    
+
+    public boolean hasSon() {
+        return hijos.getSize() > 0;
+    }
+
+    public void recorrido() {
+        if (this.hasSon()) {
+            Pieza x = (Pieza) this.getValue();
+            System.out.println(x.toString() + " " + x.getPosicion());
+            for (int i = 0; i < this.getHijos().getSize(); i++) {
+                ((NodoArbol) this.getHijos().at(i)).recorrido();
+            }
+        }
+    }
 }
-    
-   
