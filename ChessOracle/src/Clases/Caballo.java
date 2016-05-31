@@ -52,5 +52,6 @@ public class Caballo extends Pieza {
         }
         return ss;
     }
+   
 
 }

@@ -1756,12 +1756,10 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_nuevaPartidaMouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        
-
         if (rb_peon.isSelected()) {//arbol para coronar un peon
-
+            peonCoronado(tablero);
         } else if (rb_caballo.isSelected()) {//arbol para comer un caballo
-
+            
         } else if (rb_rey.isSelected()) {//arbol para poner en jaque al rey
 
         }
@@ -1827,9 +1825,9 @@ public class Main extends javax.swing.JFrame {
             for (int j = 0; j < 8; j++) {
                 if (board[i][j] != miJugadaAnterior[i][j]) {
                     if (board[i][j] != null && board[i][j].getColor() == 'B') {
-                        pieza = board[i][j];
+                        pieza = copiaPieza(board[i][j]) ;
                     } else if (miJugadaAnterior[i][j] != null && miJugadaAnterior[i][j].getColor() == 'B') {
-                        pieza = miJugadaAnterior[i][j];
+                        pieza = copiaPieza(miJugadaAnterior[i][j]) ;
                     }
                 }
             }
@@ -1845,7 +1843,7 @@ public class Main extends javax.swing.JFrame {
                 if (pieza.movimientoValido(tablero, new Posicion(i, j))) {
                     pieza.setAnterior(pieza.getPosicion().getX(), pieza.getPosicion().getY());
                     pieza.setPosicion(new Posicion(i, j));
-                    tablero[i][j] = pieza;
+                    tablero[i][j] = copiaPieza(pieza);
                     tablero[pieza.getAnterior().getX()][pieza.getAnterior().getY()] = null;
                     posiciones.push(tablero);
                 }
@@ -1870,6 +1868,25 @@ public class Main extends javax.swing.JFrame {
             }
         }
         return tablero;
+
+    }
+    
+    public Pieza copiaPieza(Pieza p) {
+        String tipo = p.getTipo();
+        Pieza pieza = new Rey();
+        switch(tipo){
+            case "PEON": 
+                pieza = new Peon(p.getColor(), p.posicion.getX(),p.posicion.getY(),p.getTipo());
+                break;
+            case "CABALLO":
+                pieza = new Caballo(p.getColor(), p.posicion.getX(),p.posicion.getY(),p.getTipo());
+                break;
+            case "REY":
+                pieza = new Rey(p.getColor(), p.posicion.getX(),p.posicion.getY(),p.getTipo());
+                break;
+        }
+        
+        return pieza;
 
     }
 
