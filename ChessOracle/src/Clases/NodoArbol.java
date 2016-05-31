@@ -11,18 +11,26 @@ package Clases;
  */
 public class NodoArbol {    
     Object value;
+    NodoArbol padre;
     Lista hijos=new Lista();
     
     public NodoArbol() {
         value=null;
     }
 
-    public NodoArbol(Object move) {
-        this.value = move;
-        
-    } 
-       
-    
+    public NodoArbol(Object value, NodoArbol padre) {
+        this.value = value;
+        this.padre = padre;
+    }
+
+    public NodoArbol getPadre() {
+        return padre;
+    }
+
+    public void setPadre(NodoArbol padre) {
+        this.padre = padre;
+    }
+
     
     public Object getValue() {
         return value;
@@ -40,14 +48,26 @@ public class NodoArbol {
         this.hijos = hijos;
     }
       
- 
+    public int getChildCount(){
+        return hijos.getSize();
+    }
+    
     public NodoArbol getLefterSon(){
         NodoArbol izquierdo= (NodoArbol)hijos.at(0);
         return izquierdo;
     }
     
+    public NodoArbol getRightBrother(){
+        NodoArbol derecho=null;
+        int pos=padre.getHijos().find(this);
+        if(padre.getHijos().getSize()>pos){
+            derecho=(NodoArbol)padre.getHijos().at(pos+1);
+        }
+        return derecho;
+    }
+    
     public void addSon(Object hijo){
-        hijos.push(new NodoArbol(hijo));
+        hijos.push(new NodoArbol(hijo,this.padre));
     }
 
     public boolean isLeaf(){

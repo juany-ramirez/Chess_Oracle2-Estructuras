@@ -28,29 +28,14 @@ public class Arbol {
         return(root==null);
     }
     
-    public void llamarRecorrido(){
-        recorrido(root);
-    }
-    
-    
     public void delete(){
         root.getHijos().remove(root.getHijos().find(this));
     }
     
-    public void recorrido(NodoArbol nodo){
-        for (int i = -1; i < nodo.getHijos().getSize(); i++){ 
-            if(root!=null){
-                System.out.println(nodo.getValue()+" (Padre: "+root+")");
-            }else{
-                System.out.println(nodo.getValue());
-            }
-            recorrido((NodoArbol)nodo.getHijos().at(i+1));
-        }
-    }
     
     public void peonCoronado(Pieza[][] tablero){
         Lista peones = new Lista();
-        Arbol arbol = new Arbol(new NodoArbol(tablero));
+        //Arbol arbol = new Arbol(new NodoArbol(tablero));
         
     }
 }
