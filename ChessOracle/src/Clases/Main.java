@@ -1759,7 +1759,7 @@ public class Main extends javax.swing.JFrame {
         if (rb_peon.isSelected()) {//arbol para coronar un peon
             peonCoronado(tablero);
         } else if (rb_caballo.isSelected()) {//arbol para comer un caballo
-            
+
         } else if (rb_rey.isSelected()) {//arbol para poner en jaque al rey
 
         }
@@ -1772,11 +1772,13 @@ public class Main extends javax.swing.JFrame {
         //if(((tablero[i][j].getColor()=='B' && turnoJugador==1) || (tablero[i][j].getColor()=='N' && turnoJugador==2)) && tablero[i][j] != null) {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                if (((tablero[i][j].getColor() == 'B' && turnoJugador == 1) && tablero[i][j] != null)) {
-                    if (tablero[i][j].getClass().getName().equals("Peon")) {
-                        tablerosHijos = posiblesTableros(tablero, tablero[i][j]);
-                        for (int k = 0; k < tablerosHijos.size; k++) {
-                            arbol.getRoot().addSon(tablerosHijos.at(k), arbol.getRoot());
+                if ((tablero[i][j] != null)) {
+                    if (tablero[i][j].getColor() == 'B') {
+                        if (tablero[i][j].getTipo().equals("PEON")) {
+                            tablerosHijos = posiblesTableros(tablero, tablero[i][j]);
+                            for (int k = 0; k < tablerosHijos.size; k++) {
+                                arbol.getRoot().addSon(tablerosHijos.at(k), arbol.getRoot());
+                            }
                         }
                     }
                 }
@@ -1788,16 +1790,18 @@ public class Main extends javax.swing.JFrame {
             while (piezaMovida(hijo).getPosicion() != null || piezaMovida(hijo).getPosicion().getY() != 0) {
                 for (int i = 0; i < 8; i++) {
                     for (int j = 0; j < 8; j++) {
-                        if (tablero[i][j].getColor() == 'N' && (tablero[i][j] != null)) {
-                            tablerosHijos = posiblesTableros(tablero, tablero[i][j]);
-                            for (int k = 0; k < tablerosHijos.size; k++) {
-                                hijo.addSon(tablerosHijos.at(k), hijo);
-                            }
-                        } else if (tablero[i][j].getColor() == 'B' && (tablero[i][j] != null)) {
-                            peon = piezaMovida(hijo);
-                            tablerosHijos = posiblesTableros(tablero, peon);
-                            for (int k = 0; k < tablerosHijos.size; k++) {
-                                hijo.addSon(tablerosHijos.at(k), hijo);
+                        if (tablero[i][j] != null) {
+                            if (tablero[i][j].getColor() == 'N') {
+                                tablerosHijos = posiblesTableros(tablero, tablero[i][j]);
+                                for (int k = 0; k < tablerosHijos.size; k++) {
+                                    hijo.addSon(tablerosHijos.at(k), hijo);
+                                }
+                            } else if (tablero[i][j].getColor() == 'B') {
+                                peon = piezaMovida(hijo);
+                                tablerosHijos = posiblesTableros(tablero, peon);
+                                for (int k = 0; k < tablerosHijos.size; k++) {
+                                    hijo.addSon(tablerosHijos.at(k), hijo);
+                                }
                             }
                         }
                     }
@@ -1807,12 +1811,13 @@ public class Main extends javax.swing.JFrame {
             if (hijo.getRightBrother() != null) {
                 hijo = hijo.getRightBrother();
             } else {
-                while (hijo.getRightBrother() != null || hijo==arbol.getRoot()) {
+                while (hijo.getRightBrother() != null || hijo == arbol.getRoot()) {
                     hijo = hijo.getPadre();
                 }
                 hijo = hijo.getRightBrother();
             }
         }
+        mapeo(arbol);
 
     }
 
@@ -1824,10 +1829,12 @@ public class Main extends javax.swing.JFrame {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 if (board[i][j] != miJugadaAnterior[i][j]) {
-                    if (board[i][j] != null && board[i][j].getColor() == 'B') {
-                        pieza = copiaPieza(board[i][j]) ;
-                    } else if (miJugadaAnterior[i][j] != null && miJugadaAnterior[i][j].getColor() == 'B') {
-                        pieza = copiaPieza(miJugadaAnterior[i][j]) ;
+                    if (board[i][j] != null) {
+                        if (board[i][j].getColor() == 'B') {
+                            pieza = copiaPieza(board[i][j]);
+                        } else if (miJugadaAnterior[i][j].getColor() == 'B') {
+                            pieza = copiaPieza(miJugadaAnterior[i][j]);
+                        }
                     }
                 }
             }
@@ -1870,22 +1877,22 @@ public class Main extends javax.swing.JFrame {
         return tablero;
 
     }
-    
+
     public Pieza copiaPieza(Pieza p) {
         String tipo = p.getTipo();
         Pieza pieza = new Rey();
-        switch(tipo){
-            case "PEON": 
-                pieza = new Peon(p.getColor(), p.posicion.getX(),p.posicion.getY(),p.getTipo());
+        switch (tipo) {
+            case "PEON":
+                pieza = new Peon(p.getColor(), p.posicion.getX(), p.posicion.getY(), p.getTipo());
                 break;
             case "CABALLO":
-                pieza = new Caballo(p.getColor(), p.posicion.getX(),p.posicion.getY(),p.getTipo());
+                pieza = new Caballo(p.getColor(), p.posicion.getX(), p.posicion.getY(), p.getTipo());
                 break;
             case "REY":
-                pieza = new Rey(p.getColor(), p.posicion.getX(),p.posicion.getY(),p.getTipo());
+                pieza = new Rey(p.getColor(), p.posicion.getX(), p.posicion.getY(), p.getTipo());
                 break;
         }
-        
+
         return pieza;
 
     }
