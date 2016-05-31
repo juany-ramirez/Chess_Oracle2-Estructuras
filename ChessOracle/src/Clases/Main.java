@@ -1717,26 +1717,44 @@ public class Main extends javax.swing.JFrame {
 
     public void peonCoronado(Pieza[][] tablero){
         Arbol arbol = new Arbol(new NodoArbol(tablero, null));
-        Lista coordenadas;
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                if(tablero[i][j].getClass().getName().equals("Peon")){
-                    //coordenadas = 
-                    //arbol.getRoot().addSon();
-                }
-            }
-        }
+        Lista tablerosHijos;
+        Lista peones = new Lista();
+        int turnoJugador = 1;
+        //if(((tablero[i][j].getColor()=='B' && turnoJugador==1) || (tablero[i][j].getColor()=='N' && turnoJugador==2)) && tablero[i][j] != null) {
+        for (int i = 0; i < 8; i++) 
+            for (int j = 0; j < 8; j++) 
+                if(((tablero[i][j].getColor()=='B' && turnoJugador==1) && tablero[i][j] != null))
+                    if(tablero[i][j].getClass().getName().equals("Peon")){
+                        tablerosHijos = posiblesTableros(tablero, tablero[i][j]);
+                        peones.push(tablero[i][j]);
+                        for (int k = 0; k < tablerosHijos.size; k++) 
+                            arbol.getRoot().addSon(tablerosHijos.at(k), arbol.getRoot());
+                    }
+        
+                
     }
     
-    public Lista posiblesPosiciones(Pieza[][] tablero, Pieza pieza){
-        Lista posiciones = new Lista();
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                //if(pieza.movimientoValido(tablero, new Posicion (i,j)){
-                    
-                //}
-            }
+    public boolean condicionPeon(){
+        boolean condicion=true;
+        for (int i = 0; i < 10; i++) {
+            
         }
+        return condicion;
+    }
+    
+    public Lista posiblesTableros(Pieza[][] tablero, Pieza pieza){
+        Lista posiciones = new Lista();
+        for (int i = 0; i < 8; i++) 
+            for (int j = 0; j < 8; j++) 
+                if(pieza.movimientoValido(tablero, new Posicion (i,j))){
+                    pieza.setAnterior(pieza.getPosicion().getX(), pieza.getPosicion().getY());
+                    pieza.setPosicion(new Posicion(i,j));
+                    tablero[i][j] = pieza;
+                    tablero[pieza.getAnterior().getX()][pieza.getAnterior().getY()] = null;
+                    posiciones.push(tablero);
+                }
+            
+        
         return posiciones;
     }
     

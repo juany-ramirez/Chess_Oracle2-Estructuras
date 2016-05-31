@@ -2,7 +2,6 @@ package Clases;
 
 public class Peon extends Pieza {
 
-    private boolean firstMove;
 
     public Peon() {
 
@@ -10,7 +9,6 @@ public class Peon extends Pieza {
 
     public Peon(char color, int x, int y) { //constructor
         super(color, x, y);
-        firstMove = true;
     }
 
     public final int diferenciasX(Posicion direccion) {
@@ -28,7 +26,7 @@ public class Peon extends Pieza {
         int diferX = diferenciasX(new Posicion(direccion));
         char actual = this.getColor();
 
-        if ((diferX == 0 && diferY == 1) || (diferY == 2 && firstMove && diferX == 0)) { //primer movimiento o movimiento hacia adelante
+        if ((diferX == 0 && diferY == 1)) { //primer movimiento o movimiento hacia adelante
             if (tablero[direccion.getY()][direccion.getX()] == null || tablero[direccion.getY()][direccion.getX()].getColor() != actual) {
                 return true;
             }
