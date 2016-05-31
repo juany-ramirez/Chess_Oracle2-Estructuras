@@ -1768,7 +1768,6 @@ public class Main extends javax.swing.JFrame {
     public void peonCoronado(Pieza[][] tablero){
         Arbol arbol = new Arbol(new NodoArbol(tablero, null));
         Lista tablerosHijos;
-        Lista peones = new Lista();
         int turnoJugador = 1;
         //if(((tablero[i][j].getColor()=='B' && turnoJugador==1) || (tablero[i][j].getColor()=='N' && turnoJugador==2)) && tablero[i][j] != null) {
         for (int i = 0; i < 8; i++) 
@@ -1776,20 +1775,43 @@ public class Main extends javax.swing.JFrame {
                 if(((tablero[i][j].getColor()=='B' && turnoJugador==1) && tablero[i][j] != null))
                     if(tablero[i][j].getClass().getName().equals("Peon")){
                         tablerosHijos = posiblesTableros(tablero, tablero[i][j]);
-                        peones.push(tablero[i][j]);
                         for (int k = 0; k < tablerosHijos.size; k++) 
                             arbol.getRoot().addSon(tablerosHijos.at(k), arbol.getRoot());
                     }
-        
+        NodoArbol hijo = (NodoArbol)arbol.getRoot().getHijos().at(0);
+        for(int p = 0 ; p< arbol.getRoot().getHijos().size ; p++) {
+            while(piezaMovida(hijo).getPosicion() != null || piezaMovida(hijo).getPosicion().getY() != 0 ){
+                for (int i = 0; i < 8; i++) 
+                    for (int j = 0; j < 8; j++) 
+                        if(tablero[i][j].getColor()=='N' && (tablero[i][j] != null)){
+                           tablerosHijos = posiblesTableros(tablero, tablero[i][j]);
+                                for (int k = 0; k < tablerosHijos.size; k++) 
+                                    hijo.addSon(tablerosHijos.at(k), hijo);
+                        }
+            }
+        }
                 
     }
     
-    public boolean condicionPeon(){
-        boolean condicion=true;
-        for (int i = 0; i < 10; i++) {
-            
+       
+    public Pieza piezaMovida(NodoArbol jugada){
+        Pieza pieza= new Peon();
+        Pieza[][] board = (Pieza[][]) jugada.getValue();
+        //NodoArbol padre = jugada.getPadre();
+        Pieza[][] miJugadaAnterior = (Pieza[][]) jugada.getPadre().getValue();
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if(board[i][j]!= miJugadaAnterior[i][j]){
+                    if(board[i][j] != null && board[i][j].getColor() == 'B'){
+                        pieza = board[i][j];
+                    }else if(miJugadaAnterior[i][j] != null && miJugadaAnterior[i][j].getColor() == 'B'){
+                        pieza = miJugadaAnterior[i][j];
+                    }
+                }
+                    
+            }
         }
-        return condicion;
+        return pieza;
     }
     
     public Lista posiblesTableros(Pieza[][] tablero, Pieza pieza){
@@ -1803,10 +1825,10 @@ public class Main extends javax.swing.JFrame {
                     tablero[pieza.getAnterior().getX()][pieza.getAnterior().getY()] = null;
                     posiciones.push(tablero);
                 }
-            
         
         return posiciones;
     }
+    
     
     public void llenar(){
         for (int i = 0; i < 8; i++) {
