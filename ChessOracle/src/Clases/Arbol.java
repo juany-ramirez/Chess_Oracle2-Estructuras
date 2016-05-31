@@ -33,9 +33,5 @@ public class Arbol {
     }
     
     
-    public void peonCoronado(Pieza[][] tablero){
-        Lista peones = new Lista();
-        //Arbol arbol = new Arbol(new NodoArbol(tablero));
-        
-    }
+    
 }

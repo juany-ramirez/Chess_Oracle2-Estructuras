@@ -3,8 +3,8 @@ package Clases;
 public abstract class Pieza {
 
     protected char color;
-    protected Posicion posicion = new Posicion();
-
+    protected Posicion posicion;
+    protected Posicion anterior;
 
     public Pieza() {
     }
@@ -14,10 +14,17 @@ public abstract class Pieza {
         this.posicion = new Posicion(x, y);
     }
 
+    public Posicion getAnterior() {
+        return anterior;
+    }
+
+    public void setAnterior(int x, int y) {
+        this.anterior = new Posicion(x, y);
+    }
+
     public char getColor() {
         return color;
     }
-
     
     public final Posicion getPosicion() {
         return posicion;
@@ -30,8 +37,9 @@ public abstract class Pieza {
     public final void setPosicion(Posicion posicion) {
         this.posicion=posicion;
     }
-
+    
     public abstract boolean movimientoValido(Pieza[][] NamelessParameter1, Posicion NamelessParameter2);
 
+    public abstract String toString();
    
 }

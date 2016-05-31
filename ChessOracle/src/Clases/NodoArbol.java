@@ -12,12 +12,13 @@ package Clases;
 public class NodoArbol {    
     Object value;
     NodoArbol padre;
-    Lista hijos=new Lista();
+    Lista hijos = new Lista();
     
     public NodoArbol() {
         value=null;
     }
 
+    
     public NodoArbol(Object value, NodoArbol padre) {
         this.value = value;
         this.padre = padre;
@@ -66,8 +67,8 @@ public class NodoArbol {
         return derecho;
     }
     
-    public void addSon(Object hijo){
-        hijos.push(new NodoArbol(hijo,this.padre));
+    public void addSon(Object hijo, NodoArbol padre){
+        hijos.push(new NodoArbol(hijo, padre));
     }
 
     public boolean isLeaf(){

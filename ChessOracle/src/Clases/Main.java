@@ -1715,6 +1715,30 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1MouseClicked
 
+    public void peonCoronado(Pieza[][] tablero){
+        Arbol arbol = new Arbol(new NodoArbol(tablero, null));
+        Lista coordenadas;
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if(tablero[i][j].getClass().getName().equals("Peon")){
+                    //coordenadas = 
+                    //arbol.getRoot().addSon();
+                }
+            }
+        }
+    }
+    
+    public Lista posiblesPosiciones(Pieza[][] tablero, Pieza pieza){
+        Lista posiciones = new Lista();
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                //if(pieza.movimientoValido(tablero, new Posicion (i,j)){
+                    
+                //}
+            }
+        }
+        return posiciones;
+    }
     
     public void llenar(){
         for (int i = 0; i < 8; i++) {
