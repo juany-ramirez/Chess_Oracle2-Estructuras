@@ -641,8 +641,8 @@ public class Main extends javax.swing.JFrame {
         String tipo = cb_tipo.getSelectedItem().toString();
         char fila = posicion.charAt(0);
         char columna = posicion.charAt(1);
-        
-        int tipoPieza=0;
+
+        int tipoPieza = 0;
         switch (tipo) {
             case "CABALLO":
                 tipoPieza = 1;
@@ -1756,6 +1756,8 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_nuevaPartidaMouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        
+
         if (rb_peon.isSelected()) {//arbol para coronar un peon
 
         } else if (rb_caballo.isSelected()) {//arbol para comer un caballo
@@ -1765,82 +1767,116 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1MouseClicked
 
-    public void peonCoronado(Pieza[][] tablero){
+    public void peonCoronado(Pieza[][] tablero) {
         Arbol arbol = new Arbol(new NodoArbol(tablero, null));
         Lista tablerosHijos;
         int turnoJugador = 1;
         //if(((tablero[i][j].getColor()=='B' && turnoJugador==1) || (tablero[i][j].getColor()=='N' && turnoJugador==2)) && tablero[i][j] != null) {
-        for (int i = 0; i < 8; i++) 
-            for (int j = 0; j < 8; j++) 
-                if(((tablero[i][j].getColor()=='B' && turnoJugador==1) && tablero[i][j] != null))
-                    if(tablero[i][j].getClass().getName().equals("Peon")){
-                        tablerosHijos = posiblesTableros(tablero, tablero[i][j]);
-                        for (int k = 0; k < tablerosHijos.size; k++) 
-                            arbol.getRoot().addSon(tablerosHijos.at(k), arbol.getRoot());
-                    }
-        NodoArbol hijo = (NodoArbol)arbol.getRoot().getHijos().at(0);
-        for(int p = 0 ; p< arbol.getRoot().getHijos().size ; p++) {
-            while(piezaMovida(hijo).getPosicion() != null || piezaMovida(hijo).getPosicion().getY() != 0 ){
-                for (int i = 0; i < 8; i++) 
-                    for (int j = 0; j < 8; j++) 
-                        if(tablero[i][j].getColor()=='N' && (tablero[i][j] != null)){
-                           tablerosHijos = posiblesTableros(tablero, tablero[i][j]);
-                                for (int k = 0; k < tablerosHijos.size; k++) 
-                                    hijo.addSon(tablerosHijos.at(k), hijo);
-                        }
-            }
-        }
-                
-    }
-    
-       
-    public Pieza piezaMovida(NodoArbol jugada){
-        Pieza pieza= new Peon();
-        Pieza[][] board = (Pieza[][]) jugada.getValue();
-        //NodoArbol padre = jugada.getPadre();
-        Pieza[][] miJugadaAnterior = (Pieza[][]) jugada.getPadre().getValue();
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                if(board[i][j]!= miJugadaAnterior[i][j]){
-                    if(board[i][j] != null && board[i][j].getColor() == 'B'){
+                if (((tablero[i][j].getColor() == 'B' && turnoJugador == 1) && tablero[i][j] != null)) {
+                    if (tablero[i][j].getClass().getName().equals("Peon")) {
+                        tablerosHijos = posiblesTableros(tablero, tablero[i][j]);
+                        for (int k = 0; k < tablerosHijos.size; k++) {
+                            arbol.getRoot().addSon(tablerosHijos.at(k), arbol.getRoot());
+                        }
+                    }
+                }
+            }
+        }
+        NodoArbol hijo = arbol.getRoot().getLefterSon();
+        Pieza peon;
+        while (hijo != arbol.getRoot()) {
+            while (piezaMovida(hijo).getPosicion() != null || piezaMovida(hijo).getPosicion().getY() != 0) {
+                for (int i = 0; i < 8; i++) {
+                    for (int j = 0; j < 8; j++) {
+                        if (tablero[i][j].getColor() == 'N' && (tablero[i][j] != null)) {
+                            tablerosHijos = posiblesTableros(tablero, tablero[i][j]);
+                            for (int k = 0; k < tablerosHijos.size; k++) {
+                                hijo.addSon(tablerosHijos.at(k), hijo);
+                            }
+                        } else if (tablero[i][j].getColor() == 'B' && (tablero[i][j] != null)) {
+                            peon = piezaMovida(hijo);
+                            tablerosHijos = posiblesTableros(tablero, peon);
+                            for (int k = 0; k < tablerosHijos.size; k++) {
+                                hijo.addSon(tablerosHijos.at(k), hijo);
+                            }
+                        }
+                    }
+                }
+                hijo = hijo.getLefterSon();
+            }
+            if (hijo.getRightBrother() != null) {
+                hijo = hijo.getRightBrother();
+            } else {
+                while (hijo.getRightBrother() != null || hijo==arbol.getRoot()) {
+                    hijo = hijo.getPadre();
+                }
+                hijo = hijo.getRightBrother();
+            }
+        }
+
+    }
+
+    public Pieza piezaMovida(NodoArbol jugada) {
+        Pieza pieza = new Peon();
+        Pieza[][] board = copiaTablero((Pieza[][]) jugada.getValue());
+        //NodoArbol padre = jugada.getPadre();
+        Pieza[][] miJugadaAnterior = copiaTablero((Pieza[][]) jugada.getPadre().getValue());
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (board[i][j] != miJugadaAnterior[i][j]) {
+                    if (board[i][j] != null && board[i][j].getColor() == 'B') {
                         pieza = board[i][j];
-                    }else if(miJugadaAnterior[i][j] != null && miJugadaAnterior[i][j].getColor() == 'B'){
+                    } else if (miJugadaAnterior[i][j] != null && miJugadaAnterior[i][j].getColor() == 'B') {
                         pieza = miJugadaAnterior[i][j];
                     }
                 }
-                    
             }
         }
         return pieza;
     }
-    
-    public Lista posiblesTableros(Pieza[][] tablero, Pieza pieza){
+
+    public Lista posiblesTableros(Pieza[][] board, Pieza pieza) {
+        Pieza[][] tablero = copiaTablero(board);
         Lista posiciones = new Lista();
-        for (int i = 0; i < 8; i++) 
-            for (int j = 0; j < 8; j++) 
-                if(pieza.movimientoValido(tablero, new Posicion (i,j))){
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (pieza.movimientoValido(tablero, new Posicion(i, j))) {
                     pieza.setAnterior(pieza.getPosicion().getX(), pieza.getPosicion().getY());
-                    pieza.setPosicion(new Posicion(i,j));
+                    pieza.setPosicion(new Posicion(i, j));
                     tablero[i][j] = pieza;
                     tablero[pieza.getAnterior().getX()][pieza.getAnterior().getY()] = null;
                     posiciones.push(tablero);
                 }
-        
+            }
+        }
         return posiciones;
     }
-    
-    
-    public void llenar(){
+
+    public void llenar() {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-                tablero[i][j]=null;
+                tablero[i][j] = null;
             }
         }
     }
-    
+
+    public Pieza[][] copiaTablero(Pieza[][] board) {
+        Pieza[][] tablero = new Pieza[8][8];;
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                tablero[i][j] = board[i][j];
+            }
+        }
+        return tablero;
+
+    }
+
     public void mapeo(Arbol arbol) {
         arbol.preOrder();
     }
+
     /**
      * @param args the command line arguments
      */
@@ -1985,8 +2021,8 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField tf_posicion;
     // End of variables declaration//GEN-END:variables
     int cont_peon_b = 8, cont_peon_n = 8, cont_caballo_b = 2, cont_caballo_n = 2, cont_rey_b = 1, cont_rey_n = 1;
-    Pieza[][] tablero= new Pieza[8][8];
-    Pieza[][] movimientos= new Pieza[8][8];
+    Pieza[][] tablero = new Pieza[8][8];
+    Pieza[][] movimientos = new Pieza[8][8];
     //Tablero tablero = new Tablero();
     //Tablero movimientos = new Tablero();
 }
