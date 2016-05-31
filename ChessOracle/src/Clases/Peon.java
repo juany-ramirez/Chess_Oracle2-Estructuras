@@ -7,8 +7,8 @@ public class Peon extends Pieza {
 
     }
 
-    public Peon(char color, int x, int y) { //constructor
-        super(color, x, y);
+    public Peon(char color, int x, int y, String tipo) { //constructor
+        super(color, x, y,tipo);
     }
 
     public final int diferenciasX(Posicion direccion) {

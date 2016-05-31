@@ -1668,11 +1668,11 @@ public class Main extends javax.swing.JFrame {
         }
 
         if (tipoPieza == 1) {
-            tablero[x][y] = new Caballo(color, x, y);
+            tablero[x][y] = new Caballo(color, x, y, tipo);
         } else if (tipoPieza == 2) {
-            tablero[x][y] = new Peon(color, x, y);
+            tablero[x][y] = new Peon(color, x, y, tipo);
         } else if (tipoPieza == 3) {
-            tablero[x][y] = new Rey(color, x, y);
+            tablero[x][y] = new Rey(color, x, y, tipo);
         }
 
         tf_posicion.setText("");

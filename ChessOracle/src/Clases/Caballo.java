@@ -6,8 +6,8 @@ public class Caballo extends Pieza {
 
     }
 
-    public Caballo(char color, int x, int y) {
-        super(color, x, y);
+    public Caballo(char color, int x, int y, String tipo) {
+        super(color, x, y, tipo);
     } //constructor
 
     public boolean movimientoValido(Pieza[][] tablero, Posicion direccion) {

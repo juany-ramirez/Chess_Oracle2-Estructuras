@@ -1,7 +1,8 @@
 package Clases;
 
 public abstract class Pieza {
-
+    
+    protected String tipo;
     protected char color;
     protected Posicion posicion;
     protected Posicion anterior;
@@ -9,9 +10,10 @@ public abstract class Pieza {
     public Pieza() {
     }
     
-    public Pieza(char color, int x, int y) {
+    public Pieza(char color, int x, int y, String tipo) {
         this.color = color;
         this.posicion = new Posicion(x, y);
+        this.tipo=tipo;
     }
 
     public Posicion getAnterior() {
@@ -37,6 +39,15 @@ public abstract class Pieza {
     public final void setPosicion(Posicion posicion) {
         this.posicion=posicion;
     }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+    
     
     public abstract boolean movimientoValido(Pieza[][] NamelessParameter1, Posicion NamelessParameter2);
 

@@ -4,8 +4,8 @@ package Clases;
 
 public class Alfil extends Pieza {
 
-    public Alfil(char color, int X, int Y) {
-        super(color, X, Y);
+    public Alfil(char color, int X, int Y, String tipo) {
+        super(color, X, Y, tipo);
     }
 
     

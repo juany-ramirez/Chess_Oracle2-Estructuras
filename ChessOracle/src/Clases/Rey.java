@@ -7,8 +7,8 @@ public class Rey extends Pieza {
     public Rey() {
         
     }
-    public Rey(char color, int x, int y) {
-        super(color, x, y);
+    public Rey(char color, int x, int y,String tipo) {
+        super(color, x, y,tipo);
     }
 
     public boolean movimientoValido(Pieza[][] tablero, Posicion direccion) {

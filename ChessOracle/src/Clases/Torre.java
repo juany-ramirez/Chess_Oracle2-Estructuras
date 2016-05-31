@@ -2,8 +2,8 @@ package Clases;
 
 public class Torre extends Pieza {
 
-    public Torre(char color, int x, int y) {
-        super(color, x, y);
+    public Torre(char color, int x, int y, String tipo) {
+        super(color, x, y, tipo);
     }
 
     public boolean movimientoValido(Pieza[][] tablero, Posicion direccion) {
