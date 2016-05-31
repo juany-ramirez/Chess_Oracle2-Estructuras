@@ -1680,6 +1680,12 @@ public class Main extends javax.swing.JFrame {
 
     private void jb_nuevaPartidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_nuevaPartidaMouseClicked
         llenar();
+        cont_rey_b=1;
+        cont_rey_n=1;
+        cont_peon_b=8;
+        cont_peon_n=8;
+        cont_caballo_b=2;
+        cont_caballo_n=2;
         Icon gray = new ImageIcon("src/Icons/gray_tile.png");
         Icon white = new ImageIcon("src/Icons/white_tile.png");
         lb_A1.setIcon(gray);
@@ -1761,10 +1767,35 @@ public class Main extends javax.swing.JFrame {
         } else if (rb_caballo.isSelected()) {//arbol para comer un caballo
 
         } else if (rb_rey.isSelected()) {//arbol para poner en jaque al rey
-
+            jaque();
         }
     }//GEN-LAST:event_jButton1MouseClicked
 
+    public void jaque(){
+        Arbol arbol= new Arbol(new NodoArbol(tablero, null));
+        Lista tablerosHijos= new Lista();
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if(tablero[i][j].getColor()=='B' && tablero[i][j].getTipo().equals("REY")){
+                    tablerosHijos=posiblesTableros(tablero,tablero[i][j]);
+                    for (int k = 0; k < tablerosHijos.size; k++) {
+                        arbol.getRoot().addSon(tablerosHijos.at(k), arbol.getRoot());
+                    }
+                }else if(tablero[i][j].getColor()=='N' && tablero[i][j].getTipo().equals("REY")){
+                    tablerosHijos=posiblesTableros(tablero,tablero[i][j]);
+                    for (int k = 0; k < tablerosHijos.size; k++) {
+                        arbol.getRoot().addSon(tablerosHijos.at(k), arbol.getRoot());
+                    }
+                }
+            }
+        }
+        NodoArbol hijo = arbol.getRoot().getLefterSon();
+        while(hijo!=arbol.getRoot()){
+            
+        }
+        mapeo(arbol);
+    }
+    
     public void peonCoronado(Pieza[][] tablero) {
         Arbol arbol = new Arbol(new NodoArbol(tablero, null));
         Lista tablerosHijos;
@@ -1823,7 +1854,8 @@ public class Main extends javax.swing.JFrame {
 
     public Pieza piezaMovida(NodoArbol jugada) {
         Pieza pieza = new Peon();
-        Pieza[][] board = copiaTablero((Pieza[][]) jugada.getValue());
+        Pieza[][] board = new Pieza[8][8];
+        board=copiaTablero((Pieza[][]) jugada.getValue());
         //NodoArbol padre = jugada.getPadre();
         Pieza[][] miJugadaAnterior = copiaTablero((Pieza[][]) jugada.getPadre().getValue());
         for (int i = 0; i < 8; i++) {
