@@ -4,6 +4,7 @@ import java.awt.Frame;
 import java.awt.Window;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 public class Main extends javax.swing.JFrame {
 
@@ -646,985 +647,1034 @@ public class Main extends javax.swing.JFrame {
             case "CABALLO":
                 tipoPieza = 1;
                 if (rb_blanco.isSelected()) {//caballos blancos
-                    if (fila == 'A') {
-                        if (columna == '1') {
-                            lb_A1.setIcon(whorse_bt);
-                        } else if (columna == '2') {
-                            lb_A2.setIcon(whorse_wt);
-                        } else if (columna == '3') {
-                            lb_A3.setIcon(whorse_bt);
-                        } else if (columna == '4') {
-                            lb_A4.setIcon(whorse_wt);
-                        } else if (columna == '5') {
-                            lb_A5.setIcon(whorse_bt);
-                        } else if (columna == '6') {
-                            lb_A6.setIcon(whorse_wt);
-                        } else if (columna == '7') {
-                            lb_A7.setIcon(whorse_bt);
-                        } else if (columna == '8') {
-                            lb_A8.setIcon(whorse_wt);
+                    if (cont_caballo_b > 0) {
+                        if (fila == 'A') {
+                            if (columna == '1') {
+                                lb_A1.setIcon(whorse_bt);
+                            } else if (columna == '2') {
+                                lb_A2.setIcon(whorse_wt);
+                            } else if (columna == '3') {
+                                lb_A3.setIcon(whorse_bt);
+                            } else if (columna == '4') {
+                                lb_A4.setIcon(whorse_wt);
+                            } else if (columna == '5') {
+                                lb_A5.setIcon(whorse_bt);
+                            } else if (columna == '6') {
+                                lb_A6.setIcon(whorse_wt);
+                            } else if (columna == '7') {
+                                lb_A7.setIcon(whorse_bt);
+                            } else if (columna == '8') {
+                                lb_A8.setIcon(whorse_wt);
+                            }
                         }
-                    }
-                    if (fila == 'B') {
-                        if (columna == '1') {
-                            lb_B1.setIcon(whorse_wt);
-                        } else if (columna == '2') {
-                            lb_B2.setIcon(whorse_bt);
-                        } else if (columna == '3') {
-                            lb_B3.setIcon(whorse_wt);
-                        } else if (columna == '4') {
-                            lb_B4.setIcon(whorse_bt);
-                        } else if (columna == '5') {
-                            lb_B5.setIcon(whorse_wt);
-                        } else if (columna == '6') {
-                            lb_B6.setIcon(whorse_bt);
-                        } else if (columna == '7') {
-                            lb_B7.setIcon(whorse_wt);
-                        } else if (columna == '8') {
-                            lb_B8.setIcon(whorse_bt);
+                        if (fila == 'B') {
+                            if (columna == '1') {
+                                lb_B1.setIcon(whorse_wt);
+                            } else if (columna == '2') {
+                                lb_B2.setIcon(whorse_bt);
+                            } else if (columna == '3') {
+                                lb_B3.setIcon(whorse_wt);
+                            } else if (columna == '4') {
+                                lb_B4.setIcon(whorse_bt);
+                            } else if (columna == '5') {
+                                lb_B5.setIcon(whorse_wt);
+                            } else if (columna == '6') {
+                                lb_B6.setIcon(whorse_bt);
+                            } else if (columna == '7') {
+                                lb_B7.setIcon(whorse_wt);
+                            } else if (columna == '8') {
+                                lb_B8.setIcon(whorse_bt);
+                            }
                         }
-                    }
-                    if (fila == 'C') {
-                        if (columna == '1') {
-                            lb_C1.setIcon(whorse_bt);
-                        } else if (columna == '2') {
-                            lb_C2.setIcon(whorse_wt);
-                        } else if (columna == '3') {
-                            lb_C3.setIcon(whorse_bt);
-                        } else if (columna == '4') {
-                            lb_C4.setIcon(whorse_wt);
-                        } else if (columna == '5') {
-                            lb_C5.setIcon(whorse_bt);
-                        } else if (columna == '6') {
-                            lb_C6.setIcon(whorse_wt);
-                        } else if (columna == '7') {
-                            lb_C7.setIcon(whorse_bt);
-                        } else if (columna == '8') {
-                            lb_C8.setIcon(whorse_wt);
+                        if (fila == 'C') {
+                            if (columna == '1') {
+                                lb_C1.setIcon(whorse_bt);
+                            } else if (columna == '2') {
+                                lb_C2.setIcon(whorse_wt);
+                            } else if (columna == '3') {
+                                lb_C3.setIcon(whorse_bt);
+                            } else if (columna == '4') {
+                                lb_C4.setIcon(whorse_wt);
+                            } else if (columna == '5') {
+                                lb_C5.setIcon(whorse_bt);
+                            } else if (columna == '6') {
+                                lb_C6.setIcon(whorse_wt);
+                            } else if (columna == '7') {
+                                lb_C7.setIcon(whorse_bt);
+                            } else if (columna == '8') {
+                                lb_C8.setIcon(whorse_wt);
+                            }
                         }
-                    }
-                    if (fila == 'D') {
-                        if (columna == '1') {
-                            lb_D1.setIcon(whorse_wt);
-                        } else if (columna == '2') {
-                            lb_D2.setIcon(whorse_bt);
-                        } else if (columna == '3') {
-                            lb_D3.setIcon(whorse_wt);
-                        } else if (columna == '4') {
-                            lb_D4.setIcon(whorse_bt);
-                        } else if (columna == '5') {
-                            lb_D5.setIcon(whorse_wt);
-                        } else if (columna == '6') {
-                            lb_D6.setIcon(whorse_bt);
-                        } else if (columna == '7') {
-                            lb_D7.setIcon(whorse_wt);
-                        } else if (columna == '8') {
-                            lb_D8.setIcon(whorse_bt);
+                        if (fila == 'D') {
+                            if (columna == '1') {
+                                lb_D1.setIcon(whorse_wt);
+                            } else if (columna == '2') {
+                                lb_D2.setIcon(whorse_bt);
+                            } else if (columna == '3') {
+                                lb_D3.setIcon(whorse_wt);
+                            } else if (columna == '4') {
+                                lb_D4.setIcon(whorse_bt);
+                            } else if (columna == '5') {
+                                lb_D5.setIcon(whorse_wt);
+                            } else if (columna == '6') {
+                                lb_D6.setIcon(whorse_bt);
+                            } else if (columna == '7') {
+                                lb_D7.setIcon(whorse_wt);
+                            } else if (columna == '8') {
+                                lb_D8.setIcon(whorse_bt);
+                            }
                         }
-                    }
-                    if (fila == 'E') {
-                        if (columna == '1') {
-                            lb_E1.setIcon(whorse_bt);
-                        } else if (columna == '2') {
-                            lb_E2.setIcon(whorse_wt);
-                        } else if (columna == '3') {
-                            lb_E3.setIcon(whorse_bt);
-                        } else if (columna == '4') {
-                            lb_E4.setIcon(whorse_wt);
-                        } else if (columna == '5') {
-                            lb_E5.setIcon(whorse_bt);
-                        } else if (columna == '6') {
-                            lb_E6.setIcon(whorse_wt);
-                        } else if (columna == '7') {
-                            lb_E7.setIcon(whorse_bt);
-                        } else if (columna == '8') {
-                            lb_E8.setIcon(whorse_wt);
+                        if (fila == 'E') {
+                            if (columna == '1') {
+                                lb_E1.setIcon(whorse_bt);
+                            } else if (columna == '2') {
+                                lb_E2.setIcon(whorse_wt);
+                            } else if (columna == '3') {
+                                lb_E3.setIcon(whorse_bt);
+                            } else if (columna == '4') {
+                                lb_E4.setIcon(whorse_wt);
+                            } else if (columna == '5') {
+                                lb_E5.setIcon(whorse_bt);
+                            } else if (columna == '6') {
+                                lb_E6.setIcon(whorse_wt);
+                            } else if (columna == '7') {
+                                lb_E7.setIcon(whorse_bt);
+                            } else if (columna == '8') {
+                                lb_E8.setIcon(whorse_wt);
+                            }
                         }
-                    }
-                    if (fila == 'F') {
-                        if (columna == '1') {
-                            lb_F1.setIcon(whorse_wt);
-                        } else if (columna == '2') {
-                            lb_F2.setIcon(whorse_bt);
-                        } else if (columna == '3') {
-                            lb_F3.setIcon(whorse_wt);
-                        } else if (columna == '4') {
-                            lb_F4.setIcon(whorse_bt);
-                        } else if (columna == '5') {
-                            lb_F5.setIcon(whorse_wt);
-                        } else if (columna == '6') {
-                            lb_F6.setIcon(whorse_bt);
-                        } else if (columna == '7') {
-                            lb_F7.setIcon(whorse_wt);
-                        } else if (columna == '8') {
-                            lb_F8.setIcon(whorse_bt);
+                        if (fila == 'F') {
+                            if (columna == '1') {
+                                lb_F1.setIcon(whorse_wt);
+                            } else if (columna == '2') {
+                                lb_F2.setIcon(whorse_bt);
+                            } else if (columna == '3') {
+                                lb_F3.setIcon(whorse_wt);
+                            } else if (columna == '4') {
+                                lb_F4.setIcon(whorse_bt);
+                            } else if (columna == '5') {
+                                lb_F5.setIcon(whorse_wt);
+                            } else if (columna == '6') {
+                                lb_F6.setIcon(whorse_bt);
+                            } else if (columna == '7') {
+                                lb_F7.setIcon(whorse_wt);
+                            } else if (columna == '8') {
+                                lb_F8.setIcon(whorse_bt);
+                            }
                         }
-                    }
-                    if (fila == 'G') {
-                        if (columna == '1') {
-                            lb_G1.setIcon(whorse_bt);
-                        } else if (columna == '2') {
-                            lb_G2.setIcon(whorse_wt);
-                        } else if (columna == '3') {
-                            lb_G3.setIcon(whorse_bt);
-                        } else if (columna == '4') {
-                            lb_G4.setIcon(whorse_wt);
-                        } else if (columna == '5') {
-                            lb_G5.setIcon(whorse_bt);
-                        } else if (columna == '6') {
-                            lb_G6.setIcon(whorse_wt);
-                        } else if (columna == '7') {
-                            lb_G7.setIcon(whorse_bt);
-                        } else if (columna == '8') {
-                            lb_G8.setIcon(whorse_wt);
+                        if (fila == 'G') {
+                            if (columna == '1') {
+                                lb_G1.setIcon(whorse_bt);
+                            } else if (columna == '2') {
+                                lb_G2.setIcon(whorse_wt);
+                            } else if (columna == '3') {
+                                lb_G3.setIcon(whorse_bt);
+                            } else if (columna == '4') {
+                                lb_G4.setIcon(whorse_wt);
+                            } else if (columna == '5') {
+                                lb_G5.setIcon(whorse_bt);
+                            } else if (columna == '6') {
+                                lb_G6.setIcon(whorse_wt);
+                            } else if (columna == '7') {
+                                lb_G7.setIcon(whorse_bt);
+                            } else if (columna == '8') {
+                                lb_G8.setIcon(whorse_wt);
+                            }
                         }
-                    }
-                    if (fila == 'H') {
-                        if (columna == '1') {
-                            lb_H1.setIcon(whorse_wt);
-                        } else if (columna == '2') {
-                            lb_H2.setIcon(whorse_bt);
-                        } else if (columna == '3') {
-                            lb_H3.setIcon(whorse_wt);
-                        } else if (columna == '4') {
-                            lb_H4.setIcon(whorse_bt);
-                        } else if (columna == '5') {
-                            lb_H5.setIcon(whorse_wt);
-                        } else if (columna == '6') {
-                            lb_H6.setIcon(whorse_bt);
-                        } else if (columna == '7') {
-                            lb_H7.setIcon(whorse_wt);
-                        } else if (columna == '8') {
-                            lb_H8.setIcon(whorse_bt);
+                        if (fila == 'H') {
+                            if (columna == '1') {
+                                lb_H1.setIcon(whorse_wt);
+                            } else if (columna == '2') {
+                                lb_H2.setIcon(whorse_bt);
+                            } else if (columna == '3') {
+                                lb_H3.setIcon(whorse_wt);
+                            } else if (columna == '4') {
+                                lb_H4.setIcon(whorse_bt);
+                            } else if (columna == '5') {
+                                lb_H5.setIcon(whorse_wt);
+                            } else if (columna == '6') {
+                                lb_H6.setIcon(whorse_bt);
+                            } else if (columna == '7') {
+                                lb_H7.setIcon(whorse_wt);
+                            } else if (columna == '8') {
+                                lb_H8.setIcon(whorse_bt);
+                            }
                         }
+                        cont_caballo_b--;
+                    } else {
+                        JOptionPane.showMessageDialog(this, "Máximo Nivel de Caballos Blancos Alcanzado");
                     }
                 } else {//caballos negros
-                    if (fila == 'A') {
-                        if (columna == '1') {
-                            lb_A1.setIcon(bhorse_bt);
-                        } else if (columna == '2') {
-                            lb_A2.setIcon(bhorse_wt);
-                        } else if (columna == '3') {
-                            lb_A3.setIcon(bhorse_bt);
-                        } else if (columna == '4') {
-                            lb_A4.setIcon(bhorse_wt);
-                        } else if (columna == '5') {
-                            lb_A5.setIcon(bhorse_bt);
-                        } else if (columna == '6') {
-                            lb_A6.setIcon(bhorse_wt);
-                        } else if (columna == '7') {
-                            lb_A7.setIcon(bhorse_bt);
-                        } else if (columna == '8') {
-                            lb_A8.setIcon(bhorse_wt);
+                    if (cont_caballo_n > 0) {
+                        if (fila == 'A') {
+                            if (columna == '1') {
+                                lb_A1.setIcon(bhorse_bt);
+                            } else if (columna == '2') {
+                                lb_A2.setIcon(bhorse_wt);
+                            } else if (columna == '3') {
+                                lb_A3.setIcon(bhorse_bt);
+                            } else if (columna == '4') {
+                                lb_A4.setIcon(bhorse_wt);
+                            } else if (columna == '5') {
+                                lb_A5.setIcon(bhorse_bt);
+                            } else if (columna == '6') {
+                                lb_A6.setIcon(bhorse_wt);
+                            } else if (columna == '7') {
+                                lb_A7.setIcon(bhorse_bt);
+                            } else if (columna == '8') {
+                                lb_A8.setIcon(bhorse_wt);
+                            }
                         }
-                    }
-                    if (fila == 'B') {
-                        if (columna == '1') {
-                            lb_B1.setIcon(bhorse_wt);
-                        } else if (columna == '2') {
-                            lb_B2.setIcon(bhorse_bt);
-                        } else if (columna == '3') {
-                            lb_B3.setIcon(bhorse_wt);
-                        } else if (columna == '4') {
-                            lb_B4.setIcon(bhorse_bt);
-                        } else if (columna == '5') {
-                            lb_B5.setIcon(bhorse_wt);
-                        } else if (columna == '6') {
-                            lb_B6.setIcon(bhorse_bt);
-                        } else if (columna == '7') {
-                            lb_B7.setIcon(bhorse_wt);
-                        } else if (columna == '8') {
-                            lb_B8.setIcon(bhorse_bt);
+                        if (fila == 'B') {
+                            if (columna == '1') {
+                                lb_B1.setIcon(bhorse_wt);
+                            } else if (columna == '2') {
+                                lb_B2.setIcon(bhorse_bt);
+                            } else if (columna == '3') {
+                                lb_B3.setIcon(bhorse_wt);
+                            } else if (columna == '4') {
+                                lb_B4.setIcon(bhorse_bt);
+                            } else if (columna == '5') {
+                                lb_B5.setIcon(bhorse_wt);
+                            } else if (columna == '6') {
+                                lb_B6.setIcon(bhorse_bt);
+                            } else if (columna == '7') {
+                                lb_B7.setIcon(bhorse_wt);
+                            } else if (columna == '8') {
+                                lb_B8.setIcon(bhorse_bt);
+                            }
                         }
-                    }
-                    if (fila == 'C') {
-                        if (columna == '1') {
-                            lb_C1.setIcon(bhorse_bt);
-                        } else if (columna == '2') {
-                            lb_C2.setIcon(bhorse_wt);
-                        } else if (columna == '3') {
-                            lb_C3.setIcon(bhorse_bt);
-                        } else if (columna == '4') {
-                            lb_C4.setIcon(bhorse_wt);
-                        } else if (columna == '5') {
-                            lb_C5.setIcon(bhorse_bt);
-                        } else if (columna == '6') {
-                            lb_C6.setIcon(bhorse_wt);
-                        } else if (columna == '7') {
-                            lb_C7.setIcon(bhorse_bt);
-                        } else if (columna == '8') {
-                            lb_C8.setIcon(bhorse_wt);
+                        if (fila == 'C') {
+                            if (columna == '1') {
+                                lb_C1.setIcon(bhorse_bt);
+                            } else if (columna == '2') {
+                                lb_C2.setIcon(bhorse_wt);
+                            } else if (columna == '3') {
+                                lb_C3.setIcon(bhorse_bt);
+                            } else if (columna == '4') {
+                                lb_C4.setIcon(bhorse_wt);
+                            } else if (columna == '5') {
+                                lb_C5.setIcon(bhorse_bt);
+                            } else if (columna == '6') {
+                                lb_C6.setIcon(bhorse_wt);
+                            } else if (columna == '7') {
+                                lb_C7.setIcon(bhorse_bt);
+                            } else if (columna == '8') {
+                                lb_C8.setIcon(bhorse_wt);
+                            }
                         }
-                    }
-                    if (fila == 'D') {
-                        if (columna == '1') {
-                            lb_D1.setIcon(bhorse_wt);
-                        } else if (columna == '2') {
-                            lb_D2.setIcon(bhorse_bt);
-                        } else if (columna == '3') {
-                            lb_D3.setIcon(bhorse_wt);
-                        } else if (columna == '4') {
-                            lb_D4.setIcon(bhorse_bt);
-                        } else if (columna == '5') {
-                            lb_D5.setIcon(bhorse_wt);
-                        } else if (columna == '6') {
-                            lb_D6.setIcon(bhorse_bt);
-                        } else if (columna == '7') {
-                            lb_D7.setIcon(bhorse_wt);
-                        } else if (columna == '8') {
-                            lb_D8.setIcon(bhorse_bt);
+                        if (fila == 'D') {
+                            if (columna == '1') {
+                                lb_D1.setIcon(bhorse_wt);
+                            } else if (columna == '2') {
+                                lb_D2.setIcon(bhorse_bt);
+                            } else if (columna == '3') {
+                                lb_D3.setIcon(bhorse_wt);
+                            } else if (columna == '4') {
+                                lb_D4.setIcon(bhorse_bt);
+                            } else if (columna == '5') {
+                                lb_D5.setIcon(bhorse_wt);
+                            } else if (columna == '6') {
+                                lb_D6.setIcon(bhorse_bt);
+                            } else if (columna == '7') {
+                                lb_D7.setIcon(bhorse_wt);
+                            } else if (columna == '8') {
+                                lb_D8.setIcon(bhorse_bt);
+                            }
                         }
-                    }
-                    if (fila == 'E') {
-                        if (columna == '1') {
-                            lb_E1.setIcon(bhorse_bt);
-                        } else if (columna == '2') {
-                            lb_E2.setIcon(bhorse_wt);
-                        } else if (columna == '3') {
-                            lb_E3.setIcon(bhorse_bt);
-                        } else if (columna == '4') {
-                            lb_E4.setIcon(bhorse_wt);
-                        } else if (columna == '5') {
-                            lb_E5.setIcon(bhorse_bt);
-                        } else if (columna == '6') {
-                            lb_E6.setIcon(bhorse_wt);
-                        } else if (columna == '7') {
-                            lb_E7.setIcon(bhorse_bt);
-                        } else if (columna == '8') {
-                            lb_E8.setIcon(bhorse_wt);
+                        if (fila == 'E') {
+                            if (columna == '1') {
+                                lb_E1.setIcon(bhorse_bt);
+                            } else if (columna == '2') {
+                                lb_E2.setIcon(bhorse_wt);
+                            } else if (columna == '3') {
+                                lb_E3.setIcon(bhorse_bt);
+                            } else if (columna == '4') {
+                                lb_E4.setIcon(bhorse_wt);
+                            } else if (columna == '5') {
+                                lb_E5.setIcon(bhorse_bt);
+                            } else if (columna == '6') {
+                                lb_E6.setIcon(bhorse_wt);
+                            } else if (columna == '7') {
+                                lb_E7.setIcon(bhorse_bt);
+                            } else if (columna == '8') {
+                                lb_E8.setIcon(bhorse_wt);
+                            }
                         }
-                    }
-                    if (fila == 'F') {
-                        if (columna == '1') {
-                            lb_F1.setIcon(bhorse_wt);
-                        } else if (columna == '2') {
-                            lb_F2.setIcon(bhorse_bt);
-                        } else if (columna == '3') {
-                            lb_F3.setIcon(bhorse_wt);
-                        } else if (columna == '4') {
-                            lb_F4.setIcon(bhorse_bt);
-                        } else if (columna == '5') {
-                            lb_F5.setIcon(bhorse_wt);
-                        } else if (columna == '6') {
-                            lb_F6.setIcon(bhorse_bt);
-                        } else if (columna == '7') {
-                            lb_F7.setIcon(bhorse_wt);
-                        } else if (columna == '8') {
-                            lb_F8.setIcon(bhorse_bt);
+                        if (fila == 'F') {
+                            if (columna == '1') {
+                                lb_F1.setIcon(bhorse_wt);
+                            } else if (columna == '2') {
+                                lb_F2.setIcon(bhorse_bt);
+                            } else if (columna == '3') {
+                                lb_F3.setIcon(bhorse_wt);
+                            } else if (columna == '4') {
+                                lb_F4.setIcon(bhorse_bt);
+                            } else if (columna == '5') {
+                                lb_F5.setIcon(bhorse_wt);
+                            } else if (columna == '6') {
+                                lb_F6.setIcon(bhorse_bt);
+                            } else if (columna == '7') {
+                                lb_F7.setIcon(bhorse_wt);
+                            } else if (columna == '8') {
+                                lb_F8.setIcon(bhorse_bt);
+                            }
                         }
-                    }
-                    if (fila == 'G') {
-                        if (columna == '1') {
-                            lb_G1.setIcon(bhorse_bt);
-                        } else if (columna == '2') {
-                            lb_G2.setIcon(bhorse_wt);
-                        } else if (columna == '3') {
-                            lb_G3.setIcon(bhorse_bt);
-                        } else if (columna == '4') {
-                            lb_G4.setIcon(bhorse_wt);
-                        } else if (columna == '5') {
-                            lb_G5.setIcon(bhorse_bt);
-                        } else if (columna == '6') {
-                            lb_G6.setIcon(bhorse_wt);
-                        } else if (columna == '7') {
-                            lb_G7.setIcon(bhorse_bt);
-                        } else if (columna == '8') {
-                            lb_G8.setIcon(bhorse_wt);
+                        if (fila == 'G') {
+                            if (columna == '1') {
+                                lb_G1.setIcon(bhorse_bt);
+                            } else if (columna == '2') {
+                                lb_G2.setIcon(bhorse_wt);
+                            } else if (columna == '3') {
+                                lb_G3.setIcon(bhorse_bt);
+                            } else if (columna == '4') {
+                                lb_G4.setIcon(bhorse_wt);
+                            } else if (columna == '5') {
+                                lb_G5.setIcon(bhorse_bt);
+                            } else if (columna == '6') {
+                                lb_G6.setIcon(bhorse_wt);
+                            } else if (columna == '7') {
+                                lb_G7.setIcon(bhorse_bt);
+                            } else if (columna == '8') {
+                                lb_G8.setIcon(bhorse_wt);
+                            }
                         }
-                    }
-                    if (fila == 'H') {
-                        if (columna == '1') {
-                            lb_H1.setIcon(bhorse_wt);
-                        } else if (columna == '2') {
-                            lb_H2.setIcon(bhorse_bt);
-                        } else if (columna == '3') {
-                            lb_H3.setIcon(bhorse_wt);
-                        } else if (columna == '4') {
-                            lb_H4.setIcon(bhorse_bt);
-                        } else if (columna == '5') {
-                            lb_H5.setIcon(bhorse_wt);
-                        } else if (columna == '6') {
-                            lb_H6.setIcon(bhorse_bt);
-                        } else if (columna == '7') {
-                            lb_H7.setIcon(bhorse_bt);
-                        } else if (columna == '8') {
-                            lb_H8.setIcon(bhorse_bt);
+                        if (fila == 'H') {
+                            if (columna == '1') {
+                                lb_H1.setIcon(bhorse_wt);
+                            } else if (columna == '2') {
+                                lb_H2.setIcon(bhorse_bt);
+                            } else if (columna == '3') {
+                                lb_H3.setIcon(bhorse_wt);
+                            } else if (columna == '4') {
+                                lb_H4.setIcon(bhorse_bt);
+                            } else if (columna == '5') {
+                                lb_H5.setIcon(bhorse_wt);
+                            } else if (columna == '6') {
+                                lb_H6.setIcon(bhorse_bt);
+                            } else if (columna == '7') {
+                                lb_H7.setIcon(bhorse_bt);
+                            } else if (columna == '8') {
+                                lb_H8.setIcon(bhorse_bt);
+                            }
                         }
+                        cont_caballo_n--;
+                    } else {
+                        JOptionPane.showMessageDialog(this, "Máximo Nivel de Caballos Negros Alcanzado");
                     }
                 }
                 break;
             case "PEON":
                 tipoPieza = 2;
                 if (rb_blanco.isSelected()) {//peones blancos
-                    if (fila == 'A') {
-                        if (columna == '1') {
-                            lb_A1.setIcon(wpawn_bt);
-                        } else if (columna == '2') {
-                            lb_A2.setIcon(wpawn_wt);
-                        } else if (columna == '3') {
-                            lb_A3.setIcon(wpawn_bt);
-                        } else if (columna == '4') {
-                            lb_A4.setIcon(wpawn_wt);
-                        } else if (columna == '5') {
-                            lb_A5.setIcon(wpawn_bt);
-                        } else if (columna == '6') {
-                            lb_A6.setIcon(wpawn_wt);
-                        } else if (columna == '7') {
-                            lb_A7.setIcon(wpawn_bt);
-                        } else if (columna == '8') {
-                            lb_A8.setIcon(wpawn_wt);
+                    if (cont_peon_b > 0) {
+                        if (fila == 'A') {
+                            if (columna == '1') {
+                                lb_A1.setIcon(wpawn_bt);
+                            } else if (columna == '2') {
+                                lb_A2.setIcon(wpawn_wt);
+                            } else if (columna == '3') {
+                                lb_A3.setIcon(wpawn_bt);
+                            } else if (columna == '4') {
+                                lb_A4.setIcon(wpawn_wt);
+                            } else if (columna == '5') {
+                                lb_A5.setIcon(wpawn_bt);
+                            } else if (columna == '6') {
+                                lb_A6.setIcon(wpawn_wt);
+                            } else if (columna == '7') {
+                                lb_A7.setIcon(wpawn_bt);
+                            } else if (columna == '8') {
+                                lb_A8.setIcon(wpawn_wt);
+                            }
                         }
-                    }
-                    if (fila == 'B') {
-                        if (columna == '1') {
-                            lb_B1.setIcon(wpawn_wt);
-                        } else if (columna == '2') {
-                            lb_B2.setIcon(wpawn_bt);
-                        } else if (columna == '3') {
-                            lb_B3.setIcon(wpawn_wt);
-                        } else if (columna == '4') {
-                            lb_B4.setIcon(wpawn_bt);
-                        } else if (columna == '5') {
-                            lb_B5.setIcon(wpawn_wt);
-                        } else if (columna == '6') {
-                            lb_B6.setIcon(wpawn_bt);
-                        } else if (columna == '7') {
-                            lb_B7.setIcon(wpawn_wt);
-                        } else if (columna == '8') {
-                            lb_B8.setIcon(wpawn_bt);
+                        if (fila == 'B') {
+                            if (columna == '1') {
+                                lb_B1.setIcon(wpawn_wt);
+                            } else if (columna == '2') {
+                                lb_B2.setIcon(wpawn_bt);
+                            } else if (columna == '3') {
+                                lb_B3.setIcon(wpawn_wt);
+                            } else if (columna == '4') {
+                                lb_B4.setIcon(wpawn_bt);
+                            } else if (columna == '5') {
+                                lb_B5.setIcon(wpawn_wt);
+                            } else if (columna == '6') {
+                                lb_B6.setIcon(wpawn_bt);
+                            } else if (columna == '7') {
+                                lb_B7.setIcon(wpawn_wt);
+                            } else if (columna == '8') {
+                                lb_B8.setIcon(wpawn_bt);
+                            }
                         }
-                    }
-                    if (fila == 'C') {
-                        if (columna == '1') {
-                            lb_C1.setIcon(wpawn_bt);
-                        } else if (columna == '2') {
-                            lb_C2.setIcon(wpawn_wt);
-                        } else if (columna == '3') {
-                            lb_C3.setIcon(wpawn_bt);
-                        } else if (columna == '4') {
-                            lb_C4.setIcon(wpawn_wt);
-                        } else if (columna == '5') {
-                            lb_C5.setIcon(wpawn_bt);
-                        } else if (columna == '6') {
-                            lb_C6.setIcon(wpawn_wt);
-                        } else if (columna == '7') {
-                            lb_C7.setIcon(wpawn_bt);
-                        } else if (columna == '8') {
-                            lb_C8.setIcon(wpawn_wt);
+                        if (fila == 'C') {
+                            if (columna == '1') {
+                                lb_C1.setIcon(wpawn_bt);
+                            } else if (columna == '2') {
+                                lb_C2.setIcon(wpawn_wt);
+                            } else if (columna == '3') {
+                                lb_C3.setIcon(wpawn_bt);
+                            } else if (columna == '4') {
+                                lb_C4.setIcon(wpawn_wt);
+                            } else if (columna == '5') {
+                                lb_C5.setIcon(wpawn_bt);
+                            } else if (columna == '6') {
+                                lb_C6.setIcon(wpawn_wt);
+                            } else if (columna == '7') {
+                                lb_C7.setIcon(wpawn_bt);
+                            } else if (columna == '8') {
+                                lb_C8.setIcon(wpawn_wt);
+                            }
                         }
-                    }
-                    if (fila == 'D') {
-                        if (columna == '1') {
-                            lb_D1.setIcon(wpawn_wt);
-                        } else if (columna == '2') {
-                            lb_D2.setIcon(wpawn_bt);
-                        } else if (columna == '3') {
-                            lb_D3.setIcon(wpawn_wt);
-                        } else if (columna == '4') {
-                            lb_D4.setIcon(wpawn_bt);
-                        } else if (columna == '5') {
-                            lb_D5.setIcon(wpawn_wt);
-                        } else if (columna == '6') {
-                            lb_D6.setIcon(wpawn_bt);
-                        } else if (columna == '7') {
-                            lb_D7.setIcon(wpawn_wt);
-                        } else if (columna == '8') {
-                            lb_D8.setIcon(wpawn_bt);
+                        if (fila == 'D') {
+                            if (columna == '1') {
+                                lb_D1.setIcon(wpawn_wt);
+                            } else if (columna == '2') {
+                                lb_D2.setIcon(wpawn_bt);
+                            } else if (columna == '3') {
+                                lb_D3.setIcon(wpawn_wt);
+                            } else if (columna == '4') {
+                                lb_D4.setIcon(wpawn_bt);
+                            } else if (columna == '5') {
+                                lb_D5.setIcon(wpawn_wt);
+                            } else if (columna == '6') {
+                                lb_D6.setIcon(wpawn_bt);
+                            } else if (columna == '7') {
+                                lb_D7.setIcon(wpawn_wt);
+                            } else if (columna == '8') {
+                                lb_D8.setIcon(wpawn_bt);
+                            }
                         }
-                    }
-                    if (fila == 'E') {
-                        if (columna == '1') {
-                            lb_E1.setIcon(wpawn_bt);
-                        } else if (columna == '2') {
-                            lb_E2.setIcon(wpawn_wt);
-                        } else if (columna == '3') {
-                            lb_E3.setIcon(wpawn_bt);
-                        } else if (columna == '4') {
-                            lb_E4.setIcon(wpawn_wt);
-                        } else if (columna == '5') {
-                            lb_E5.setIcon(wpawn_bt);
-                        } else if (columna == '6') {
-                            lb_E6.setIcon(wpawn_wt);
-                        } else if (columna == '7') {
-                            lb_E7.setIcon(wpawn_bt);
-                        } else if (columna == '8') {
-                            lb_E8.setIcon(wpawn_wt);
+                        if (fila == 'E') {
+                            if (columna == '1') {
+                                lb_E1.setIcon(wpawn_bt);
+                            } else if (columna == '2') {
+                                lb_E2.setIcon(wpawn_wt);
+                            } else if (columna == '3') {
+                                lb_E3.setIcon(wpawn_bt);
+                            } else if (columna == '4') {
+                                lb_E4.setIcon(wpawn_wt);
+                            } else if (columna == '5') {
+                                lb_E5.setIcon(wpawn_bt);
+                            } else if (columna == '6') {
+                                lb_E6.setIcon(wpawn_wt);
+                            } else if (columna == '7') {
+                                lb_E7.setIcon(wpawn_bt);
+                            } else if (columna == '8') {
+                                lb_E8.setIcon(wpawn_wt);
+                            }
                         }
-                    }
-                    if (fila == 'F') {
-                        if (columna == '1') {
-                            lb_F1.setIcon(wpawn_wt);
-                        } else if (columna == '2') {
-                            lb_F2.setIcon(wpawn_bt);
-                        } else if (columna == '3') {
-                            lb_F3.setIcon(wpawn_wt);
-                        } else if (columna == '4') {
-                            lb_F4.setIcon(wpawn_bt);
-                        } else if (columna == '5') {
-                            lb_F5.setIcon(wpawn_wt);
-                        } else if (columna == '6') {
-                            lb_F6.setIcon(wpawn_bt);
-                        } else if (columna == '7') {
-                            lb_F7.setIcon(wpawn_wt);
-                        } else if (columna == '8') {
-                            lb_F8.setIcon(wpawn_bt);
+                        if (fila == 'F') {
+                            if (columna == '1') {
+                                lb_F1.setIcon(wpawn_wt);
+                            } else if (columna == '2') {
+                                lb_F2.setIcon(wpawn_bt);
+                            } else if (columna == '3') {
+                                lb_F3.setIcon(wpawn_wt);
+                            } else if (columna == '4') {
+                                lb_F4.setIcon(wpawn_bt);
+                            } else if (columna == '5') {
+                                lb_F5.setIcon(wpawn_wt);
+                            } else if (columna == '6') {
+                                lb_F6.setIcon(wpawn_bt);
+                            } else if (columna == '7') {
+                                lb_F7.setIcon(wpawn_wt);
+                            } else if (columna == '8') {
+                                lb_F8.setIcon(wpawn_bt);
+                            }
                         }
-                    }
-                    if (fila == 'G') {
-                        if (columna == '1') {
-                            lb_G1.setIcon(wpawn_bt);
-                        } else if (columna == '2') {
-                            lb_G2.setIcon(wpawn_wt);
-                        } else if (columna == '3') {
-                            lb_G3.setIcon(wpawn_bt);
-                        } else if (columna == '4') {
-                            lb_G4.setIcon(wpawn_wt);;
-                        } else if (columna == '5') {
-                            lb_G5.setIcon(wpawn_bt);
-                        } else if (columna == '6') {
-                            lb_G6.setIcon(wpawn_wt);
-                        } else if (columna == '7') {
-                            lb_G7.setIcon(wpawn_bt);
-                        } else if (columna == '8') {
-                            lb_G8.setIcon(wpawn_wt);
+                        if (fila == 'G') {
+                            if (columna == '1') {
+                                lb_G1.setIcon(wpawn_bt);
+                            } else if (columna == '2') {
+                                lb_G2.setIcon(wpawn_wt);
+                            } else if (columna == '3') {
+                                lb_G3.setIcon(wpawn_bt);
+                            } else if (columna == '4') {
+                                lb_G4.setIcon(wpawn_wt);;
+                            } else if (columna == '5') {
+                                lb_G5.setIcon(wpawn_bt);
+                            } else if (columna == '6') {
+                                lb_G6.setIcon(wpawn_wt);
+                            } else if (columna == '7') {
+                                lb_G7.setIcon(wpawn_bt);
+                            } else if (columna == '8') {
+                                lb_G8.setIcon(wpawn_wt);
+                            }
                         }
-                    }
-                    if (fila == 'H') {
-                        if (columna == '1') {
-                            lb_H1.setIcon(wpawn_wt);
-                        } else if (columna == '2') {
-                            lb_H2.setIcon(wpawn_bt);
-                        } else if (columna == '3') {
-                            lb_H3.setIcon(wpawn_wt);
-                        } else if (columna == '4') {
-                            lb_H4.setIcon(wpawn_bt);
-                        } else if (columna == '5') {
-                            lb_H5.setIcon(wpawn_wt);
-                        } else if (columna == '6') {
-                            lb_H6.setIcon(wpawn_bt);
-                        } else if (columna == '7') {
-                            lb_H7.setIcon(wpawn_wt);
-                        } else if (columna == '8') {
-                            lb_H8.setIcon(wpawn_bt);
+                        if (fila == 'H') {
+                            if (columna == '1') {
+                                lb_H1.setIcon(wpawn_wt);
+                            } else if (columna == '2') {
+                                lb_H2.setIcon(wpawn_bt);
+                            } else if (columna == '3') {
+                                lb_H3.setIcon(wpawn_wt);
+                            } else if (columna == '4') {
+                                lb_H4.setIcon(wpawn_bt);
+                            } else if (columna == '5') {
+                                lb_H5.setIcon(wpawn_wt);
+                            } else if (columna == '6') {
+                                lb_H6.setIcon(wpawn_bt);
+                            } else if (columna == '7') {
+                                lb_H7.setIcon(wpawn_wt);
+                            } else if (columna == '8') {
+                                lb_H8.setIcon(wpawn_bt);
+                            }
                         }
+                        cont_peon_b--;
+                    } else {
+                        JOptionPane.showMessageDialog(this, "Máximo Nivel de Peones Blancos Alcanzado");
                     }
                 } else {//peones negros
-                    if (fila == 'A') {
-                        if (columna == '1') {
-                            lb_A1.setIcon(bpawn_bt);
-                        } else if (columna == '2') {
-                            lb_A2.setIcon(bpawn_wt);
-                        } else if (columna == '3') {
-                            lb_A3.setIcon(bpawn_bt);
-                        } else if (columna == '4') {
-                            lb_A4.setIcon(bpawn_wt);
-                        } else if (columna == '5') {
-                            lb_A5.setIcon(bpawn_bt);
-                        } else if (columna == '6') {
-                            lb_A6.setIcon(bpawn_wt);
-                        } else if (columna == '7') {
-                            lb_A7.setIcon(bpawn_bt);
-                        } else if (columna == '8') {
-                            lb_A8.setIcon(bpawn_wt);
+                    if (cont_peon_n > 0) {
+                        if (fila == 'A') {
+                            if (columna == '1') {
+                                lb_A1.setIcon(bpawn_bt);
+                            } else if (columna == '2') {
+                                lb_A2.setIcon(bpawn_wt);
+                            } else if (columna == '3') {
+                                lb_A3.setIcon(bpawn_bt);
+                            } else if (columna == '4') {
+                                lb_A4.setIcon(bpawn_wt);
+                            } else if (columna == '5') {
+                                lb_A5.setIcon(bpawn_bt);
+                            } else if (columna == '6') {
+                                lb_A6.setIcon(bpawn_wt);
+                            } else if (columna == '7') {
+                                lb_A7.setIcon(bpawn_bt);
+                            } else if (columna == '8') {
+                                lb_A8.setIcon(bpawn_wt);
+                            }
                         }
-                    }
-                    if (fila == 'B') {
-                        if (columna == '1') {
-                            lb_B1.setIcon(bpawn_wt);
-                        } else if (columna == '2') {
-                            lb_B2.setIcon(bpawn_bt);
-                        } else if (columna == '3') {
-                            lb_B3.setIcon(bpawn_wt);
-                        } else if (columna == '4') {
-                            lb_B4.setIcon(bpawn_bt);
-                        } else if (columna == '5') {
-                            lb_B5.setIcon(bpawn_wt);
-                        } else if (columna == '6') {
-                            lb_B6.setIcon(bpawn_bt);
-                        } else if (columna == '7') {
-                            lb_B7.setIcon(bpawn_wt);
-                        } else if (columna == '8') {
-                            lb_B8.setIcon(bpawn_bt);
+                        if (fila == 'B') {
+                            if (columna == '1') {
+                                lb_B1.setIcon(bpawn_wt);
+                            } else if (columna == '2') {
+                                lb_B2.setIcon(bpawn_bt);
+                            } else if (columna == '3') {
+                                lb_B3.setIcon(bpawn_wt);
+                            } else if (columna == '4') {
+                                lb_B4.setIcon(bpawn_bt);
+                            } else if (columna == '5') {
+                                lb_B5.setIcon(bpawn_wt);
+                            } else if (columna == '6') {
+                                lb_B6.setIcon(bpawn_bt);
+                            } else if (columna == '7') {
+                                lb_B7.setIcon(bpawn_wt);
+                            } else if (columna == '8') {
+                                lb_B8.setIcon(bpawn_bt);
+                            }
                         }
-                    }
-                    if (fila == 'C') {
-                        if (columna == '1') {
-                            lb_C1.setIcon(bpawn_bt);
-                        } else if (columna == '2') {
-                            lb_C2.setIcon(bpawn_wt);
-                        } else if (columna == '3') {
-                            lb_C3.setIcon(bpawn_bt);
-                        } else if (columna == '4') {
-                            lb_C4.setIcon(bpawn_wt);
-                        } else if (columna == '5') {
-                            lb_C5.setIcon(bpawn_bt);
-                        } else if (columna == '6') {
-                            lb_C6.setIcon(bpawn_wt);
-                        } else if (columna == '7') {
-                            lb_C7.setIcon(bpawn_bt);
-                        } else if (columna == '8') {
-                            lb_C8.setIcon(bpawn_wt);
+                        if (fila == 'C') {
+                            if (columna == '1') {
+                                lb_C1.setIcon(bpawn_bt);
+                            } else if (columna == '2') {
+                                lb_C2.setIcon(bpawn_wt);
+                            } else if (columna == '3') {
+                                lb_C3.setIcon(bpawn_bt);
+                            } else if (columna == '4') {
+                                lb_C4.setIcon(bpawn_wt);
+                            } else if (columna == '5') {
+                                lb_C5.setIcon(bpawn_bt);
+                            } else if (columna == '6') {
+                                lb_C6.setIcon(bpawn_wt);
+                            } else if (columna == '7') {
+                                lb_C7.setIcon(bpawn_bt);
+                            } else if (columna == '8') {
+                                lb_C8.setIcon(bpawn_wt);
+                            }
                         }
-                    }
-                    if (fila == 'D') {
-                        if (columna == '1') {
-                            lb_D1.setIcon(bpawn_wt);
-                        } else if (columna == '2') {
-                            lb_D2.setIcon(bpawn_bt);
-                        } else if (columna == '3') {
-                            lb_D3.setIcon(bpawn_wt);
-                        } else if (columna == '4') {
-                            lb_D4.setIcon(bpawn_bt);
-                        } else if (columna == '5') {
-                            lb_D5.setIcon(bpawn_wt);
-                        } else if (columna == '6') {
-                            lb_D6.setIcon(bpawn_bt);
-                        } else if (columna == '7') {
-                            lb_D7.setIcon(bpawn_wt);
-                        } else if (columna == '8') {
-                            lb_D8.setIcon(bpawn_bt);
+                        if (fila == 'D') {
+                            if (columna == '1') {
+                                lb_D1.setIcon(bpawn_wt);
+                            } else if (columna == '2') {
+                                lb_D2.setIcon(bpawn_bt);
+                            } else if (columna == '3') {
+                                lb_D3.setIcon(bpawn_wt);
+                            } else if (columna == '4') {
+                                lb_D4.setIcon(bpawn_bt);
+                            } else if (columna == '5') {
+                                lb_D5.setIcon(bpawn_wt);
+                            } else if (columna == '6') {
+                                lb_D6.setIcon(bpawn_bt);
+                            } else if (columna == '7') {
+                                lb_D7.setIcon(bpawn_wt);
+                            } else if (columna == '8') {
+                                lb_D8.setIcon(bpawn_bt);
+                            }
                         }
-                    }
-                    if (fila == 'E') {
-                        if (columna == '1') {
-                            lb_E1.setIcon(bpawn_bt);
-                        } else if (columna == '2') {
-                            lb_E2.setIcon(bpawn_wt);
-                        } else if (columna == '3') {
-                            lb_E3.setIcon(bpawn_bt);
-                        } else if (columna == '4') {
-                            lb_E4.setIcon(bpawn_wt);
-                        } else if (columna == '5') {
-                            lb_E5.setIcon(bpawn_bt);
-                        } else if (columna == '6') {
-                            lb_E6.setIcon(bpawn_wt);
-                        } else if (columna == '7') {
-                            lb_E7.setIcon(bpawn_bt);
-                        } else if (columna == '8') {
-                            lb_E8.setIcon(bpawn_wt);
+                        if (fila == 'E') {
+                            if (columna == '1') {
+                                lb_E1.setIcon(bpawn_bt);
+                            } else if (columna == '2') {
+                                lb_E2.setIcon(bpawn_wt);
+                            } else if (columna == '3') {
+                                lb_E3.setIcon(bpawn_bt);
+                            } else if (columna == '4') {
+                                lb_E4.setIcon(bpawn_wt);
+                            } else if (columna == '5') {
+                                lb_E5.setIcon(bpawn_bt);
+                            } else if (columna == '6') {
+                                lb_E6.setIcon(bpawn_wt);
+                            } else if (columna == '7') {
+                                lb_E7.setIcon(bpawn_bt);
+                            } else if (columna == '8') {
+                                lb_E8.setIcon(bpawn_wt);
+                            }
                         }
-                    }
-                    if (fila == 'F') {
-                        if (columna == '1') {
-                            lb_F1.setIcon(bpawn_wt);
-                        } else if (columna == '2') {
-                            lb_F2.setIcon(bpawn_bt);
-                        } else if (columna == '3') {
-                            lb_F3.setIcon(bpawn_wt);
-                        } else if (columna == '4') {
-                            lb_F4.setIcon(bpawn_bt);
-                        } else if (columna == '5') {
-                            lb_F5.setIcon(bpawn_wt);
-                        } else if (columna == '6') {
-                            lb_F6.setIcon(bpawn_bt);
-                        } else if (columna == '7') {
-                            lb_F7.setIcon(bpawn_wt);
-                        } else if (columna == '8') {
-                            lb_F8.setIcon(bpawn_bt);
+                        if (fila == 'F') {
+                            if (columna == '1') {
+                                lb_F1.setIcon(bpawn_wt);
+                            } else if (columna == '2') {
+                                lb_F2.setIcon(bpawn_bt);
+                            } else if (columna == '3') {
+                                lb_F3.setIcon(bpawn_wt);
+                            } else if (columna == '4') {
+                                lb_F4.setIcon(bpawn_bt);
+                            } else if (columna == '5') {
+                                lb_F5.setIcon(bpawn_wt);
+                            } else if (columna == '6') {
+                                lb_F6.setIcon(bpawn_bt);
+                            } else if (columna == '7') {
+                                lb_F7.setIcon(bpawn_wt);
+                            } else if (columna == '8') {
+                                lb_F8.setIcon(bpawn_bt);
+                            }
                         }
-                    }
-                    if (fila == 'G') {
-                        if (columna == '1') {
-                            lb_G1.setIcon(bpawn_bt);
-                        } else if (columna == '2') {
-                            lb_G2.setIcon(bpawn_wt);
-                        } else if (columna == '3') {
-                            lb_G3.setIcon(bpawn_bt);
-                        } else if (columna == '4') {
-                            lb_G4.setIcon(bpawn_wt);
-                        } else if (columna == '5') {
-                            lb_G5.setIcon(bpawn_bt);
-                        } else if (columna == '6') {
-                            lb_G6.setIcon(bpawn_wt);
-                        } else if (columna == '7') {
-                            lb_G7.setIcon(bpawn_bt);
-                        } else if (columna == '8') {
-                            lb_G8.setIcon(bpawn_wt);
+                        if (fila == 'G') {
+                            if (columna == '1') {
+                                lb_G1.setIcon(bpawn_bt);
+                            } else if (columna == '2') {
+                                lb_G2.setIcon(bpawn_wt);
+                            } else if (columna == '3') {
+                                lb_G3.setIcon(bpawn_bt);
+                            } else if (columna == '4') {
+                                lb_G4.setIcon(bpawn_wt);
+                            } else if (columna == '5') {
+                                lb_G5.setIcon(bpawn_bt);
+                            } else if (columna == '6') {
+                                lb_G6.setIcon(bpawn_wt);
+                            } else if (columna == '7') {
+                                lb_G7.setIcon(bpawn_bt);
+                            } else if (columna == '8') {
+                                lb_G8.setIcon(bpawn_wt);
+                            }
                         }
-                    }
-                    if (fila == 'H') {
-                        if (columna == '1') {
-                            lb_H1.setIcon(bpawn_wt);
-                        } else if (columna == '2') {
-                            lb_H2.setIcon(bpawn_bt);
-                        } else if (columna == '3') {
-                            lb_H3.setIcon(bpawn_wt);
-                        } else if (columna == '4') {
-                            lb_H4.setIcon(bpawn_bt);
-                        } else if (columna == '5') {
-                            lb_H5.setIcon(bpawn_wt);
-                        } else if (columna == '6') {
-                            lb_H6.setIcon(bpawn_bt);
-                        } else if (columna == '7') {
-                            lb_H7.setIcon(bpawn_wt);
-                        } else if (columna == '8') {
-                            lb_H8.setIcon(bpawn_bt);
+                        if (fila == 'H') {
+                            if (columna == '1') {
+                                lb_H1.setIcon(bpawn_wt);
+                            } else if (columna == '2') {
+                                lb_H2.setIcon(bpawn_bt);
+                            } else if (columna == '3') {
+                                lb_H3.setIcon(bpawn_wt);
+                            } else if (columna == '4') {
+                                lb_H4.setIcon(bpawn_bt);
+                            } else if (columna == '5') {
+                                lb_H5.setIcon(bpawn_wt);
+                            } else if (columna == '6') {
+                                lb_H6.setIcon(bpawn_bt);
+                            } else if (columna == '7') {
+                                lb_H7.setIcon(bpawn_wt);
+                            } else if (columna == '8') {
+                                lb_H8.setIcon(bpawn_bt);
+                            }
                         }
+                        cont_peon_n--;
+                    } else {
+                        JOptionPane.showMessageDialog(this, "Máximo Nivel de Peones Negros Alcanzado");
                     }
                 }
                 break;
             case "REY":
                 tipoPieza = 3;
                 if (rb_blanco.isSelected()) {//rey blanco
-                    if (fila == 'A') {
-                        if (columna == '1') {
-                            lb_A1.setIcon(wking_bt);
-                        } else if (columna == '2') {
-                            lb_A2.setIcon(wking_wt);
-                        } else if (columna == '3') {
-                            lb_A3.setIcon(wking_bt);
-                        } else if (columna == '4') {
-                            lb_A4.setIcon(wking_wt);
-                        } else if (columna == '5') {
-                            lb_A5.setIcon(wking_bt);
-                        } else if (columna == '6') {
-                            lb_A6.setIcon(wking_wt);
-                        } else if (columna == '7') {
-                            lb_A7.setIcon(wking_bt);
-                        } else if (columna == '8') {
-                            lb_A8.setIcon(wking_wt);
+                    if (cont_rey_b > 0) {
+                        if (fila == 'A') {
+                            if (columna == '1') {
+                                lb_A1.setIcon(wking_bt);
+                            } else if (columna == '2') {
+                                lb_A2.setIcon(wking_wt);
+                            } else if (columna == '3') {
+                                lb_A3.setIcon(wking_bt);
+                            } else if (columna == '4') {
+                                lb_A4.setIcon(wking_wt);
+                            } else if (columna == '5') {
+                                lb_A5.setIcon(wking_bt);
+                            } else if (columna == '6') {
+                                lb_A6.setIcon(wking_wt);
+                            } else if (columna == '7') {
+                                lb_A7.setIcon(wking_bt);
+                            } else if (columna == '8') {
+                                lb_A8.setIcon(wking_wt);
+                            }
                         }
-                    }
-                    if (fila == 'B') {
-                        if (columna == '1') {
-                            lb_B1.setIcon(wking_wt);
-                        } else if (columna == '2') {
-                            lb_B2.setIcon(wking_bt);
-                        } else if (columna == '3') {
-                            lb_B3.setIcon(wking_wt);
-                        } else if (columna == '4') {
-                            lb_B4.setIcon(wking_bt);
-                        } else if (columna == '5') {
-                            lb_B5.setIcon(wking_wt);
-                        } else if (columna == '6') {
-                            lb_B6.setIcon(wking_bt);
-                        } else if (columna == '7') {
-                            lb_B7.setIcon(wking_wt);
-                        } else if (columna == '8') {
-                            lb_B8.setIcon(wking_bt);
+                        if (fila == 'B') {
+                            if (columna == '1') {
+                                lb_B1.setIcon(wking_wt);
+                            } else if (columna == '2') {
+                                lb_B2.setIcon(wking_bt);
+                            } else if (columna == '3') {
+                                lb_B3.setIcon(wking_wt);
+                            } else if (columna == '4') {
+                                lb_B4.setIcon(wking_bt);
+                            } else if (columna == '5') {
+                                lb_B5.setIcon(wking_wt);
+                            } else if (columna == '6') {
+                                lb_B6.setIcon(wking_bt);
+                            } else if (columna == '7') {
+                                lb_B7.setIcon(wking_wt);
+                            } else if (columna == '8') {
+                                lb_B8.setIcon(wking_bt);
+                            }
                         }
-                    }
-                    if (fila == 'C') {
-                        if (columna == '1') {
-                            lb_C1.setIcon(wking_bt);
-                        } else if (columna == '2') {
-                            lb_C2.setIcon(wking_wt);
-                        } else if (columna == '3') {
-                            lb_C3.setIcon(wking_bt);
-                        } else if (columna == '4') {
-                            lb_C4.setIcon(wking_wt);
-                        } else if (columna == '5') {
-                            lb_C5.setIcon(wking_bt);
-                        } else if (columna == '6') {
-                            lb_C6.setIcon(wking_wt);
-                        } else if (columna == '7') {
-                            lb_C7.setIcon(wking_wt);
-                        } else if (columna == '8') {
-                            lb_C8.setIcon(wking_wt);
+                        if (fila == 'C') {
+                            if (columna == '1') {
+                                lb_C1.setIcon(wking_bt);
+                            } else if (columna == '2') {
+                                lb_C2.setIcon(wking_wt);
+                            } else if (columna == '3') {
+                                lb_C3.setIcon(wking_bt);
+                            } else if (columna == '4') {
+                                lb_C4.setIcon(wking_wt);
+                            } else if (columna == '5') {
+                                lb_C5.setIcon(wking_bt);
+                            } else if (columna == '6') {
+                                lb_C6.setIcon(wking_wt);
+                            } else if (columna == '7') {
+                                lb_C7.setIcon(wking_wt);
+                            } else if (columna == '8') {
+                                lb_C8.setIcon(wking_wt);
+                            }
                         }
-                    }
-                    if (fila == 'D') {
-                        if (columna == '1') {
-                            lb_D1.setIcon(wking_wt);
-                        } else if (columna == '2') {
-                            lb_D2.setIcon(wking_bt);
-                        } else if (columna == '3') {
-                            lb_D3.setIcon(wking_wt);
-                        } else if (columna == '4') {
-                            lb_D4.setIcon(wking_bt);
-                        } else if (columna == '5') {
-                            lb_D5.setIcon(wking_wt);
-                        } else if (columna == '6') {
-                            lb_D6.setIcon(wking_bt);
-                        } else if (columna == '7') {
-                            lb_D7.setIcon(wking_wt);
-                        } else if (columna == '8') {
-                            lb_D8.setIcon(wking_bt);
+                        if (fila == 'D') {
+                            if (columna == '1') {
+                                lb_D1.setIcon(wking_wt);
+                            } else if (columna == '2') {
+                                lb_D2.setIcon(wking_bt);
+                            } else if (columna == '3') {
+                                lb_D3.setIcon(wking_wt);
+                            } else if (columna == '4') {
+                                lb_D4.setIcon(wking_bt);
+                            } else if (columna == '5') {
+                                lb_D5.setIcon(wking_wt);
+                            } else if (columna == '6') {
+                                lb_D6.setIcon(wking_bt);
+                            } else if (columna == '7') {
+                                lb_D7.setIcon(wking_wt);
+                            } else if (columna == '8') {
+                                lb_D8.setIcon(wking_bt);
+                            }
                         }
-                    }
-                    if (fila == 'E') {
-                        if (columna == '1') {
-                            lb_E1.setIcon(wking_bt);
-                        } else if (columna == '2') {
-                            lb_E2.setIcon(wking_wt);
-                        } else if (columna == '3') {
-                            lb_E3.setIcon(wking_bt);
-                        } else if (columna == '4') {
-                            lb_E4.setIcon(wking_wt);
-                        } else if (columna == '5') {
-                            lb_E5.setIcon(wking_bt);
-                        } else if (columna == '6') {
-                            lb_E6.setIcon(wking_wt);
-                        } else if (columna == '7') {
-                            lb_E7.setIcon(wking_bt);
-                        } else if (columna == '8') {
-                            lb_E8.setIcon(wking_wt);
+                        if (fila == 'E') {
+                            if (columna == '1') {
+                                lb_E1.setIcon(wking_bt);
+                            } else if (columna == '2') {
+                                lb_E2.setIcon(wking_wt);
+                            } else if (columna == '3') {
+                                lb_E3.setIcon(wking_bt);
+                            } else if (columna == '4') {
+                                lb_E4.setIcon(wking_wt);
+                            } else if (columna == '5') {
+                                lb_E5.setIcon(wking_bt);
+                            } else if (columna == '6') {
+                                lb_E6.setIcon(wking_wt);
+                            } else if (columna == '7') {
+                                lb_E7.setIcon(wking_bt);
+                            } else if (columna == '8') {
+                                lb_E8.setIcon(wking_wt);
+                            }
                         }
-                    }
-                    if (fila == 'F') {
-                        if (columna == '1') {
-                            lb_F1.setIcon(wking_wt);
-                        } else if (columna == '2') {
-                            lb_F2.setIcon(wking_bt);
-                        } else if (columna == '3') {
-                            lb_F3.setIcon(wking_wt);
-                        } else if (columna == '4') {
-                            lb_F4.setIcon(wking_bt);
-                        } else if (columna == '5') {
-                            lb_F5.setIcon(wking_wt);
-                        } else if (columna == '6') {
-                            lb_F6.setIcon(wking_bt);
-                        } else if (columna == '7') {
-                            lb_F7.setIcon(wking_wt);
-                        } else if (columna == '8') {
-                            lb_F8.setIcon(wking_bt);
+                        if (fila == 'F') {
+                            if (columna == '1') {
+                                lb_F1.setIcon(wking_wt);
+                            } else if (columna == '2') {
+                                lb_F2.setIcon(wking_bt);
+                            } else if (columna == '3') {
+                                lb_F3.setIcon(wking_wt);
+                            } else if (columna == '4') {
+                                lb_F4.setIcon(wking_bt);
+                            } else if (columna == '5') {
+                                lb_F5.setIcon(wking_wt);
+                            } else if (columna == '6') {
+                                lb_F6.setIcon(wking_bt);
+                            } else if (columna == '7') {
+                                lb_F7.setIcon(wking_wt);
+                            } else if (columna == '8') {
+                                lb_F8.setIcon(wking_bt);
+                            }
                         }
-                    }
-                    if (fila == 'G') {
-                        if (columna == '1') {
-                            lb_G1.setIcon(wking_bt);
-                        } else if (columna == '2') {
-                            lb_G2.setIcon(wking_wt);
-                        } else if (columna == '3') {
-                            lb_G3.setIcon(wking_bt);
-                        } else if (columna == '4') {
-                            lb_G4.setIcon(wking_wt);
-                        } else if (columna == '5') {
-                            lb_G5.setIcon(wking_bt);
-                        } else if (columna == '6') {
-                            lb_G6.setIcon(wking_wt);
-                        } else if (columna == '7') {
-                            lb_G7.setIcon(wking_bt);
-                        } else if (columna == '8') {
-                            lb_G8.setIcon(wking_wt);
+                        if (fila == 'G') {
+                            if (columna == '1') {
+                                lb_G1.setIcon(wking_bt);
+                            } else if (columna == '2') {
+                                lb_G2.setIcon(wking_wt);
+                            } else if (columna == '3') {
+                                lb_G3.setIcon(wking_bt);
+                            } else if (columna == '4') {
+                                lb_G4.setIcon(wking_wt);
+                            } else if (columna == '5') {
+                                lb_G5.setIcon(wking_bt);
+                            } else if (columna == '6') {
+                                lb_G6.setIcon(wking_wt);
+                            } else if (columna == '7') {
+                                lb_G7.setIcon(wking_bt);
+                            } else if (columna == '8') {
+                                lb_G8.setIcon(wking_wt);
+                            }
                         }
-                    }
-                    if (fila == 'H') {
-                        if (columna == '1') {
-                            lb_H1.setIcon(wking_wt);
-                        } else if (columna == '2') {
-                            lb_H2.setIcon(wking_bt);
-                        } else if (columna == '3') {
-                            lb_H3.setIcon(wking_wt);
-                        } else if (columna == '4') {
-                            lb_H4.setIcon(wking_bt);
-                        } else if (columna == '5') {
-                            lb_H5.setIcon(wking_wt);
-                        } else if (columna == '6') {
-                            lb_H6.setIcon(wking_bt);
-                        } else if (columna == '7') {
-                            lb_H7.setIcon(wking_wt);
-                        } else if (columna == '8') {
-                            lb_H8.setIcon(wking_bt);
+                        if (fila == 'H') {
+                            if (columna == '1') {
+                                lb_H1.setIcon(wking_wt);
+                            } else if (columna == '2') {
+                                lb_H2.setIcon(wking_bt);
+                            } else if (columna == '3') {
+                                lb_H3.setIcon(wking_wt);
+                            } else if (columna == '4') {
+                                lb_H4.setIcon(wking_bt);
+                            } else if (columna == '5') {
+                                lb_H5.setIcon(wking_wt);
+                            } else if (columna == '6') {
+                                lb_H6.setIcon(wking_bt);
+                            } else if (columna == '7') {
+                                lb_H7.setIcon(wking_wt);
+                            } else if (columna == '8') {
+                                lb_H8.setIcon(wking_bt);
+                            }
                         }
+                        cont_rey_b--;
+                    } else {
+                        JOptionPane.showMessageDialog(this, "Máximo Nivel de Rey Blanco Alcanzado");
                     }
                 } else {//rey negro
-                    if (fila == 'A') {
-                        if (columna == '1') {
-                            lb_A1.setIcon(bking_bt);
-                        } else if (columna == '2') {
-                            lb_A2.setIcon(bking_wt);
-                        } else if (columna == '3') {
-                            lb_A3.setIcon(bking_bt);
-                        } else if (columna == '4') {
-                            lb_A4.setIcon(bking_wt);
-                        } else if (columna == '5') {
-                            lb_A5.setIcon(bking_bt);
-                        } else if (columna == '6') {
-                            lb_A6.setIcon(bking_wt);
-                        } else if (columna == '7') {
-                            lb_A7.setIcon(bking_bt);
-                        } else if (columna == '8') {
-                            lb_A8.setIcon(bking_wt);
+                    if (cont_rey_n > 0) {
+                        if (fila == 'A') {
+                            if (columna == '1') {
+                                lb_A1.setIcon(bking_bt);
+                            } else if (columna == '2') {
+                                lb_A2.setIcon(bking_wt);
+                            } else if (columna == '3') {
+                                lb_A3.setIcon(bking_bt);
+                            } else if (columna == '4') {
+                                lb_A4.setIcon(bking_wt);
+                            } else if (columna == '5') {
+                                lb_A5.setIcon(bking_bt);
+                            } else if (columna == '6') {
+                                lb_A6.setIcon(bking_wt);
+                            } else if (columna == '7') {
+                                lb_A7.setIcon(bking_bt);
+                            } else if (columna == '8') {
+                                lb_A8.setIcon(bking_wt);
+                            }
                         }
-                    }
-                    if (fila == 'B') {
-                        if (columna == '1') {
-                            lb_B1.setIcon(bking_wt);
-                        } else if (columna == '2') {
-                            lb_B2.setIcon(bking_bt);
-                        } else if (columna == '3') {
-                            lb_B3.setIcon(bking_wt);
-                        } else if (columna == '4') {
-                            lb_B4.setIcon(bking_bt);
-                        } else if (columna == '5') {
-                            lb_B5.setIcon(bking_wt);
-                        } else if (columna == '6') {
-                            lb_B6.setIcon(bking_bt);
-                        } else if (columna == '7') {
-                            lb_B7.setIcon(bking_wt);
-                        } else if (columna == '8') {
-                            lb_B8.setIcon(bking_bt);
+                        if (fila == 'B') {
+                            if (columna == '1') {
+                                lb_B1.setIcon(bking_wt);
+                            } else if (columna == '2') {
+                                lb_B2.setIcon(bking_bt);
+                            } else if (columna == '3') {
+                                lb_B3.setIcon(bking_wt);
+                            } else if (columna == '4') {
+                                lb_B4.setIcon(bking_bt);
+                            } else if (columna == '5') {
+                                lb_B5.setIcon(bking_wt);
+                            } else if (columna == '6') {
+                                lb_B6.setIcon(bking_bt);
+                            } else if (columna == '7') {
+                                lb_B7.setIcon(bking_wt);
+                            } else if (columna == '8') {
+                                lb_B8.setIcon(bking_bt);
+                            }
                         }
-                    }
-                    if (fila == 'C') {
-                        if (columna == '1') {
-                            lb_C1.setIcon(bking_bt);
-                        } else if (columna == '2') {
-                            lb_C2.setIcon(bking_wt);
-                        } else if (columna == '3') {
-                            lb_C3.setIcon(bking_bt);
-                        } else if (columna == '4') {
-                            lb_C4.setIcon(bking_wt);
-                        } else if (columna == '5') {
-                            lb_C5.setIcon(bking_bt);
-                        } else if (columna == '6') {
-                            lb_C6.setIcon(bking_wt);
-                        } else if (columna == '7') {
-                            lb_C7.setIcon(bking_bt);
-                        } else if (columna == '8') {
-                            lb_C8.setIcon(bking_wt);                      
+                        if (fila == 'C') {
+                            if (columna == '1') {
+                                lb_C1.setIcon(bking_bt);
+                            } else if (columna == '2') {
+                                lb_C2.setIcon(bking_wt);
+                            } else if (columna == '3') {
+                                lb_C3.setIcon(bking_bt);
+                            } else if (columna == '4') {
+                                lb_C4.setIcon(bking_wt);
+                            } else if (columna == '5') {
+                                lb_C5.setIcon(bking_bt);
+                            } else if (columna == '6') {
+                                lb_C6.setIcon(bking_wt);
+                            } else if (columna == '7') {
+                                lb_C7.setIcon(bking_bt);
+                            } else if (columna == '8') {
+                                lb_C8.setIcon(bking_wt);
+                            }
                         }
-                    }
-                    if (fila == 'D') {
-                        if (columna == '1') {
-                            lb_D1.setIcon(bking_wt);
-                        } else if (columna == '2') {
-                            lb_D2.setIcon(bking_bt);
-                        } else if (columna == '3') {
-                            lb_D3.setIcon(bking_wt);
-                        } else if (columna == '4') {
-                            lb_D4.setIcon(bking_bt);
-                        } else if (columna == '5') {
-                            lb_D5.setIcon(bking_wt);
-                        } else if (columna == '6') {
-                            lb_D6.setIcon(bking_bt);
-                        } else if (columna == '7') {
-                            lb_D7.setIcon(bking_wt);
-                        } else if (columna == '8') {
-                            lb_D8.setIcon(bking_bt);
+                        if (fila == 'D') {
+                            if (columna == '1') {
+                                lb_D1.setIcon(bking_wt);
+                            } else if (columna == '2') {
+                                lb_D2.setIcon(bking_bt);
+                            } else if (columna == '3') {
+                                lb_D3.setIcon(bking_wt);
+                            } else if (columna == '4') {
+                                lb_D4.setIcon(bking_bt);
+                            } else if (columna == '5') {
+                                lb_D5.setIcon(bking_wt);
+                            } else if (columna == '6') {
+                                lb_D6.setIcon(bking_bt);
+                            } else if (columna == '7') {
+                                lb_D7.setIcon(bking_wt);
+                            } else if (columna == '8') {
+                                lb_D8.setIcon(bking_bt);
+                            }
                         }
-                    }
-                    if (fila == 'E') {
-                        if (columna == '1') {
-                            lb_E1.setIcon(bking_bt);
-                        } else if (columna == '2') {
-                            lb_E2.setIcon(bking_wt);
-                        } else if (columna == '3') {
-                            lb_E3.setIcon(bking_bt);
-                        } else if (columna == '4') {
-                            lb_E4.setIcon(bking_wt);
-                        } else if (columna == '5') {
-                            lb_E5.setIcon(bking_bt);
-                        } else if (columna == '6') {
-                            lb_E6.setIcon(bking_wt);
-                        } else if (columna == '7') {
-                            lb_E7.setIcon(bking_bt);
-                        } else if (columna == '8') {
-                            lb_E8.setIcon(bking_wt);
+                        if (fila == 'E') {
+                            if (columna == '1') {
+                                lb_E1.setIcon(bking_bt);
+                            } else if (columna == '2') {
+                                lb_E2.setIcon(bking_wt);
+                            } else if (columna == '3') {
+                                lb_E3.setIcon(bking_bt);
+                            } else if (columna == '4') {
+                                lb_E4.setIcon(bking_wt);
+                            } else if (columna == '5') {
+                                lb_E5.setIcon(bking_bt);
+                            } else if (columna == '6') {
+                                lb_E6.setIcon(bking_wt);
+                            } else if (columna == '7') {
+                                lb_E7.setIcon(bking_bt);
+                            } else if (columna == '8') {
+                                lb_E8.setIcon(bking_wt);
+                            }
                         }
-                    }
-                    if (fila == 'F') {
-                        if (columna == '1') {
-                            lb_F1.setIcon(bking_wt);
-                        } else if (columna == '2') {
-                            lb_F2.setIcon(bking_bt);
-                        } else if (columna == '3') {
-                            lb_F3.setIcon(bking_wt);
-                        } else if (columna == '4') {
-                            lb_F4.setIcon(bking_bt);
-                        } else if (columna == '5') {
-                            lb_F5.setIcon(bking_wt);
-                        } else if (columna == '6') {
-                            lb_F6.setIcon(bking_bt);
-                        } else if (columna == '7') {
-                            lb_F7.setIcon(bking_wt);
-                        } else if (columna == '8') {
-                            lb_F8.setIcon(bking_bt);
+                        if (fila == 'F') {
+                            if (columna == '1') {
+                                lb_F1.setIcon(bking_wt);
+                            } else if (columna == '2') {
+                                lb_F2.setIcon(bking_bt);
+                            } else if (columna == '3') {
+                                lb_F3.setIcon(bking_wt);
+                            } else if (columna == '4') {
+                                lb_F4.setIcon(bking_bt);
+                            } else if (columna == '5') {
+                                lb_F5.setIcon(bking_wt);
+                            } else if (columna == '6') {
+                                lb_F6.setIcon(bking_bt);
+                            } else if (columna == '7') {
+                                lb_F7.setIcon(bking_wt);
+                            } else if (columna == '8') {
+                                lb_F8.setIcon(bking_bt);
+                            }
                         }
-                    }
-                    if (fila == 'G') {
-                        if (columna == '1') {
-                            lb_G1.setIcon(bking_bt);
-                        } else if (columna == '2') {
-                            lb_G2.setIcon(bking_wt);
-                        } else if (columna == '3') {
-                            lb_G3.setIcon(bking_bt);
-                        } else if (columna == '4') {
-                            lb_G4.setIcon(bking_wt);
-                        } else if (columna == '5') {
-                            lb_G5.setIcon(bking_bt);
-                        } else if (columna == '6') {
-                            lb_G6.setIcon(bking_wt);
-                        } else if (columna == '7') {
-                            lb_G7.setIcon(bking_bt);
-                        } else if (columna == '8') {
-                            lb_G8.setIcon(bking_wt);
+                        if (fila == 'G') {
+                            if (columna == '1') {
+                                lb_G1.setIcon(bking_bt);
+                            } else if (columna == '2') {
+                                lb_G2.setIcon(bking_wt);
+                            } else if (columna == '3') {
+                                lb_G3.setIcon(bking_bt);
+                            } else if (columna == '4') {
+                                lb_G4.setIcon(bking_wt);
+                            } else if (columna == '5') {
+                                lb_G5.setIcon(bking_bt);
+                            } else if (columna == '6') {
+                                lb_G6.setIcon(bking_wt);
+                            } else if (columna == '7') {
+                                lb_G7.setIcon(bking_bt);
+                            } else if (columna == '8') {
+                                lb_G8.setIcon(bking_wt);
+                            }
                         }
-                    }
-                    if (fila == 'H') {
-                        if (columna == '1') {
-                            lb_H1.setIcon(bking_wt);
-                        } else if (columna == '2') {
-                            lb_H2.setIcon(bking_bt);
-                        } else if (columna == '3') {
-                            lb_H3.setIcon(bking_wt);
-                        } else if (columna == '4') {
-                            lb_H4.setIcon(bking_bt);
-                        } else if (columna == '5') {
-                            lb_H5.setIcon(bking_wt);
-                        } else if (columna == '6') {
-                            lb_H6.setIcon(bking_bt);
-                        } else if (columna == '7') {
-                            lb_H7.setIcon(bking_wt);
-                        } else if (columna == '8') {
-                            lb_H8.setIcon(bking_bt);
+                        if (fila == 'H') {
+                            if (columna == '1') {
+                                lb_H1.setIcon(bking_wt);
+                            } else if (columna == '2') {
+                                lb_H2.setIcon(bking_bt);
+                            } else if (columna == '3') {
+                                lb_H3.setIcon(bking_wt);
+                            } else if (columna == '4') {
+                                lb_H4.setIcon(bking_bt);
+                            } else if (columna == '5') {
+                                lb_H5.setIcon(bking_wt);
+                            } else if (columna == '6') {
+                                lb_H6.setIcon(bking_bt);
+                            } else if (columna == '7') {
+                                lb_H7.setIcon(bking_wt);
+                            } else if (columna == '8') {
+                                lb_H8.setIcon(bking_bt);
+                            }
                         }
+                        cont_rey_n--;
+                    } else {
+                        JOptionPane.showMessageDialog(this, "Máximo Nivel de Rey Negro Alcanzado");
                     }
                 }
                 break;
         }
-        int x=-1, y=-1;
-        switch(fila){
-            case 'A': x=0;
+        int x = -1, y = -1;
+        switch (fila) {
+            case 'A':
+                x = 0;
                 break;
-            case 'B': x=1;
+            case 'B':
+                x = 1;
                 break;
-            case 'C': x=2;
+            case 'C':
+                x = 2;
                 break;
-            case 'D': x=3;
+            case 'D':
+                x = 3;
                 break;
-            case 'E': x=4;
+            case 'E':
+                x = 4;
                 break;
-            case 'F': x=5;
+            case 'F':
+                x = 5;
                 break;
-            case 'G': x=6;
+            case 'G':
+                x = 6;
                 break;
-            case 'H': x=7;
+            case 'H':
+                x = 7;
                 break;
         }
-        
-        switch(columna){
-            case '1': y=0;
+
+        switch (columna) {
+            case '1':
+                y = 0;
                 break;
-            case '2': y=1;
+            case '2':
+                y = 1;
                 break;
-            case '3': y=2;
+            case '3':
+                y = 2;
                 break;
-            case '4': y=3;
+            case '4':
+                y = 3;
                 break;
-            case '5': y=4;
+            case '5':
+                y = 4;
                 break;
-            case '6': y=5;
+            case '6':
+                y = 5;
                 break;
-            case '7': y=6;
+            case '7':
+                y = 6;
                 break;
-            case '8': y=7;
+            case '8':
+                y = 7;
                 break;
         }
         char color = ' ';
         if (rb_blanco.isSelected()) //caballos blancos
+        {
             color = 'B';
-        else
-            color ='N';
-        
-        if(tipoPieza==1)
-            tablero[x][y]= new Caballo(color,x,y);
-        else if(tipoPieza ==2 )
-            tablero[x][y]= new Peon(color,x,y);
-        else if(tipoPieza ==3)
-            tablero[x][y]= new Rey(color,x,y);
-        
+        } else {
+            color = 'N';
+        }
+
+        if (tipoPieza == 1) {
+            tablero[x][y] = new Caballo(color, x, y);
+        } else if (tipoPieza == 2) {
+            tablero[x][y] = new Peon(color, x, y);
+        } else if (tipoPieza == 3) {
+            tablero[x][y] = new Rey(color, x, y);
+        }
+
         tf_posicion.setText("");
     }//GEN-LAST:event_jb_ingresarCoordenadasMouseClicked
 
@@ -1764,6 +1814,10 @@ public class Main extends javax.swing.JFrame {
                 tablero[i][j]=null;
             }
         }
+    }
+    
+    public void mapeo(Arbol arbol) {
+        arbol.preOrder();
     }
     /**
      * @param args the command line arguments
@@ -1908,7 +1962,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JRadioButton rb_rey;
     private javax.swing.JTextField tf_posicion;
     // End of variables declaration//GEN-END:variables
-
+    int cont_peon_b = 8, cont_peon_n = 8, cont_caballo_b = 2, cont_caballo_n = 2, cont_rey_b = 1, cont_rey_n = 1;
     Pieza[][] tablero= new Pieza[8][8];
     Pieza[][] movimientos= new Pieza[8][8];
     //Tablero tablero = new Tablero();
